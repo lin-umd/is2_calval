@@ -1,2 +1,2 @@
 # is2_calval
-co-locate 
+co-locate is2 shots
