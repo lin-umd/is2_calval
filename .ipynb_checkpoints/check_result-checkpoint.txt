@@ -1,0 +1,1800 @@
+-- Processing  usda_me
+-- Bounding box: [-70.6173431992878, 45.22065245895822, -69.10682622175449, 46.84308039968804]
+{'Number of available granules': 273, 'Average size of granules (MB)': 1367.707767091828, 'Total size of all granules (MB)': 373384.22041606903}
+-- This project is done:  usda_me
+-- Processing  plumasnf_20180707
+-- Bounding box: [-121.62974126301091, 39.32381908716643, -120.07598651049018, 40.04642681047188]
+{'Number of available granules': 256, 'Average size of granules (MB)': 2525.030279804021, 'Total size of all granules (MB)': 646407.7516298294}
+-- This project is done:  plumasnf_20180707
+-- Processing  tern_robson_whole
+-- Bounding box: [145.59525664990025, -17.13049492699667, 145.64865171543616, -17.079369211517328]
+{'Number of available granules': 29, 'Average size of granules (MB)': 1261.1240535933396, 'Total size of all granules (MB)': 36572.59755420685}
+-- This project is done:  tern_robson_whole
+-- Processing  jpl_borneo_013
+-- Bounding box: [114.43871021032565, -2.1615630199973426, 114.6596232318661, -2.139282279582191]
+{'Number of available granules': 51, 'Average size of granules (MB)': 894.6133840411317, 'Total size of all granules (MB)': 45625.28258609772}
+-- This project is done:  jpl_borneo_013
+-- Processing  stri_serc_Oct2011
+-- Bounding box: [-76.58439124851942, 38.87436274894928, -76.53298350307848, 38.902745438111246]
+{'Number of available granules': 21, 'Average size of granules (MB)': 1706.9786566325597, 'Total size of all granules (MB)': 35846.55178928375}
+-- This project is done:  stri_serc_Oct2011
+-- Processing  litchfield
+-- Bounding box: [130.76630446513622, -13.203080141597352, 130.81262026721436, -13.157567537123503]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1163.346675453186, 'Total size of all granules (MB)': 29083.66688632965}
+-- This project is done:  litchfield
+-- Processing  embrapa_brazil_keller_2008_tap
+-- Bounding box: [-54.977552243173825, -3.054982761241093, -54.94107207028917, -2.8476182370514573]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1108.7161054196565, 'Total size of all granules (MB)': 25500.4704246521}
+-- This project is done:  embrapa_brazil_keller_2008_tap
+-- Processing  embrapa_brazil_keller_2012_sdm
+-- Bounding box: [-45.090660381160674, -23.384348706766563, -45.064303664843266, -23.320794687069]
+{'Number of available granules': 21, 'Average size of granules (MB)': 1423.4578178496588, 'Total size of all granules (MB)': 29892.614174842834}
+-- This project is done:  embrapa_brazil_keller_2012_sdm
+-- Processing  neon_leno2019
+-- Bounding box: [-88.25940295600572, 31.784530559907054, -88.12822295351376, 31.88045637695894]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1150.9212632062959, 'Total size of all granules (MB)': 47187.77179145813}
+-- This project is done:  neon_leno2019
+-- Processing  gold01
+-- Bounding box: [152.82294398317632, -27.431726673053962, 152.83153515183898, -27.426719810865542]
+{'Number of available granules': 19, 'Average size of granules (MB)': 571.5428533052143, 'Total size of all granules (MB)': 10859.314212799072}
+-- This project is done:  gold01
+-- Processing  nasa_ma
+-- Bounding box: [-72.2256714052577, 42.44501549848217, -72.15817931155763, 42.553623817199075]
+{'Number of available granules': 33, 'Average size of granules (MB)': 1478.8694838032577, 'Total size of all granules (MB)': 48802.69296550751}
+-- This project is done:  nasa_ma
+-- Processing  embrapa_brazil_keller_2011_cot
+-- Bounding box: [-58.87111649428967, -9.488813885402493, -58.85159116592282, -9.44009809908404]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1190.0575627451358, 'Total size of all granules (MB)': 27371.323943138123}
+-- This project is done:  embrapa_brazil_keller_2011_cot
+-- Processing  canada_2010_32608
+-- Bounding box: [-136.98673549201956, 61.188627638152624, -131.40264578899968, 63.91237384985584]
+{'Number of available granules': 947, 'Average size of granules (MB)': 1881.5517174540503, 'Total size of all granules (MB)': 1781829.4764289856}
+-- This project is done:  canada_2010_32608
+-- Processing  usda_or
+-- Bounding box: [-122.62615075170372, 42.356611048363256, -121.08098386079364, 44.013047598863565]
+{'Number of available granules': 274, 'Average size of granules (MB)': 2785.415821621888, 'Total size of all granules (MB)': 763203.9351243973}
+-- This project is done:  usda_or
+-- Processing  jpl_borneo_005
+-- Bounding box: [115.36630404046873, -0.8847013802849659, 115.42766769962502, -0.8108927467867096]
+{'Number of available granules': 31, 'Average size of granules (MB)': 901.1023024897421, 'Total size of all granules (MB)': 27934.171377182007}
+-- This project is done:  jpl_borneo_005
+-- Processing  embrapa_brazil_keller_2013_st1
+-- Bounding box: [-54.994744260589485, -3.728570485768999, -54.876362356635994, -3.293650816639102]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1187.0517783381722, 'Total size of all granules (MB)': 52230.27824687958}
+-- This project is done:  embrapa_brazil_keller_2013_st1
+-- Processing  neon_stei2019
+-- Bounding box: [-89.59270570545068, 45.44048003792724, -89.38586201256314, 45.55884375313264]
+{'Number of available granules': 56, 'Average size of granules (MB)': 1102.8049221720014, 'Total size of all granules (MB)': 61757.07564163208}
+-- This project is done:  neon_stei2019
+-- Processing  jpl_borneo_119
+-- Bounding box: [114.42260916364316, -2.212945172947521, 114.47080239208056, -2.101077655007112]
+{'Number of available granules': 26, 'Average size of granules (MB)': 842.4464426040649, 'Total size of all granules (MB)': 21903.60750770569}
+-- This project is done:  jpl_borneo_119
+-- Processing  neon_blan2021
+-- Bounding box: [-78.10368189242631, 39.036457831614364, -77.93860776492691, 39.15042931995375]
+{'Number of available granules': 48, 'Average size of granules (MB)': 1358.5559403300285, 'Total size of all granules (MB)': 65210.68513584137}
+-- This project is done:  neon_blan2021
+-- Processing  embrapa_brazil_2020_fn1_a01
+-- Bounding box: [-53.832858093506154, -12.084894816767097, -53.82989812956987, -11.63454836318537]
+{'Number of available granules': 22, 'Average size of granules (MB)': 1296.3011106577787, 'Total size of all granules (MB)': 28518.62443447113}
+-- This project is done:  embrapa_brazil_2020_fn1_a01
+-- Processing  neon_clbj2021
+-- Bounding box: [-97.67169912665514, 33.309076632144006, -97.54091041904303, 33.4307033502597]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1251.577313139632, 'Total size of all granules (MB)': 46308.36058616638}
+-- This project is done:  neon_clbj2021
+-- Processing  embrapa_brazil_keller_2011_ant
+-- Bounding box: [-68.29888361564466, -9.31496443808529, -68.26244468951069, -9.292271410790882]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1989.435292930603, 'Total size of all granules (MB)': 49735.882323265076}
+-- This project is done:  embrapa_brazil_keller_2011_ant
+-- Processing  neon_bona2019
+-- Bounding box: [-147.68035383541925, 65.11315792324515, -147.33435854246332, 65.2448408428412]
+{'Number of available granules': 107, 'Average size of granules (MB)': 2262.824510511951, 'Total size of all granules (MB)': 242122.22262477875}
+-- This project is done:  neon_bona2019
+-- Processing  embrapa_brazil_keller_2013_cag
+-- Bounding box: [-49.62918593030219, -26.69646008730852, -49.586267242482386, -26.648393908929815]
+{'Number of available granules': 26, 'Average size of granules (MB)': 958.9264672719515, 'Total size of all granules (MB)': 24932.08814907074}
+-- This project is done:  embrapa_brazil_keller_2013_cag
+-- Processing  neon_mlbs2015
+-- Bounding box: [-80.61872091692554, 37.30330002708055, -80.45084283408555, 37.446732545360064]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1426.6874760437013, 'Total size of all granules (MB)': 71334.37380218506}
+-- This project is done:  neon_mlbs2015
+-- Processing  embrapa_brazil_keller_2014_san
+-- Bounding box: [-54.914850845952905, -3.3115551478815695, -54.85256669182731, -2.9808523695790736]
+{'Number of available granules': 34, 'Average size of granules (MB)': 1194.0407026234795, 'Total size of all granules (MB)': 40597.3838891983}
+-- This project is done:  embrapa_brazil_keller_2014_san
+-- Processing  falkowski_damon_2007
+-- Bounding box: [-119.06861480749336, 44.07646853719454, -118.94639377511547, 44.25286058486901]
+{'Number of available granules': 45, 'Average size of granules (MB)': 2545.350286165873, 'Total size of all granules (MB)': 114540.7628774643}
+-- This project is done:  falkowski_damon_2007
+-- Processing  walkerfire_20191007
+-- Bounding box: [-120.73931204494808, 39.98860950336352, -120.43581123901117, 40.19307335572872]
+{'Number of available granules': 69, 'Average size of granules (MB)': 2189.749117809793, 'Total size of all granules (MB)': 151092.68912887573}
+-- This project is done:  walkerfire_20191007
+-- Processing  rami_jarvselja
+-- Bounding box: [27.255011480276117, 58.2799601676793, 27.33211266315373, 58.312011129609864]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1324.3601313043148, 'Total size of all granules (MB)': 62244.926171302795}
+-- This project is done:  rami_jarvselja
+-- Processing  neon_dela2016
+-- Bounding box: [-87.8676500386148, 32.476198721997505, -87.74681716049808, 32.623747678122484]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1211.9698131652106, 'Total size of all granules (MB)': 50902.73215293884}
+-- This project is done:  neon_dela2016
+-- Processing  fernan_fernan
+-- Bounding box: [-116.67238542685146, 47.6330921935741, -116.5838300037129, 47.74792969912839]
+{'Number of available granules': 35, 'Average size of granules (MB)': 3048.958778953552, 'Total size of all granules (MB)': 106713.55726337433}
+-- This project is done:  fernan_fernan
+-- Processing  zhangye_china
+-- Bounding box: [100.24524915647535, 38.534891150082736, 100.24616333689075, 38.53582899174675]
+{'Number of available granules': 19, 'Average size of granules (MB)': 2384.9201965833963, 'Total size of all granules (MB)': 45313.483735084534}
+-- This project is done:  zhangye_china
+-- Processing  jpl_borneo_001
+-- Bounding box: [115.2942111090711, -1.4415201783126979, 115.36543270130109, -1.3977515473812308]
+{'Number of available granules': 39, 'Average size of granules (MB)': 882.3756178831443, 'Total size of all granules (MB)': 34412.64909744263}
+-- This project is done:  jpl_borneo_001
+-- Processing  drc_ghent_field_32634
+-- Bounding box: [18.112474782480387, 0.5814394401199057, 23.28733200778624, 3.4698468477299143]
+{'Number of available granules': 803, 'Average size of granules (MB)': 1212.6242027187704, 'Total size of all granules (MB)': 973737.2347831726}
+-- This project is done:  drc_ghent_field_32634
+-- Processing  boschetti_idaho_clearcreek
+-- Bounding box: [-115.85410122919177, 45.92969452854553, -115.63705604075562, 46.11078118919768]
+{'Number of available granules': 56, 'Average size of granules (MB)': 3065.5410682303564, 'Total size of all granules (MB)': 171670.29982089996}
+-- This project is done:  boschetti_idaho_clearcreek
+-- Processing  neon_scbi2019
+-- Bounding box: [-78.21455424021333, 38.8263587142157, -78.08415319593068, 38.92330449776793]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1441.8775914355022, 'Total size of all granules (MB)': 59116.98124885559}
+-- This project is done:  neon_scbi2019
+-- Processing  embrapa_brazil_keller_2013_and
+-- Bounding box: [-46.8460644441373, -2.577144260164463, -46.8280183231881, -2.531912754295215]
+{'Number of available granules': 22, 'Average size of granules (MB)': 1100.4743243997748, 'Total size of all granules (MB)': 24210.435136795044}
+-- This project is done:  embrapa_brazil_keller_2013_and
+-- Processing  usda_mn
+-- Bounding box: [-93.27766252152988, 46.63519114404211, -91.70005739233396, 48.262206126246404]
+{'Number of available granules': 293, 'Average size of granules (MB)': 1233.757206610852, 'Total size of all granules (MB)': 361490.8615369797}
+-- This project is done:  usda_mn
+-- Processing  neon_abby2019
+-- Bounding box: [-122.36897448437925, 45.69962395776105, -122.24873775020288, 45.81784147033584]
+{'Number of available granules': 40, 'Average size of granules (MB)': 2664.0660998106005, 'Total size of all granules (MB)': 106562.64399242401}
+-- This project is done:  neon_abby2019
+-- Processing  embrapa_brazil_keller_2013_tac
+-- Bounding box: [-48.33505392740321, -2.482856532041762, -48.29148778019084, -2.437838717508234]
+{'Number of available granules': 24, 'Average size of granules (MB)': 1295.203669865926, 'Total size of all granules (MB)': 31084.888076782227}
+-- This project is done:  embrapa_brazil_keller_2013_tac
+-- Processing  inpe_brazil31983
+-- Bounding box: [-47.751364165012504, -5.331818133143749, -44.686188398202844, -1.2729486752347041]
+{'Number of available granules': 507, 'Average size of granules (MB)': 1413.8487995531432, 'Total size of all granules (MB)': 716821.3413734436}
+-- This project is done:  inpe_brazil31983
+-- Processing  neon_teak2017
+-- Bounding box: [-119.10603462758529, 36.950556137283044, -118.96414216531545, 37.10029333892038]
+{'Number of available granules': 40, 'Average size of granules (MB)': 2524.8553074359893, 'Total size of all granules (MB)': 100994.21229743958}
+-- This project is done:  neon_teak2017
+-- Processing  neon_konz2018
+-- Bounding box: [-96.65987828030823, 39.05040743993163, -96.48111872889984, 39.241302236226]
+{'Number of available granules': 51, 'Average size of granules (MB)': 1175.2802001354742, 'Total size of all granules (MB)': 59939.29020690918}
+-- This project is done:  neon_konz2018
+-- Processing  neon_harv2016
+-- Bounding box: [-72.29052030536401, 42.362177555364646, -72.10231036925363, 42.59593559070177]
+{'Number of available granules': 56, 'Average size of granules (MB)': 1217.651150226593, 'Total size of all granules (MB)': 68188.46441268921}
+-- This project is done:  neon_harv2016
+-- Processing  neon_osbs
+-- Bounding box: [-82.09758959500694, 29.597293392352736, -81.88952121506998, 29.772408572391893]
+{'Number of available granules': 54, 'Average size of granules (MB)': 1538.7027236620586, 'Total size of all granules (MB)': 83089.94707775116}
+-- This project is done:  neon_osbs
+-- Processing  spain_leon2
+-- Bounding box: [-6.844739955547255, 42.820128222022184, -6.646695564189727, 42.89841859736941]
+{'Number of available granules': 60, 'Average size of granules (MB)': 1493.8444378693898, 'Total size of all granules (MB)': 89630.66627216339}
+-- This project is done:  spain_leon2
+-- Processing  neon_harv2018
+-- Bounding box: [-72.28906685722957, 42.38287333642806, -72.10225662071483, 42.575748887029036]
+{'Number of available granules': 54, 'Average size of granules (MB)': 1179.7741741604275, 'Total size of all granules (MB)': 63707.805404663086}
+-- This project is done:  neon_harv2018
+-- Processing  cflra_lolocreekeldoradocreek
+-- Bounding box: [-115.73395520294928, 46.2099163515156, -115.59019151605091, 46.25893959031649]
+{'Number of available granules': 58, 'Average size of granules (MB)': 3017.529078269827, 'Total size of all granules (MB)': 175016.68653964996}
+-- This project is done:  cflra_lolocreekeldoradocreek
+-- Processing  neon_nogp2016
+-- Bounding box: [-100.98710295201853, 46.72431203053835, -100.84227937493331, 46.85103821962236]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1324.352133216858, 'Total size of all granules (MB)': 66217.6066608429}
+-- This project is done:  neon_nogp2016
+-- Processing  neon_puum2019
+-- Bounding box: [-155.36524568919035, 19.498754146042774, -155.21549772386084, 19.617779758010656]
+{'Number of available granules': 47, 'Average size of granules (MB)': 950.7051477026432, 'Total size of all granules (MB)': 44683.14194202423}
+-- This project is done:  neon_puum2019
+-- Processing  dcef_nfp_2011
+-- Bounding box: [-116.55403843721334, 47.71806009552424, -116.48306409069502, 47.74321464602754]
+{'Number of available granules': 31, 'Average size of granules (MB)': 3026.1937212790212, 'Total size of all granules (MB)': 93812.00535964966}
+-- This project is done:  dcef_nfp_2011
+-- Processing  neon_clbj2018
+-- Bounding box: [-97.67997835828734, 33.3079714327828, -97.52952905712941, 33.43069785476332]
+{'Number of available granules': 40, 'Average size of granules (MB)': 1268.7163892269134, 'Total size of all granules (MB)': 50748.65556907654}
+-- This project is done:  neon_clbj2018
+-- Processing  neon_jerc2016
+-- Bounding box: [-84.57286277346809, 31.136312172904585, -84.35295233042062, 31.348292343987517]
+{'Number of available granules': 59, 'Average size of granules (MB)': 1206.413291640201, 'Total size of all granules (MB)': 71178.38420677185}
+-- This project is done:  neon_jerc2016
+-- Processing  ucl_wytham
+-- Bounding box: [-1.5117838654157993, 51.687598167248716, -1.2575310142521479, 51.81788741518528]
+{'Number of available granules': 65, 'Average size of granules (MB)': 1428.5219042117778, 'Total size of all granules (MB)': 92853.92377376556}
+-- This project is done:  ucl_wytham
+-- Processing  stri_serc_Jun2012
+-- Bounding box: [-76.57489863482809, 38.87138229543096, -76.53807661504005, 38.902794028632144]
+{'Number of available granules': 18, 'Average size of granules (MB)': 1758.2767694261338, 'Total size of all granules (MB)': 31648.98184967041}
+-- This project is done:  stri_serc_Jun2012
+-- Processing  embrapa_brazil_2020_fn2_a01
+-- Bounding box: [-54.19667536233831, -12.084923060662376, -54.19390180559494, -11.63452158294464]
+{'Number of available granules': 26, 'Average size of granules (MB)': 1133.3488834087666, 'Total size of all granules (MB)': 29467.07096862793}
+-- This project is done:  embrapa_brazil_2020_fn2_a01
+-- Processing  nsw_coffsharbour
+-- Bounding box: [153.01455132815437, -30.28479599697483, 153.20183456732556, -30.022321033786746]
+{'Number of available granules': 57, 'Average size of granules (MB)': 593.675596806041, 'Total size of all granules (MB)': 33839.509017944336}
+-- This project is done:  nsw_coffsharbour
+-- Processing  neon_rmnp2017
+-- Bounding box: [-105.59311276751136, 40.12297694565189, -105.43668548770353, 40.315089105291214]
+{'Number of available granules': 50, 'Average size of granules (MB)': 2496.6226546669004, 'Total size of all granules (MB)': 124831.13273334503}
+-- This project is done:  neon_rmnp2017
+-- Processing  neon_clbj2017
+-- Bounding box: [-97.68035467728149, 33.31707088827199, -97.53674676494573, 33.42236728127651]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1268.9679864331295, 'Total size of all granules (MB)': 48220.78348445892}
+-- This project is done:  neon_clbj2017
+-- Processing  germany_coburn1
+-- Bounding box: [11.055104155522047, 50.41585968743221, 11.127044638870476, 50.45256810990514]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1963.2153357428474, 'Total size of all granules (MB)': 72638.96742248535}
+-- This project is done:  germany_coburn1
+-- Processing  nagano_japan_full
+-- Bounding box: [137.93062419170099, 35.863375528053496, 137.93422922164714, 35.868242346420615]
+{'Number of available granules': 14, 'Average size of granules (MB)': 2110.237472329821, 'Total size of all granules (MB)': 29543.324612617493}
+-- This project is done:  nagano_japan_full
+-- Processing  neon_osbs2019
+-- Bounding box: [-82.09046011509533, 29.59276590616872, -81.89773113334037, 29.77032058931876]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1569.2537273216249, 'Total size of all granules (MB)': 78462.68636608124}
+-- This project is done:  neon_osbs2019
+-- Processing  neon_serc2021
+-- Bounding box: [-76.62765015957066, 38.84430238641938, -76.50008464019545, 38.93559111853295]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1374.5541555404664, 'Total size of all granules (MB)': 68727.70777702332}
+-- This project is done:  neon_serc2021
+-- Processing  neon_niwo2017
+-- Bounding box: [-105.6903117721771, 39.95499000907377, -105.48390778757305, 40.096495854599944]
+{'Number of available granules': 47, 'Average size of granules (MB)': 2319.7303082283506, 'Total size of all granules (MB)': 109027.32448673248}
+-- This project is done:  neon_niwo2017
+-- Processing  demiguel_soriai
+-- Bounding box: [-3.111520876676079, 41.77170659023997, -3.073760081604746, 41.81305379015661]
+{'Number of available granules': 31, 'Average size of granules (MB)': 1781.6505764376732, 'Total size of all granules (MB)': 55231.16786956787}
+-- This project is done:  demiguel_soriai
+-- Processing  neon_leno2016
+-- Bounding box: [-88.25039294221762, 31.766530550839924, -88.12505949828615, 31.899972870561953]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1131.012520464984, 'Total size of all granules (MB)': 49764.55090045929}
+-- This project is done:  neon_leno2016
+-- Processing  neon_jorn2018
+-- Bounding box: [-106.9205561446689, 32.525738460996955, -106.76576112425514, 32.725818173368225]
+{'Number of available granules': 24, 'Average size of granules (MB)': 2374.2577039400735, 'Total size of all granules (MB)': 56982.18489456177}
+-- This project is done:  neon_jorn2018
+-- Processing  umn_colville_2014
+-- Bounding box: [-118.3853382582211, 48.69651096365207, -118.21686137689362, 48.991685912918996]
+{'Number of available granules': 56, 'Average size of granules (MB)': 2571.619852236339, 'Total size of all granules (MB)': 144010.71172523499}
+-- This project is done:  umn_colville_2014
+-- Processing  neon_stei2017
+-- Bounding box: [-89.62060012064005, 45.4459766534009, -89.45132953061363, 45.55182254748864]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1185.3155827623732, 'Total size of all granules (MB)': 55709.83238983154}
+-- This project is done:  neon_stei2017
+-- Processing  neon_heal2018
+-- Bounding box: [-149.3298108365392, 63.82853412869946, -149.10212916821584, 63.93141281345153]
+{'Number of available granules': 78, 'Average size of granules (MB)': 2370.49001900355, 'Total size of all granules (MB)': 184898.22148227692}
+-- This project is done:  neon_heal2018
+-- Processing  inpe_brazil31980
+-- Bounding box: [-65.9997431739491, -13.824501069230188, -59.955646153933564, -0.02364741485714578]
+{'Number of available granules': 1914, 'Average size of granules (MB)': 1260.4299810174366, 'Total size of all granules (MB)': 2412462.9836673737}
+-- This project is done:  inpe_brazil31980
+-- Processing  canada_2010_32614
+-- Bounding box: [-99.21877550871667, 52.19564363795222, -96.01530129313481, 56.77016148533532]
+{'Number of available granules': 597, 'Average size of granules (MB)': 1259.044883485216, 'Total size of all granules (MB)': 751649.7954406738}
+-- This project is done:  canada_2010_32614
+-- Processing  neon_wood2016
+-- Bounding box: [-99.32795654512431, 47.06871121237597, -99.02635001744757, 47.259324382198216]
+{'Number of available granules': 72, 'Average size of granules (MB)': 1369.9907557169597, 'Total size of all granules (MB)': 98639.3344116211}
+-- This project is done:  neon_wood2016
+-- Processing  spain_valsaindemiguel
+-- Bounding box: [-4.090591910050248, 40.78631428042106, -3.9686763207706073, 40.85380063291063]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1602.50445213772, 'Total size of all granules (MB)': 67305.18698978424}
+-- This project is done:  spain_valsaindemiguel
+-- Processing  neon_stei2020
+-- Bounding box: [-89.62948722118749, 45.434696441931536, -89.37422359569511, 45.56319152491717]
+{'Number of available granules': 60, 'Average size of granules (MB)': 1151.5468026161193, 'Total size of all granules (MB)': 69092.80815696716}
+-- This project is done:  neon_stei2020
+-- Processing  embrapa_brazil_keller_2014_ba3
+-- Bounding box: [-61.827156285715205, -1.7953235758060055, -61.68795111254275, -1.5839818187394856]
+{'Number of available granules': 36, 'Average size of granules (MB)': 1146.9419742955101, 'Total size of all granules (MB)': 41289.91107463837}
+-- This project is done:  embrapa_brazil_keller_2014_ba3
+-- Processing  costarica_laselva2019
+-- Bounding box: [-84.02302530960456, 10.430284269920666, -84.00168455828029, 10.439751202613703]
+{'Number of available granules': 22, 'Average size of granules (MB)': 975.6135295087641, 'Total size of all granules (MB)': 21463.49764919281}
+-- This project is done:  costarica_laselva2019
+-- Processing  pref_fia
+-- Bounding box: [-116.83860447111431, 48.34241804150373, -116.73497690705902, 48.37613476589175]
+{'Number of available granules': 40, 'Average size of granules (MB)': 3022.6784826517105, 'Total size of all granules (MB)': 120907.13930606842}
+-- This project is done:  pref_fia
+-- Processing  neon_tall2018
+-- Bounding box: [-87.47586870936706, 32.86600039834998, -87.35822670430184, 32.99081704554219]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1136.131178390689, 'Total size of all granules (MB)': 46581.37831401825}
+-- This project is done:  neon_tall2018
+-- Processing  inpe_brazil31981
+-- Bounding box: [-60.04077445600972, -13.405348861024516, -54.00026328348745, -0.01735541859341852]
+{'Number of available granules': 1898, 'Average size of granules (MB)': 1044.9447156837794, 'Total size of all granules (MB)': 1983305.070367813}
+-- This project is done:  inpe_brazil31981
+-- Processing  southafrica_umgano
+-- Bounding box: [29.500001640150593, -30.055495281414714, 29.525335380421875, -30.043395472851923]
+{'Number of available granules': 29, 'Average size of granules (MB)': 618.0131270967681, 'Total size of all granules (MB)': 17922.380685806274}
+-- This project is done:  southafrica_umgano
+-- Processing  neon_onaq2019
+-- Bounding box: [-112.58569669429134, 40.13356934138746, -112.3998183580932, 40.24944545502555]
+{'Number of available granules': 60, 'Average size of granules (MB)': 2274.5059095541637, 'Total size of all granules (MB)': 136470.35457324982}
+-- This project is done:  neon_onaq2019
+-- Processing  umn_colvillewest_2015
+-- Bounding box: [-118.45013417612384, 48.48978369741852, -118.21601571259286, 48.57415759498485]
+{'Number of available granules': 66, 'Average size of granules (MB)': 2738.250763315143, 'Total size of all granules (MB)': 180724.55037879944}
+-- This project is done:  umn_colvillewest_2015
+-- Processing  cflra_twincreek
+-- Bounding box: [-114.94318123150866, 46.559772435682554, -114.93729530475797, 46.56362584440192]
+{'Number of available granules': 34, 'Average size of granules (MB)': 2399.528097040513, 'Total size of all granules (MB)': 81583.95529937744}
+-- This project is done:  cflra_twincreek
+-- Processing  stri_bci
+-- Bounding box: [-79.87137826800804, 9.132181691782076, -79.81877490862745, 9.183251353286826]
+{'Number of available granules': 24, 'Average size of granules (MB)': 831.6840955018997, 'Total size of all granules (MB)': 19960.418292045593}
+-- This project is done:  stri_bci
+-- Processing  neon_tall2016
+-- Bounding box: [-87.47920546767068, 32.85380060848322, -87.35954853426836, 33.00809542526567]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1136.131178390689, 'Total size of all granules (MB)': 46581.37831401825}
+-- This project is done:  neon_tall2016
+-- Processing  neon_prov
+-- Bounding box: [-119.22317606527419, 37.04329946748802, -119.17835744647185, 37.08892845115289]
+{'Number of available granules': 31, 'Average size of granules (MB)': 2652.262477136427, 'Total size of all granules (MB)': 82220.13679122925}
+-- This project is done:  neon_prov
+-- Processing  cambridge_sepilok
+-- Bounding box: [117.90820299120688, 5.830967749037077, 117.98442352877274, 5.8677439723451545]
+{'Number of available granules': 31, 'Average size of granules (MB)': 1168.2680837569699, 'Total size of all granules (MB)': 36216.310596466064}
+-- This project is done:  cambridge_sepilok
+-- Processing  chave_nourages
+-- Bounding box: [-53.239592380642215, 4.031185001353461, -52.665515868852474, 4.100242734260461]
+{'Number of available granules': 106, 'Average size of granules (MB)': 714.6771224309813, 'Total size of all granules (MB)': 75755.77497768402}
+-- This project is done:  chave_nourages
+-- Processing  neon_puum2020
+-- Bounding box: [-155.4611321814354, 19.49220791983638, -155.2129279729182, 19.62569113134484]
+{'Number of available granules': 59, 'Average size of granules (MB)': 988.3184832071854, 'Total size of all granules (MB)': 58310.79050922394}
+-- This project is done:  neon_puum2020
+-- Processing  neon_dela2018
+-- Bounding box: [-87.86846875107679, 32.49484233021725, -87.73658816484188, 32.60745479779616]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1220.3879162766214, 'Total size of all granules (MB)': 52476.680399894714}
+-- This project is done:  neon_dela2018
+-- Processing  maryland_hansen
+-- Bounding box: [-76.15142977188765, 38.90636968743877, -76.14020029025875, 38.913784229699885]
+{'Number of available granules': 31, 'Average size of granules (MB)': 1256.4235770625453, 'Total size of all granules (MB)': 38949.130888938904}
+-- This project is done:  maryland_hansen
+-- Processing  dalponte_trentino
+-- Bounding box: [10.750790518821157, 45.955319869298215, 11.766799319984607, 46.30819318629498]
+{'Number of available granules': 177, 'Average size of granules (MB)': 1748.7425138290319, 'Total size of all granules (MB)': 309527.42494773865}
+-- This project is done:  dalponte_trentino
+-- Processing  cflra_dutchoven
+-- Bounding box: [-115.55632239347112, 45.86163717202243, -115.54523099435472, 45.86639975475216]
+{'Number of available granules': 20, 'Average size of granules (MB)': 3355.532574033737, 'Total size of all granules (MB)': 67110.65148067474}
+-- This project is done:  cflra_dutchoven
+-- Processing  embrapa_brazil_keller_2014_tan
+-- Bounding box: [-52.44328256151374, -13.090433447640065, -52.375528016016844, -13.071686828898132]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1262.0603840869405, 'Total size of all granules (MB)': 29027.388833999634}
+-- This project is done:  embrapa_brazil_keller_2014_tan
+-- Processing  nsw_merimbula
+-- Bounding box: [149.64935546801908, -37.37486351971672, 149.9762805625746, -37.09816804449198]
+{'Number of available granules': 69, 'Average size of granules (MB)': 801.0845594958982, 'Total size of all granules (MB)': 55274.83460521698}
+-- This project is done:  nsw_merimbula
+-- Processing  neon_ster
+-- Bounding box: [-103.08994532432243, 40.42612443627198, -102.98917502212403, 40.522907795235234]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1531.3538026537215, 'Total size of all granules (MB)': 53597.38309288025}
+-- This project is done:  neon_ster
+-- Processing  umn_colville_2012
+-- Bounding box: [-118.55594022316863, 48.758498952609976, -118.50718303206105, 48.91597524223147]
+{'Number of available granules': 34, 'Average size of granules (MB)': 2717.883049992954, 'Total size of all granules (MB)': 92408.02369976044}
+-- This project is done:  umn_colville_2012
+-- Processing  neon_rmnp2020
+-- Bounding box: [-105.58321156372062, 40.13507038002437, -105.43130922898229, 40.304468593358415]
+{'Number of available granules': 50, 'Average size of granules (MB)': 2389.1046748542785, 'Total size of all granules (MB)': 119455.23374271393}
+-- This project is done:  neon_rmnp2020
+-- Processing  southafrica_karkloof
+-- Bounding box: [30.20729387647291, -29.32693356341991, 30.32302663717823, -29.280351142015697]
+{'Number of available granules': 35, 'Average size of granules (MB)': 699.4253182002476, 'Total size of all granules (MB)': 24479.886137008667}
+-- This project is done:  southafrica_karkloof
+-- Processing  spain_monfrague
+-- Bounding box: [-6.1025287817370275, 39.86309913832758, -6.054344961196315, 39.88280640759071]
+{'Number of available granules': 17, 'Average size of granules (MB)': 1698.997473043554, 'Total size of all granules (MB)': 28882.957041740417}
+-- This project is done:  spain_monfrague
+-- Processing  nsw_portmacquarie4
+-- Bounding box: [152.6408139228781, -31.80159047169871, 152.66174058025385, -31.774191229474823]
+{'Number of available granules': 25, 'Average size of granules (MB)': 610.183198928833, 'Total size of all granules (MB)': 15254.579973220825}
+-- This project is done:  nsw_portmacquarie4
+-- Processing  neon_clbj2022
+-- Bounding box: [-97.6777942190913, 33.31682306723211, -97.53660845890779, 33.42293836158271]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1268.9679864331295, 'Total size of all granules (MB)': 48220.78348445892}
+-- This project is done:  neon_clbj2022
+-- Processing  canada_2010_32612
+-- Bounding box: [-120.14276912559055, 53.6157527164121, -105.68528271601919, 62.28975912378605]
+{'Number of available granules': 4477, 'Average size of granules (MB)': 2180.010340313787, 'Total size of all granules (MB)': 9759906.293584824}
+-- This project is done:  canada_2010_32612
+-- Processing  neon_blan2017
+-- Bounding box: [-78.09933338424692, 39.02065606488116, -77.94314274872748, 39.152731151827844]
+{'Number of available granules': 48, 'Average size of granules (MB)': 1358.5559403300285, 'Total size of all granules (MB)': 65210.68513584137}
+-- This project is done:  neon_blan2017
+-- Processing  credo
+-- Bounding box: [120.62765818314922, -30.214226766260566, 120.68062510047876, -30.168585799852618]
+{'Number of available granules': 32, 'Average size of granules (MB)': 487.1590192914009, 'Total size of all granules (MB)': 15589.08861732483}
+-- This project is done:  credo
+-- Processing  nsw_casino
+-- Bounding box: [152.8663101432517, -29.409286621513168, 153.30022097414118, -28.97408069956099]
+{'Number of available granules': 91, 'Average size of granules (MB)': 617.7641578506638, 'Total size of all granules (MB)': 56216.5383644104}
+-- This project is done:  nsw_casino
+-- Processing  neon_leno2017
+-- Bounding box: [-88.25641163577988, 31.786016765918163, -88.12869309163285, 31.87869550437717]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1150.9212632062959, 'Total size of all granules (MB)': 47187.77179145813}
+-- This project is done:  neon_leno2017
+-- Processing  neon_bart2018
+-- Bounding box: [-71.34413331971098, 43.99037793010898, -71.20250784357893, 44.083681163034285]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1400.2187001649725, 'Total size of all granules (MB)': 60209.40410709381}
+-- This project is done:  neon_bart2018
+-- Processing  fernan_tepeepottercreek
+-- Bounding box: [-116.40917877113672, 47.735441834476646, -116.18675247010736, 47.839933401437776]
+{'Number of available granules': 60, 'Average size of granules (MB)': 2612.065929508209, 'Total size of all granules (MB)': 156723.95577049255}
+-- This project is done:  fernan_tepeepottercreek
+-- Processing  whrc_indonesia_walker
+-- Bounding box: [116.5486845885127, 1.7194265805874511, 117.51305947065421, 2.163484710537837]
+{'Number of available granules': 165, 'Average size of granules (MB)': 1440.539118830363, 'Total size of all granules (MB)': 237688.9546070099}
+-- This project is done:  whrc_indonesia_walker
+-- Processing  neon_ukfs2019
+-- Bounding box: [-95.26293716720976, 38.95224707890475, -95.11964835851532, 39.094481756430824]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1126.256783355366, 'Total size of all granules (MB)': 49555.29846763611}
+-- This project is done:  neon_ukfs2019
+-- Processing  embrapa_brazil_keller_2013_bon
+-- Bounding box: [-67.30153317424464, -9.890981177452906, -67.26948633966482, -9.858848771735314]
+{'Number of available granules': 20, 'Average size of granules (MB)': 1501.245350408554, 'Total size of all granules (MB)': 30024.90700817108}
+-- This project is done:  embrapa_brazil_keller_2013_bon
+-- Processing  nasa_howland
+-- Bounding box: [-68.77827254820589, 45.16911191567864, -68.68063550522223, 45.25583534205377]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1264.6827379714612, 'Total size of all granules (MB)': 54381.35773277283}
+-- This project is done:  nasa_howland
+-- Processing  stanley_stanley
+-- Bounding box: [-115.1640397871704, 44.26272979027271, -115.02153291572749, 44.347216588811506]
+{'Number of available granules': 60, 'Average size of granules (MB)': 2766.463209724426, 'Total size of all granules (MB)': 165987.79258346558}
+-- This project is done:  stanley_stanley
+-- Processing  neon_steicheq2016
+-- Bounding box: [-90.1310239373442, 45.765636286360994, -90.03787868150943, 45.84869020666073]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1247.3389047350202, 'Total size of all granules (MB)': 43656.86166572571}
+-- This project is done:  neon_steicheq2016
+-- Processing  embrapa_brazil_keller_2014_fnb
+-- Bounding box: [-54.4286731365603, -12.480009726022958, -54.38950669448227, -12.429639916561563]
+{'Number of available granules': 19, 'Average size of granules (MB)': 1484.5845220967342, 'Total size of all granules (MB)': 28207.10591983795}
+-- This project is done:  embrapa_brazil_keller_2014_fnb
+-- Processing  neon_bart2016
+-- Bounding box: [-71.34332556985733, 43.96992057760706, -71.20143839701018, 44.10458599987235]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1375.6299097537994, 'Total size of all granules (MB)': 60527.716029167175}
+-- This project is done:  neon_bart2016
+-- Processing  neon_leno
+-- Bounding box: [-88.2616084941857, 31.76266147860344, -88.10508817932048, 31.9025651450857]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1167.2030924388341, 'Total size of all granules (MB)': 57192.95152950287}
+-- This project is done:  neon_leno
+-- Processing  nezperce
+-- Bounding box: [-116.81194253741205, 46.15330831630744, -116.1421141412014, 46.49284938856356]
+{'Number of available granules': 133, 'Average size of granules (MB)': 3090.4636640405297, 'Total size of all granules (MB)': 411031.66731739044}
+-- This project is done:  nezperce
+-- Processing  canada_2010_32609
+-- Bounding box: [-133.9047727351057, 59.97938443880401, -120.84400273718397, 62.092740527330854]
+{'Number of available granules': 1995, 'Average size of granules (MB)': 1869.0900437892828, 'Total size of all granules (MB)': 3728834.637359619}
+-- This project is done:  canada_2010_32609
+-- Processing  sweden_skog2019
+-- Bounding box: [11.562238710866373, 55.93497611973894, 21.66116842824784, 65.99597307279603]
+{'Number of available granules': 3334, 'Average size of granules (MB)': 1528.8236390232826, 'Total size of all granules (MB)': 5097098.012503624}
+-- This project is done:  sweden_skog2019
+-- Processing  neon_steicheq2019
+-- Bounding box: [-90.12948018750123, 45.77310887553394, -90.03755143282132, 45.84472795597031]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1247.3389047350202, 'Total size of all granules (MB)': 43656.86166572571}
+-- This project is done:  neon_steicheq2019
+-- Processing  sagehen_20190730
+-- Bounding box: [-120.33523011108231, 39.36782701837815, -120.20087694292326, 39.493617809257984]
+{'Number of available granules': 46, 'Average size of granules (MB)': 2566.9592155373616, 'Total size of all granules (MB)': 118080.12391471863}
+-- This project is done:  sagehen_20190730
+-- Processing  roc_hansensouth
+-- Bounding box: [13.273452373593656, -3.874534977917686, 13.522671261401406, -2.5363208923078178]
+{'Number of available granules': 70, 'Average size of granules (MB)': 1381.2822019713265, 'Total size of all granules (MB)': 96689.75413799286}
+-- This project is done:  roc_hansensouth
+-- Processing  embrapa_brazil_keller_2014_cau
+-- Bounding box: [-48.49580364516432, -3.767195061561691, -48.46843421206663, -3.7302824781228447]
+{'Number of available granules': 27, 'Average size of granules (MB)': 1297.2970222897, 'Total size of all granules (MB)': 35027.0196018219}
+-- This project is done:  embrapa_brazil_keller_2014_cau
+-- Processing  nasa_me
+-- Bounding box: [-68.76720090877336, 45.19515902481332, -68.7001564327661, 45.236032840903746]
+{'Number of available granules': 30, 'Average size of granules (MB)': 1307.477541732788, 'Total size of all granules (MB)': 39224.32625198364}
+-- This project is done:  nasa_me
+-- Processing  embrapa_brazil_keller_2008_pre
+-- Bounding box: [-60.11700122653563, -2.4478906445535213, -59.76413693215717, -2.3297140072481946]
+{'Number of available granules': 71, 'Average size of granules (MB)': 948.9802531390123, 'Total size of all granules (MB)': 67377.59797286987}
+-- This project is done:  embrapa_brazil_keller_2008_pre
+-- Processing  neon_moab2018
+-- Bounding box: [-109.45736374142938, 38.19326378452524, -109.31617115338548, 38.30028995434955]
+{'Number of available granules': 39, 'Average size of granules (MB)': 2604.0327396881885, 'Total size of all granules (MB)': 101557.27684783936}
+-- This project is done:  neon_moab2018
+-- Processing  inpe_brazil31979
+-- Bounding box: [-71.94789230736819, -10.427168475083324, -65.92710298295582, -0.0248473466995463]
+{'Number of available granules': 1824, 'Average size of granules (MB)': 1544.0898904204369, 'Total size of all granules (MB)': 2816419.960126877}
+-- This project is done:  inpe_brazil31979
+-- Processing  moscowmtn_2009
+-- Bounding box: [-116.98893212454027, 46.77778124032195, -116.6453840810179, 46.865927632671195]
+{'Number of available granules': 72, 'Average size of granules (MB)': 3124.9014007647834, 'Total size of all granules (MB)': 224992.9008550644}
+-- This project is done:  moscowmtn_2009
+-- Processing  neon_blan2016
+-- Bounding box: [-78.10009172060239, 39.01840071130612, -77.9437446408114, 39.15680764533445]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1372.915768623352, 'Total size of all granules (MB)': 64527.04112529755}
+-- This project is done:  neon_blan2016
+-- Processing  neon_dsny2021
+-- Bounding box: [-81.41755895645232, 28.027329974457516, -81.36589507711463, 28.150504708510617]
+{'Number of available granules': 32, 'Average size of granules (MB)': 1387.2743936181068, 'Total size of all granules (MB)': 44392.78059577942}
+-- This project is done:  neon_dsny2021
+-- Processing  neon_heal2017
+-- Bounding box: [-149.3347671707554, 63.82879313499709, -149.10255261448424, 63.93113957075652]
+{'Number of available granules': 78, 'Average size of granules (MB)': 2370.49001900355, 'Total size of all granules (MB)': 184898.22148227692}
+-- This project is done:  neon_heal2017
+-- Processing  plumasnf_20180717
+-- Bounding box: [-121.39147813736288, 39.78435503079619, -119.9256080647861, 40.352974527362996]
+{'Number of available granules': 258, 'Average size of granules (MB)': 2435.484474256057, 'Total size of all granules (MB)': 628354.9943580627}
+-- This project is done:  plumasnf_20180717
+-- Processing  neon_jerc2017
+-- Bounding box: [-84.52946804916684, 31.15806605441218, -84.35425363627543, 31.328056841901287]
+{'Number of available granules': 48, 'Average size of granules (MB)': 1232.258550087611, 'Total size of all granules (MB)': 59148.41040420532}
+-- This project is done:  neon_jerc2017
+-- Processing  neon_scbi2021
+-- Bounding box: [-78.21489207993537, 38.82745071272323, -78.0842161229051, 38.9221393521999]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1441.8775914355022, 'Total size of all granules (MB)': 59116.98124885559}
+-- This project is done:  neon_scbi2021
+-- Processing  inpe_brazil31974
+-- Bounding box: [-65.9084661292348, 0.026333906454925615, -59.94739158667843, 4.043139676434461]
+{'Number of available granules': 1743, 'Average size of granules (MB)': 1257.3923552759886, 'Total size of all granules (MB)': 2191634.875246048}
+-- This project is done:  inpe_brazil31974
+-- Processing  warra
+-- Bounding box: [146.6189771343984, -43.12921510711346, 146.69375783493626, -43.077044946960704]
+{'Number of available granules': 24, 'Average size of granules (MB)': 916.3074955542883, 'Total size of all granules (MB)': 21991.379893302917}
+-- This project is done:  warra
+-- Processing  neon_konz2017
+-- Bounding box: [-96.66038314921526, 39.05122839256295, -96.48360779182114, 39.24050677044461]
+{'Number of available granules': 51, 'Average size of granules (MB)': 1175.2802001354742, 'Total size of all granules (MB)': 59939.29020690918}
+-- This project is done:  neon_konz2017
+-- Processing  neon_clbj2019
+-- Bounding box: [-97.68007129639925, 33.30889442539588, -97.53874831440763, 33.429946578717086]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1268.9679864331295, 'Total size of all granules (MB)': 48220.78348445892}
+-- This project is done:  neon_clbj2019
+-- Processing  embrapa_brazil_2020_hum_a01
+-- Bounding box: [-67.66841136955556, -9.762640479856481, -67.62133190057854, -9.749430358746686]
+{'Number of available granules': 21, 'Average size of granules (MB)': 1760.8218292508807, 'Total size of all granules (MB)': 36977.258414268494}
+-- This project is done:  embrapa_brazil_2020_hum_a01
+-- Processing  embrapa_brazil_keller_2013_fn1
+-- Bounding box: [-53.832399029428785, -12.084443225365312, -53.83035723427676, -11.635000178405567]
+{'Number of available granules': 22, 'Average size of granules (MB)': 1296.3011106577787, 'Total size of all granules (MB)': 28518.62443447113}
+-- This project is done:  embrapa_brazil_keller_2013_fn1
+-- Processing  neon_grsm
+-- Bounding box: [-83.66311158090356, 35.54732338454574, -83.44229398513494, 35.72909840014041]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1423.812403309102, 'Total size of all granules (MB)': 69766.807762146}
+-- This project is done:  neon_grsm
+-- Processing  southafrica_dargle
+-- Bounding box: [30.023768434834754, -29.49105955864488, 30.067402953893513, -29.475161487202058]
+{'Number of available granules': 24, 'Average size of granules (MB)': 652.6646878321966, 'Total size of all granules (MB)': 15663.952507972717}
+-- This project is done:  southafrica_dargle
+-- Processing  neon_srer2021
+-- Bounding box: [-110.97191494753467, 31.70888191686137, -110.73680138194818, 31.931209471050124]
+{'Number of available granules': 58, 'Average size of granules (MB)': 2424.7424120738588, 'Total size of all granules (MB)': 140635.0599002838}
+-- This project is done:  neon_srer2021
+-- Processing  kellner_pfynwald
+-- Bounding box: [7.606879885561707, 46.29576901726241, 7.622293851093837, 46.308585835224534]
+{'Number of available granules': 24, 'Average size of granules (MB)': 1577.3129383325577, 'Total size of all granules (MB)': 37855.510519981384}
+-- This project is done:  kellner_pfynwald
+-- Processing  spain_exts3
+-- Bounding box: [-6.350983331457414, 37.990039389453415, -6.212049610920976, 38.08383417222253]
+{'Number of available granules': 40, 'Average size of granules (MB)': 1378.8284313678741, 'Total size of all granules (MB)': 55153.137254714966}
+-- This project is done:  spain_exts3
+-- Processing  embrapa_brazil_keller_2008_cui
+-- Bounding box: [-60.21500523787324, -2.61983117167527, -60.1819881519585, -2.5945150334246065]
+{'Number of available granules': 20, 'Average size of granules (MB)': 1064.3285492897035, 'Total size of all granules (MB)': 21286.570985794067}
+-- This project is done:  embrapa_brazil_keller_2008_cui
+-- Processing  csir_justicia
+-- Bounding box: [31.375920753355953, -24.916187427242246, 31.539684381945015, -24.853342006749052]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1530.19376988638, 'Total size of all granules (MB)': 64268.138335227966}
+-- This project is done:  csir_justicia
+-- Processing  csir_ireagh
+-- Bounding box: [31.238444688291953, -24.900368432492055, 31.392947457718318, -24.82417287922281]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1630.5360345159258, 'Total size of all granules (MB)': 68482.51344966888}
+-- This project is done:  csir_ireagh
+-- Processing  disney_danum
+-- Bounding box: [117.92455246954658, 5.847696309761455, 117.97385301517274, 5.865765039132225]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1131.914340171814, 'Total size of all granules (MB)': 28297.85850429535}
+-- This project is done:  disney_danum
+-- Processing  neon_yell2018
+-- Bounding box: [-110.67627781003604, 44.84091918577268, -110.3601328230025, 44.994335435410285]
+{'Number of available granules': 75, 'Average size of granules (MB)': 2406.3133393096923, 'Total size of all granules (MB)': 180473.50044822693}
+-- This project is done:  neon_yell2018
+-- Processing  neon_deju2018
+-- Bounding box: [-145.82861895841282, 63.77489485041796, -145.6051985896249, 63.962348702394]
+{'Number of available granules': 82, 'Average size of granules (MB)': 2203.225037830632, 'Total size of all granules (MB)': 180664.45310211182}
+-- This project is done:  neon_deju2018
+-- Processing  silvanet_valsain
+-- Bounding box: [-4.073880703007002, 40.77523886409372, -3.9988732192329466, 40.83944661159923]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1672.2749124799457, 'Total size of all granules (MB)': 58529.621936798096}
+-- This project is done:  silvanet_valsain
+-- Processing  jpl_borneo_138
+-- Bounding box: [110.12462309539949, -1.881078587530739, 110.19079499677866, -1.8528154851553196]
+{'Number of available granules': 24, 'Average size of granules (MB)': 767.2731119791666, 'Total size of all granules (MB)': 18414.5546875}
+-- This project is done:  jpl_borneo_138
+-- Processing  neon_sjer
+-- Bounding box: [-119.7997148567575, 37.03770873207449, -119.66824138257803, 37.145010526426525]
+{'Number of available granules': 38, 'Average size of granules (MB)': 3017.652761283674, 'Total size of all granules (MB)': 114670.8049287796}
+-- This project is done:  neon_sjer
+-- Processing  neon_unde2016
+-- Bounding box: [-89.59015440745469, 46.122474712272016, -89.42016130682724, 46.292812348205345]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1332.3154452514648, 'Total size of all granules (MB)': 66615.77226257324}
+-- This project is done:  neon_unde2016
+-- Processing  whroo
+-- Bounding box: [145.02366997169815, -36.67752688756565, 145.03508431564046, -36.6686809074414]
+{'Number of available granules': 22, 'Average size of granules (MB)': 720.2795577916232, 'Total size of all granules (MB)': 15846.15027141571}
+-- This project is done:  whroo
+-- Processing  cflra_clearcreek
+-- Bounding box: [-115.82914015037426, 45.98877087089206, -115.68117815347284, 46.05468894020931]
+{'Number of available granules': 53, 'Average size of granules (MB)': 3040.073925306212, 'Total size of all granules (MB)': 161123.91804122925}
+-- This project is done:  cflra_clearcreek
+-- Processing  csir_agincourt
+-- Bounding box: [31.13373743012437, -24.837917848272934, 31.226852836292718, -24.786453740736455]
+{'Number of available granules': 34, 'Average size of granules (MB)': 1926.4654803276062, 'Total size of all granules (MB)': 65499.82633113861}
+-- This project is done:  csir_agincourt
+-- Processing  neon_blan2022
+-- Bounding box: [-78.1010563404152, 39.0370594218169, -77.94348414695185, 39.14885025081759]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1372.915768623352, 'Total size of all granules (MB)': 64527.04112529755}
+-- This project is done:  neon_blan2022
+-- Processing  drc_ghent_field_32734
+-- Bounding box: [18.001874366860704, -5.858725792802911, 23.50378289144509, 0.03994441780490532]
+{'Number of available granules': 1664, 'Average size of granules (MB)': 1046.338940449059, 'Total size of all granules (MB)': 1741107.9969072342}
+-- This project is done:  drc_ghent_field_32734
+-- Processing  embrapa_brazil_keller_2013_fst
+-- Bounding box: [-56.24361174016863, -1.642786749443779, -56.20150255839927, -1.6013682121943293]
+{'Number of available granules': 24, 'Average size of granules (MB)': 1277.9796938101451, 'Total size of all granules (MB)': 30671.51265144348}
+-- This project is done:  embrapa_brazil_keller_2013_fst
+-- Processing  embrapa_brazil_keller_2012_tap
+-- Bounding box: [-54.99161683045327, -3.1588177662842094, -54.939767341035214, -2.8425351875147666]
+{'Number of available granules': 26, 'Average size of granules (MB)': 1129.2079976155208, 'Total size of all granules (MB)': 29359.40793800354}
+-- This project is done:  embrapa_brazil_keller_2012_tap
+-- Processing  neon_bona2017
+-- Bounding box: [-147.68009370960294, 65.11702286847965, -147.33720499716003, 65.24187421988307]
+{'Number of available granules': 107, 'Average size of granules (MB)': 2262.824510511951, 'Total size of all granules (MB)': 242122.22262477875}
+-- This project is done:  neon_bona2017
+-- Processing  neon_unde2022
+-- Bounding box: [-89.59791960841744, 46.14025619362826, -89.41062107826387, 46.27636184662398]
+{'Number of available granules': 52, 'Average size of granules (MB)': 1338.7825740117294, 'Total size of all granules (MB)': 69616.69384860992}
+-- This project is done:  neon_unde2022
+-- Processing  embrapa_brazil_2020_jar_a01b
+-- Bounding box: [-122.85630085038329, -87.64407669835542, -53.225312425691456, 0.7700025339274377]
+{'Number of available granules': 59364, 'Average size of granules (MB)': 1291.5478826120177, 'Total size of all granules (MB)': 76671448.50337982}
+-- This project is done:  embrapa_brazil_2020_jar_a01b
+-- Processing  spain_exts4
+-- Bounding box: [-6.0173630007699535, 38.71984233145109, -5.876401400930142, 38.831320983192555]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1487.976418900997, 'Total size of all granules (MB)': 69934.89168834686}
+-- This project is done:  spain_exts4
+-- Processing  embrapa_brazil_2020_tap_a04
+-- Bounding box: [-54.97816255726506, -3.0321872763180395, -54.94717431658112, -3.0025246110338197]
+{'Number of available granules': 20, 'Average size of granules (MB)': 1156.541848230362, 'Total size of all granules (MB)': 23130.83696460724}
+-- This project is done:  embrapa_brazil_2020_tap_a04
+-- Processing  cascadeeastzone
+-- Bounding box: [-115.84855757744906, 44.62807690809301, -115.6733760479521, 45.27313680992954]
+{'Number of available granules': 77, 'Average size of granules (MB)': 3065.433319884461, 'Total size of all granules (MB)': 236038.36563110352}
+-- This project is done:  cascadeeastzone
+-- Processing  neon_dela2021
+-- Bounding box: [-87.90193059012539, 32.493365839899646, -87.75800361223166, 32.608984643338125]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1226.4033651351929, 'Total size of all granules (MB)': 53961.748065948486}
+-- This project is done:  neon_dela2021
+-- Processing  jpl_mabounie
+-- Bounding box: [10.482312200219605, -0.8234798450869963, 10.618009802271542, -0.7139983750010857]
+{'Number of available granules': 35, 'Average size of granules (MB)': 869.0670839854649, 'Total size of all granules (MB)': 30417.347939491272}
+-- This project is done:  jpl_mabounie
+-- Processing  usda_panj
+-- Bounding box: [-75.84347389516273, 39.51383541243235, -74.01329031066965, 41.1790585424341]
+{'Number of available granules': 324, 'Average size of granules (MB)': 1327.5287375538437, 'Total size of all granules (MB)': 430119.3109674454}
+-- This project is done:  usda_panj
+-- Processing  neon_grsm2022
+-- Bounding box: [-83.54175793094905, 35.54544994177622, -83.47414042461416, 35.72571754870612]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1281.7648978362213, 'Total size of all granules (MB)': 47425.301219940186}
+-- This project is done:  neon_grsm2022
+-- Processing  neon_bldr_preflood
+-- Bounding box: [-105.32557832628999, 39.94358058323507, -105.14263749027855, 40.101780626388646]
+{'Number of available granules': 59, 'Average size of granules (MB)': 1911.8059056168895, 'Total size of all granules (MB)': 112796.54843139648}
+-- This project is done:  neon_bldr_preflood
+-- Processing  embrapa_brazil_2020_tap_a01
+-- Bounding box: [-54.97015046533058, -2.8730828776180837, -54.93959935370354, -2.8422096320776307]
+{'Number of available granules': 22, 'Average size of granules (MB)': 1146.8527475703847, 'Total size of all granules (MB)': 25230.760446548462}
+-- This project is done:  embrapa_brazil_2020_tap_a01
+-- Processing  embrapa_brazil_keller_2013_fn2
+-- Bounding box: [-54.196216409767324, -12.08446220495759, -54.194361100179314, -11.63498217821638]
+{'Number of available granules': 26, 'Average size of granules (MB)': 1133.3488834087666, 'Total size of all granules (MB)': 29467.07096862793}
+-- This project is done:  embrapa_brazil_keller_2013_fn2
+-- Processing  stjoe
+-- Bounding box: [-116.35491512128486, 47.13137572567387, -116.02624359926435, 47.29049177945969]
+{'Number of available granules': 83, 'Average size of granules (MB)': 3037.666851618204, 'Total size of all granules (MB)': 252126.3486843109}
+-- This project is done:  stjoe
+-- Processing  embrapa_brazil_keller_2013_hum
+-- Bounding box: [-67.6679246331491, -9.76215650285967, -67.6218186758743, -9.749886701761483]
+{'Number of available granules': 21, 'Average size of granules (MB)': 1760.8218292508807, 'Total size of all granules (MB)': 36977.258414268494}
+-- This project is done:  embrapa_brazil_keller_2013_hum
+-- Processing  embrapa_brazil_2020_par_a01
+-- Bounding box: [-47.55855674170223, -3.329349496037021, -47.51098840367411, -3.305772395865757]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1518.5759559714277, 'Total size of all granules (MB)': 34927.246987342834}
+-- This project is done:  embrapa_brazil_2020_par_a01
+-- Processing  fergusonfire_20180916
+-- Bounding box: [-119.97247633202707, 37.38163914535513, -119.53356351071979, 37.729521898745915]
+{'Number of available granules': 84, 'Average size of granules (MB)': 2773.785955894561, 'Total size of all granules (MB)': 232998.02029514313}
+-- This project is done:  fergusonfire_20180916
+-- Processing  amani
+-- Bounding box: [38.55675496349991, -5.2381053471797285, 38.67390808754724, -5.0755275925791326]
+{'Number of available granules': 36, 'Average size of granules (MB)': 1372.4034650590684, 'Total size of all granules (MB)': 49406.524742126465}
+-- This project is done:  amani
+-- Processing  neon_wood2021
+-- Bounding box: [-99.33353212801245, 47.08037703902198, -99.01397519544187, 47.24228172466549]
+{'Number of available granules': 73, 'Average size of granules (MB)': 1360.0406255199484, 'Total size of all granules (MB)': 99282.96566295624}
+-- This project is done:  neon_wood2021
+-- Processing  malaysia_davidcoomes
+-- Bounding box: [117.75499916130697, 4.917464425005396, 117.92094421003807, 4.977820586570639]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1184.2559386852176, 'Total size of all granules (MB)': 50923.005363464355}
+-- This project is done:  malaysia_davidcoomes
+-- Processing  neon_grsm2016
+-- Bounding box: [-83.66656087863079, 35.534473317698776, -83.32177003256069, 35.76846437799249]
+{'Number of available granules': 72, 'Average size of granules (MB)': 1323.4585443470214, 'Total size of all granules (MB)': 95289.01519298553}
+-- This project is done:  neon_grsm2016
+-- Processing  g_aguilarNP
+-- Bounding box: [152.7698771628614, -27.46537770409596, 152.86871511586338, -27.376843709302435]
+{'Number of available granules': 37, 'Average size of granules (MB)': 658.84471952593, 'Total size of all granules (MB)': 24377.25462245941}
+-- This project is done:  g_aguilarNP
+-- Processing  embrapa_brazil_2020_jar_a01a
+-- Bounding box: [-115.42319109057102, -86.93277591527719, -53.77523868626193, 1.372857382345968]
+{'Number of available granules': 51681, 'Average size of granules (MB)': 1300.502820153887, 'Total size of all granules (MB)': 67211286.24837303}
+-- This project is done:  embrapa_brazil_2020_jar_a01a
+-- Processing  nasa_sierra
+-- Bounding box: [-119.07849897147021, 36.95174564496185, -119.01065274805785, 36.98353932924899]
+{'Number of available granules': 30, 'Average size of granules (MB)': 2617.8264596621198, 'Total size of all granules (MB)': 78534.79378986359}
+-- This project is done:  nasa_sierra
+-- Processing  canada_2010_32610
+-- Bounding box: [-132.14276912559055, 61.24852997572791, -115.63197845555949, 64.27033458028035]
+{'Number of available granules': 2541, 'Average size of granules (MB)': 1827.0069813474995, 'Total size of all granules (MB)': 4642424.739603996}
+-- This project is done:  canada_2010_32610
+-- Processing  dcef_nfp_2009
+-- Bounding box: [-116.52341665482298, 47.72569485299604, -116.4885833546275, 47.74872105976461]
+{'Number of available granules': 30, 'Average size of granules (MB)': 2978.224650541941, 'Total size of all granules (MB)': 89346.73951625824}
+-- This project is done:  dcef_nfp_2009
+-- Processing  embrapa_brazil_keller_2014_rib
+-- Bounding box: [-67.59296787326103, -9.949660994769411, -67.55269130044798, -9.90871112561483]
+{'Number of available granules': 20, 'Average size of granules (MB)': 2215.9243535518644, 'Total size of all granules (MB)': 44318.48707103729}
+-- This project is done:  embrapa_brazil_keller_2014_rib
+-- Processing  dcef_nfp_2010
+-- Bounding box: [-116.52229877241392, 47.72721778460648, -116.48232345806719, 47.75064147198795]
+{'Number of available granules': 30, 'Average size of granules (MB)': 2978.224650541941, 'Total size of all granules (MB)': 89346.73951625824}
+-- This project is done:  dcef_nfp_2010
+-- Processing  neon_tall2019
+-- Bounding box: [-87.48765572054602, 32.87177548894984, -87.34950332975, 32.98547374215995]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1123.3116831098284, 'Total size of all granules (MB)': 47179.09069061279}
+-- This project is done:  neon_tall2019
+-- Processing  upperlolo
+-- Bounding box: [-115.74178767420092, 46.313724522286094, -115.56212363360702, 46.43878892270524]
+{'Number of available granules': 61, 'Average size of granules (MB)': 3003.6049600820074, 'Total size of all granules (MB)': 183219.90256500244}
+-- This project is done:  upperlolo
+-- Processing  neon_unde2020
+-- Bounding box: [-89.60470579847245, 46.134206125490756, -89.4177698077022, 46.27754491888644]
+{'Number of available granules': 52, 'Average size of granules (MB)': 1338.7825740117294, 'Total size of all granules (MB)': 69616.69384860992}
+-- This project is done:  neon_unde2020
+-- Processing  neon_jorn2017
+-- Bounding box: [-106.97737409530943, 32.55724010467997, -106.7699926410162, 32.747895387773674]
+{'Number of available granules': 30, 'Average size of granules (MB)': 2220.149984550476, 'Total size of all granules (MB)': 66604.49953651428}
+-- This project is done:  neon_jorn2017
+-- Processing  neon_mlbs2021
+-- Bounding box: [-80.60343500105185, 37.32677791670149, -80.45918562523202, 37.43732839757457]
+{'Number of available granules': 45, 'Average size of granules (MB)': 1441.4541836632623, 'Total size of all granules (MB)': 64865.4382648468}
+-- This project is done:  neon_mlbs2021
+-- Processing  neon_sjer2019
+-- Bounding box: [-119.79810325364652, 37.0442895648902, -119.66473109417957, 37.13647204211174]
+{'Number of available granules': 39, 'Average size of granules (MB)': 2955.846515948956, 'Total size of all granules (MB)': 115278.01412200928}
+-- This project is done:  neon_sjer2019
+-- Processing  neon_heal2021
+-- Bounding box: [-149.33737345125863, 63.821305090657276, -149.085349687541, 63.94013826154471]
+{'Number of available granules': 82, 'Average size of granules (MB)': 2295.03114477018, 'Total size of all granules (MB)': 188192.55387115479}
+-- This project is done:  neon_heal2021
+-- Processing  neon_tall2015
+-- Bounding box: [-87.52212546021549, 32.837422785557045, -87.33699681822841, 33.01982741757936]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1091.8773602355611, 'Total size of all granules (MB)': 48042.603850364685}
+-- This project is done:  neon_tall2015
+-- Processing  stri_serc_Mar2012
+-- Bounding box: [-76.5724598657148, 38.87541769904381, -76.53590134451488, 38.90628677902108]
+{'Number of available granules': 18, 'Average size of granules (MB)': 1758.2767694261338, 'Total size of all granules (MB)': 31648.98184967041}
+-- This project is done:  stri_serc_Mar2012
+-- Processing  neon_onaq2022
+-- Bounding box: [-112.57829606931988, 40.13187918604577, -112.39456736361015, 40.25081235277507]
+{'Number of available granules': 54, 'Average size of granules (MB)': 2136.9403985164786, 'Total size of all granules (MB)': 115394.78151988983}
+-- This project is done:  neon_onaq2022
+-- Processing  neon_niwo2020
+-- Bounding box: [-105.646925778401, 39.97844650396121, -105.48325856275333, 40.07721403826182]
+{'Number of available granules': 41, 'Average size of granules (MB)': 2414.180126353008, 'Total size of all granules (MB)': 98981.38518047333}
+-- This project is done:  neon_niwo2020
+-- Processing  spain_extremadura
+-- Bounding box: [-7.257948116630912, 38.00057657539595, -4.841764161425308, 40.47183017396883]
+{'Number of available granules': 418, 'Average size of granules (MB)': 1513.1763603082684, 'Total size of all granules (MB)': 632507.7186088562}
+-- This project is done:  spain_extremadura
+-- Processing  neon_jerc2018
+-- Bounding box: [-84.57218514598121, 31.15761166654195, -84.3553875648802, 31.328681542811584]
+{'Number of available granules': 59, 'Average size of granules (MB)': 1206.413291640201, 'Total size of all granules (MB)': 71178.38420677185}
+-- This project is done:  neon_jerc2018
+-- Processing  neon_moab2017
+-- Bounding box: [-109.45754917827755, 38.17712379580142, -109.29091777284829, 38.34446074822867]
+{'Number of available granules': 45, 'Average size of granules (MB)': 2371.8363190756904, 'Total size of all granules (MB)': 106732.63435840607}
+-- This project is done:  neon_moab2017
+-- Processing  neon_cper2021
+-- Bounding box: [-104.80566212048838, 40.7727466132165, -104.6653151674285, 40.880742033054126]
+{'Number of available granules': 40, 'Average size of granules (MB)': 1875.0386793136597, 'Total size of all granules (MB)': 75001.54717254639}
+-- This project is done:  neon_cper2021
+-- Processing  spain_exts2
+-- Bounding box: [-7.147833832349565, 38.361001243100574, -7.052357988233214, 38.47207389565881]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1361.448707530373, 'Total size of all granules (MB)': 51735.050886154175}
+-- This project is done:  spain_exts2
+-- Processing  jrsrp_ilcp2015_wholeq6
+-- Bounding box: [146.25289893788167, -26.41839823866662, 147.7016953954505, -25.280792899440975]
+{'Number of available granules': 239, 'Average size of granules (MB)': 1164.3931461837003, 'Total size of all granules (MB)': 278289.96193790436}
+-- This project is done:  jrsrp_ilcp2015_wholeq6
+-- Processing  neon_barr2019
+-- Bounding box: [-156.85098753935642, 71.21650912844608, -156.24657345489246, 71.39272211342836]
+{'Number of available granules': 162, 'Average size of granules (MB)': 2025.8146571053398, 'Total size of all granules (MB)': 328181.97445106506}
+-- This project is done:  neon_barr2019
+-- Processing  gliht_mexico_nfi_32616
+-- Bounding box: [-89.90635863743266, 18.33785434894125, -87.30746887075087, 21.510195996697576]
+{'Number of available granules': 440, 'Average size of granules (MB)': 938.4044951785694, 'Total size of all granules (MB)': 412897.97787857056}
+-- This project is done:  gliht_mexico_nfi_32616
+-- Processing  embrapa_brazil_keller_2013_jam
+-- Bounding box: [-63.023001080200515, -9.173693409148509, -62.98976840947126, -9.066283052246927]
+{'Number of available granules': 29, 'Average size of granules (MB)': 1146.6111567924763, 'Total size of all granules (MB)': 33251.72354698181}
+-- This project is done:  embrapa_brazil_keller_2013_jam
+-- Processing  gliht_mexico_nfi_32613
+-- Bounding box: [-110.63589427207967, 15.822952100630642, -87.30746887075087, 30.75954437674237]
+{'Number of available granules': 6942, 'Average size of granules (MB)': 1247.9064344322603, 'Total size of all granules (MB)': 8662966.46782875}
+-- This project is done:  gliht_mexico_nfi_32613
+-- Processing  neon_steicheq2017
+-- Bounding box: [-90.13051516747564, 45.77809567435906, -90.03759851346724, 45.83865012534442]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1247.3389047350202, 'Total size of all granules (MB)': 43656.86166572571}
+-- This project is done:  neon_steicheq2017
+-- Processing  nsw_portmacquarie1
+-- Bounding box: [152.68700202190277, -31.296115680432337, 152.84198084528458, -31.17585138202718]
+{'Number of available granules': 51, 'Average size of granules (MB)': 577.6185984892004, 'Total size of all granules (MB)': 29458.54852294922}
+-- This project is done:  nsw_portmacquarie1
+-- Processing  embrapa_brazil_2020_duc_a01
+-- Bounding box: [-59.95812784630481, -2.965165593514831, -59.92107087455358, -2.9357710050974752]
+{'Number of available granules': 16, 'Average size of granules (MB)': 1062.7811490297318, 'Total size of all granules (MB)': 17004.498384475708}
+-- This project is done:  embrapa_brazil_2020_duc_a01
+-- Processing  jpl_wb_colombia
+-- Bounding box: [-78.93697384070646, 1.5094227375001779, -76.32717565770481, 7.650856195296362]
+{'Number of available granules': 480, 'Average size of granules (MB)': 1311.2868953903517, 'Total size of all granules (MB)': 629417.7097873688}
+-- This project is done:  jpl_wb_colombia
+-- Processing  neon_dcfs2016
+-- Bounding box: [-99.32795654512431, 47.06871121237597, -99.02635001744757, 47.259324382198216]
+{'Number of available granules': 72, 'Average size of granules (MB)': 1369.9907557169597, 'Total size of all granules (MB)': 98639.3344116211}
+-- This project is done:  neon_dcfs2016
+-- Processing  neon_sjer2017
+-- Bounding box: [-119.81137009603744, 37.03515145150093, -119.6850732574819, 37.14774476515372]
+{'Number of available granules': 37, 'Average size of granules (MB)': 2862.0494492762796, 'Total size of all granules (MB)': 105895.82962322235}
+-- This project is done:  neon_sjer2017
+-- Processing  neon_nogp2021
+-- Bounding box: [-100.99231691059416, 46.73239263444099, -100.83533441507024, 46.841343531209496]
+{'Number of available granules': 52, 'Average size of granules (MB)': 1345.831898505871, 'Total size of all granules (MB)': 69983.2587223053}
+-- This project is done:  neon_nogp2021
+-- Processing  neon_deju2017
+-- Bounding box: [-145.82656293112473, 63.77116454960794, -145.61863294252052, 63.965390894233884]
+{'Number of available granules': 79, 'Average size of granules (MB)': 2179.3582189294357, 'Total size of all granules (MB)': 172169.29929542542}
+-- This project is done:  neon_deju2017
+-- Processing  neon_bona2021
+-- Bounding box: [-147.69419773373372, 65.1097697290486, -147.32401900356533, 65.25187832286828]
+{'Number of available granules': 109, 'Average size of granules (MB)': 2266.535928087497, 'Total size of all granules (MB)': 247052.41616153717}
+-- This project is done:  neon_bona2021
+-- Processing  skidmore_bayerischer
+-- Bounding box: [13.169402600736552, 48.854016256329984, 13.61442568789072, 49.133984456146756]
+{'Number of available granules': 105, 'Average size of granules (MB)': 1603.019789223444, 'Total size of all granules (MB)': 168317.0778684616}
+-- This project is done:  skidmore_bayerischer
+-- Processing  csir_limpopo
+-- Bounding box: [30.315874903266224, -23.748858518232055, 30.99554210622893, -23.12588306006914]
+{'Number of available granules': 125, 'Average size of granules (MB)': 1649.3191186904908, 'Total size of all granules (MB)': 206164.88983631134}
+-- This project is done:  csir_limpopo
+-- Processing  neon_heal2019
+-- Bounding box: [-149.33258071406692, 63.82570504604731, -149.103438711806, 63.93397480001759]
+{'Number of available granules': 78, 'Average size of granules (MB)': 2370.49001900355, 'Total size of all granules (MB)': 184898.22148227692}
+-- This project is done:  neon_heal2019
+-- Processing  canada_petawawa2012
+-- Bounding box: [-77.62067284760211, 45.925730828083545, -77.37443522037111, 46.019315748193904]
+{'Number of available granules': 67, 'Average size of granules (MB)': 1248.9661887866348, 'Total size of all granules (MB)': 83680.73464870453}
+-- This project is done:  canada_petawawa2012
+-- Processing  neon_ukfs2016
+-- Bounding box: [-95.25640151103069, 38.938371122533354, -95.128660524051, 39.10646320304372]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1135.536177413408, 'Total size of all granules (MB)': 48828.05562877655}
+-- This project is done:  neon_ukfs2016
+-- Processing  neon_bona2018
+-- Bounding box: [-147.68083617204218, 65.11690445947369, -147.33417628663167, 65.24187351335405]
+{'Number of available granules': 107, 'Average size of granules (MB)': 2262.824510511951, 'Total size of all granules (MB)': 242122.22262477875}
+-- This project is done:  neon_bona2018
+-- Processing  neon_grsm2018
+-- Bounding box: [-83.66311158090356, 35.54732338454574, -83.44201111549427, 35.72909840014041]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1423.812403309102, 'Total size of all granules (MB)': 69766.807762146}
+-- This project is done:  neon_grsm2018
+-- Processing  embrapa_brazil_2020_cau_a01
+-- Bounding box: [-48.49625838759529, -3.767647017494026, -48.46797942881738, -3.729824396615992]
+{'Number of available granules': 27, 'Average size of granules (MB)': 1297.2970222897, 'Total size of all granules (MB)': 35027.0196018219}
+-- This project is done:  embrapa_brazil_2020_cau_a01
+-- Processing  neon_srer2019
+-- Bounding box: [-110.9898684224076, 31.7110310478292, -110.72894839204533, 31.926123903488907]
+{'Number of available granules': 59, 'Average size of granules (MB)': 2393.9994467880765, 'Total size of all granules (MB)': 141245.96736049652}
+-- This project is done:  neon_srer2019
+-- Processing  nagano_japan
+-- Bounding box: [137.93062419170099, 35.863375528053496, 137.93444994175542, 35.868242346420615]
+{'Number of available granules': 14, 'Average size of granules (MB)': 2110.237472329821, 'Total size of all granules (MB)': 29543.324612617493}
+-- This project is done:  nagano_japan
+-- Processing  neon_deju2019
+-- Bounding box: [-145.82793549476435, 63.772098424392034, -145.60761711274637, 63.952609687687065]
+{'Number of available granules': 81, 'Average size of granules (MB)': 2218.5474072915536, 'Total size of all granules (MB)': 179702.33999061584}
+-- This project is done:  neon_deju2019
+-- Processing  gliht_32606ak2014
+-- Bounding box: [-149.78329405836675, 62.75092183280961, -140.94537292885175, 65.43756546430923]
+{'Number of available granules': 1429, 'Average size of granules (MB)': 2263.686268355314, 'Total size of all granules (MB)': 3234807.677479744}
+-- This project is done:  gliht_32606ak2014
+-- Processing  canada_2010_26917
+-- Bounding box: [-81.98730891689422, 48.19972122816018, -81.74006744278736, 48.326547384082055]
+{'Number of available granules': 69, 'Average size of granules (MB)': 1245.6970059491587, 'Total size of all granules (MB)': 85953.09341049194}
+-- This project is done:  canada_2010_26917
+-- Processing  neon_ster2021
+-- Bounding box: [-103.11765945845096, 40.42673410092483, -102.96811919879757, 40.53118271703984]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1468.8515420076324, 'Total size of all granules (MB)': 60222.91322231293}
+-- This project is done:  neon_ster2021
+-- Processing  neon_ster2022
+-- Bounding box: [-103.11359430397748, 40.42316926669138, -102.96419276917155, 40.532060516393734]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1522.8655154137384, 'Total size of all granules (MB)': 63960.351647377014}
+-- This project is done:  neon_ster2022
+-- Processing  cflra_selwayriverelkcreek
+-- Bounding box: [-115.74669245546106, 45.86225068750241, -115.4251078808085, 46.15548295547373]
+{'Number of available granules': 104, 'Average size of granules (MB)': 2732.6410762988603, 'Total size of all granules (MB)': 284194.6719350815}
+-- This project is done:  cflra_selwayriverelkcreek
+-- Processing  neon_dsny2017
+-- Bounding box: [-81.49928614217305, 28.02697518507337, -81.36433006745482, 28.15077627861763]
+{'Number of available granules': 48, 'Average size of granules (MB)': 1386.1022034088771, 'Total size of all granules (MB)': 66532.9057636261}
+-- This project is done:  neon_dsny2017
+-- Processing  neon_yell2020
+-- Bounding box: [-110.67325975911947, 44.85253150055074, -110.36481057286325, 44.98708706742618]
+{'Number of available granules': 74, 'Average size of granules (MB)': 2355.661201193526, 'Total size of all granules (MB)': 174318.92888832092}
+-- This project is done:  neon_yell2020
+-- Processing  ltbmu_20180710
+-- Bounding box: [-120.27785480749303, 38.67967967462473, -119.81983889931924, 39.34028650891555]
+{'Number of available granules': 106, 'Average size of granules (MB)': 2346.3897896082894, 'Total size of all granules (MB)': 248717.3176984787}
+-- This project is done:  ltbmu_20180710
+-- Processing  huuth_traunstein
+-- Bounding box: [12.657732564563956, 47.93378341166231, 12.67284062173857, 47.93747577375211]
+{'Number of available granules': 28, 'Average size of granules (MB)': 1827.8024909155708, 'Total size of all granules (MB)': 51178.469745635986}
+-- This project is done:  huuth_traunstein
+-- Processing  gliht_32617fl2020
+-- Bounding box: [-81.8131138832902, 24.648487916394828, -80.35361014883875, 26.120882543051646]
+{'Number of available granules': 250, 'Average size of granules (MB)': 936.3186252250672, 'Total size of all granules (MB)': 234079.65630626678}
+-- This project is done:  gliht_32617fl2020
+-- Processing  neon_teak2021
+-- Bounding box: [-119.1093904195271, 36.94654743469781, -118.96800447459384, 37.10503552618165]
+{'Number of available granules': 41, 'Average size of granules (MB)': 2492.637822755953, 'Total size of all granules (MB)': 102198.15073299408}
+-- This project is done:  neon_teak2021
+-- Processing  nasa_hubbard
+-- Bounding box: [-71.80625515906515, 43.91438906418751, -71.6844715646699, 43.96367023868728]
+{'Number of available granules': 46, 'Average size of granules (MB)': 1488.8378997471023, 'Total size of all granules (MB)': 68486.5433883667}
+-- This project is done:  nasa_hubbard
+-- Processing  oeh_ausplotsforests
+-- Bounding box: [152.2563516993928, -32.347748184864216, 153.09439099502873, -30.237937507610457]
+{'Number of available granules': 180, 'Average size of granules (MB)': 731.2350240283542, 'Total size of all granules (MB)': 131622.30432510376}
+-- This project is done:  oeh_ausplotsforests
+-- Processing  zofin_180607
+-- Bounding box: [14.694102016834295, 48.65875348371515, 14.71662127222653, 48.673832785004564]
+{'Number of available granules': 31, 'Average size of granules (MB)': 1448.3599582487536, 'Total size of all granules (MB)': 44899.158705711365}
+-- This project is done:  zofin_180607
+-- Processing  canada_2010_32618
+-- Bounding box: [-76.7237089259637, 48.09890351974935, -69.75273311361762, 50.9841891673711]
+{'Number of available granules': 1107, 'Average size of granules (MB)': 1366.5609249711144, 'Total size of all granules (MB)': 1512782.9439430237}
+-- This project is done:  canada_2010_32618
+-- Processing  neon_konz2019
+-- Bounding box: [-96.66333916327483, 39.05121953540688, -96.47989362793909, 39.24005204223508]
+{'Number of available granules': 51, 'Average size of granules (MB)': 1175.2802001354742, 'Total size of all granules (MB)': 59939.29020690918}
+-- This project is done:  neon_konz2019
+-- Processing  icos_bialowieza
+-- Bounding box: [23.536404063753242, 52.59268951455754, 23.93454249870346, 52.92248955539733]
+{'Number of available granules': 89, 'Average size of granules (MB)': 1623.741175255079, 'Total size of all granules (MB)': 144512.96459770203}
+-- This project is done:  icos_bialowieza
+-- Processing  neon_grsm2017
+-- Bounding box: [-83.6597843477127, 35.55425139552776, -83.24559076521436, 35.750852840794295]
+{'Number of available granules': 83, 'Average size of granules (MB)': 1358.1450966869493, 'Total size of all granules (MB)': 112726.04302501678}
+-- This project is done:  neon_grsm2017
+-- Processing  neon_serc2019
+-- Bounding box: [-76.62665626665564, 38.84110589887953, -76.50151362172988, 38.93897138051639]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1374.5541555404664, 'Total size of all granules (MB)': 68727.70777702332}
+-- This project is done:  neon_serc2019
+-- Processing  jpl_borneo_040
+-- Bounding box: [113.89632016784851, -2.4772523532573185, 113.90386114433616, -2.2616690160467448]
+{'Number of available granules': 19, 'Average size of granules (MB)': 803.0584037680375, 'Total size of all granules (MB)': 15258.109671592712}
+-- This project is done:  jpl_borneo_040
+-- Processing  jpl_lope
+-- Bounding box: [11.552971003585734, -0.23715006821164483, 11.643226782577619, -0.1559827355930888]
+{'Number of available granules': 34, 'Average size of granules (MB)': 1122.2511612667756, 'Total size of all granules (MB)': 38156.53948307037}
+-- This project is done:  jpl_lope
+-- Processing  embrapa_brazil_keller_2013_fna
+-- Bounding box: [-55.03216340161117, -12.51517125365311, -54.99523275089421, -12.487785463392846]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1295.3104906463623, 'Total size of all granules (MB)': 32382.762266159058}
+-- This project is done:  embrapa_brazil_keller_2013_fna
+-- Processing  neon_srer2017
+-- Bounding box: [-110.99705358448291, 31.704227594241647, -110.73122388082218, 31.923684695042084]
+{'Number of available granules': 59, 'Average size of granules (MB)': 2393.9994467880765, 'Total size of all granules (MB)': 141245.96736049652}
+-- This project is done:  neon_srer2017
+-- Processing  neon_serc2016
+-- Bounding box: [-76.62703624132371, 38.82483390671928, -76.49915583946776, 38.959890709715225]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1374.5541555404664, 'Total size of all granules (MB)': 68727.70777702332}
+-- This project is done:  neon_serc2016
+-- Processing  neon_harv2019
+-- Bounding box: [-72.2935449170124, 42.37991680080699, -72.09997978773455, 42.578940554276045]
+{'Number of available granules': 56, 'Average size of granules (MB)': 1217.651150226593, 'Total size of all granules (MB)': 68188.46441268921}
+-- This project is done:  neon_harv2019
+-- Processing  neon_dsny
+-- Bounding box: [-81.51864044352192, 28.013116460327108, -81.35674710908083, 28.165875133358316]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1380.5992793842238, 'Total size of all granules (MB)': 67649.36468982697}
+-- This project is done:  neon_dsny
+-- Processing  embrapa_brazil_2020_st1_a01
+-- Bounding box: [-54.99529620290264, -3.729125229548538, -54.87581066558497, -3.293096767982428]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1187.0517783381722, 'Total size of all granules (MB)': 52230.27824687958}
+-- This project is done:  embrapa_brazil_2020_st1_a01
+-- Processing  neon_tall2017
+-- Bounding box: [-87.48861439203343, 32.84843100263374, -87.34060541401523, 33.0069527408878]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1111.3987403470417, 'Total size of all granules (MB)': 47790.14583492279}
+-- This project is done:  neon_tall2017
+-- Processing  cuilai_china
+-- Bounding box: [117.30226857991244, 36.03056904912829, 117.31425502402216, 36.039727009668354]
+{'Number of available granules': 24, 'Average size of granules (MB)': 1846.6653845310211, 'Total size of all granules (MB)': 44319.96922874451}
+-- This project is done:  cuilai_china
+-- Processing  neon_osbs2018
+-- Bounding box: [-82.0443243557058, 29.61178896140672, -81.92856141954256, 29.758192226577634]
+{'Number of available granules': 36, 'Average size of granules (MB)': 1462.2509200572968, 'Total size of all granules (MB)': 52641.03312206268}
+-- This project is done:  neon_osbs2018
+-- Processing  neon_soap2019
+-- Bounding box: [-119.33745493401106, 36.98082813695524, -119.16637126836542, 37.10805271731947]
+{'Number of available granules': 47, 'Average size of granules (MB)': 2967.0661648080704, 'Total size of all granules (MB)': 139452.1097459793}
+-- This project is done:  neon_soap2019
+-- Processing  nasa_sonoma_whole
+-- Bounding box: [-123.53793135559584, 38.107617709123765, -122.34572505239719, 39.24087502170567]
+{'Number of available granules': 207, 'Average size of granules (MB)': 2642.367269202707, 'Total size of all granules (MB)': 546970.0247249603}
+-- This project is done:  nasa_sonoma_whole
+-- Processing  embrapa_brazil_keller_2013_st2
+-- Bounding box: [-54.900858132145984, -3.7032933885973005, -54.782480646054424, -3.2683733236586296]
+{'Number of available granules': 39, 'Average size of granules (MB)': 1212.991101827377, 'Total size of all granules (MB)': 47306.6529712677}
+-- This project is done:  embrapa_brazil_keller_2013_st2
+-- Processing  gliht_mexico_nfi_32612
+-- Bounding box: [-110.63589427207967, 23.43141238703669, -104.38542713337812, 30.75954437674237]
+{'Number of available granules': 1919, 'Average size of granules (MB)': 1545.2307230490703, 'Total size of all granules (MB)': 2965297.757531166}
+-- This project is done:  gliht_mexico_nfi_32612
+-- Processing  embrapa_brazil_keller_2014_go1
+-- Bounding box: [-50.775902344865926, -15.813472578106738, -50.3230608677668, -15.800854884969722]
+{'Number of available granules': 85, 'Average size of granules (MB)': 1260.5327947055591, 'Total size of all granules (MB)': 107145.28754997253}
+-- This project is done:  embrapa_brazil_keller_2014_go1
+-- Processing  embrapa_brazil_keller_2014_fn3
+-- Bounding box: [-59.97965556519357, -13.11408878728107, -54.054503329188236, -11.089582517361013]
+{'Number of available granules': 900, 'Average size of granules (MB)': 1168.3876352585687, 'Total size of all granules (MB)': 1051548.8717327118}
+-- This project is done:  embrapa_brazil_keller_2014_fn3
+-- Processing  neon_rmnp2022
+-- Bounding box: [-105.58214624184302, 40.130301505961704, -105.4387045669995, 40.307545196949356]
+{'Number of available granules': 48, 'Average size of granules (MB)': 2413.2239585320153, 'Total size of all granules (MB)': 115834.75000953674}
+-- This project is done:  neon_rmnp2022
+-- Processing  jpl_borneo_004
+-- Bounding box: [112.05064060599307, 0.7257731308744925, 112.15983155402732, 0.7868709716726572]
+{'Number of available granules': 31, 'Average size of granules (MB)': 1239.8449536292783, 'Total size of all granules (MB)': 38435.19356250763}
+-- This project is done:  jpl_borneo_004
+-- Processing  neon_unde2017
+-- Bounding box: [-89.57150448979294, 46.14779973640881, -89.42997905512544, 46.26722775471082]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1300.8599969782729, 'Total size of all granules (MB)': 61140.41985797882}
+-- This project is done:  neon_unde2017
+-- Processing  newzealand_forestservice
+-- Bounding box: [167.93608237306353, -46.439198097079164, 178.29352795255286, -34.45877722327503]
+{'Number of available granules': 1741, 'Average size of granules (MB)': 728.4932060400554, 'Total size of all granules (MB)': 1268306.6717157364}
+-- This project is done:  newzealand_forestservice
+-- Processing  usda_co
+-- Bounding box: [-108.16095426289463, 39.504157681528824, -106.56321822471541, 41.1588124172185]
+{'Number of available granules': 287, 'Average size of granules (MB)': 2314.420084531299, 'Total size of all granules (MB)': 664238.5642604828}
+-- This project is done:  usda_co
+-- Processing  usda_sc
+-- Bounding box: [-80.87424361528407, 32.45187762211794, -79.32044866891428, 34.021104213883774]
+{'Number of available granules': 275, 'Average size of granules (MB)': 1359.848029008345, 'Total size of all granules (MB)': 373958.2079772949}
+-- This project is done:  usda_sc
+-- Processing  gliht_mexico_nfi_32615
+-- Bounding box: [-95.52442532722411, 15.822952100630642, -89.69910443907678, 21.04483801361901]
+{'Number of available granules': 934, 'Average size of granules (MB)': 851.8898552347301, 'Total size of all granules (MB)': 795665.124789238}
+-- This project is done:  gliht_mexico_nfi_32615
+-- Processing  neon_soap2021
+-- Bounding box: [-119.31785587017798, 36.982849391915636, -119.16419779182728, 37.109905718754]
+{'Number of available granules': 45, 'Average size of granules (MB)': 2929.9595282236737, 'Total size of all granules (MB)': 131848.1787700653}
+-- This project is done:  neon_soap2021
+-- Processing  neon_bart2019
+-- Bounding box: [-71.34769645511385, 43.987292065703144, -71.19592632578384, 44.08697399181961]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1398.56318088288, 'Total size of all granules (MB)': 65732.46950149536}
+-- This project is done:  neon_bart2019
+-- Processing  neon_tool2019
+-- Bounding box: [-149.6722048204575, 68.53849763647042, -149.25255300259883, 68.70371802772848]
+{'Number of available granules': 119, 'Average size of granules (MB)': 2111.3637278180163, 'Total size of all granules (MB)': 251252.28361034393}
+-- This project is done:  neon_tool2019
+-- Processing  embrapa_brazil_2020_jar_a01c
+-- Bounding box: [-52.432701905845946, 0.6805642663515835, -52.350223564330065, 0.7619702861565424]
+{'Number of available granules': 27, 'Average size of granules (MB)': 717.9552207522922, 'Total size of all granules (MB)': 19384.79096031189}
+-- This project is done:  embrapa_brazil_2020_jar_a01c
+-- Processing  embrapa_brazil_2020_tal_a01
+-- Bounding box: [-67.99429035725346, -10.268433297312098, -67.95973694165718, -10.24274495115104]
+{'Number of available granules': 12, 'Average size of granules (MB)': 2816.564598004023, 'Total size of all granules (MB)': 33798.77517604828}
+-- This project is done:  embrapa_brazil_2020_tal_a01
+-- Processing  moscowmtn_2003
+-- Bounding box: [-116.98892045594793, 46.768528418509874, -116.64538909353001, 46.86725557373271]
+{'Number of available granules': 72, 'Average size of granules (MB)': 3124.9014007647834, 'Total size of all granules (MB)': 224992.9008550644}
+-- This project is done:  moscowmtn_2003
+-- Processing  roc_hansennorth
+-- Bounding box: [15.492731186463095, 1.224783330115817, 16.605430895742504, 2.167949674655508]
+{'Number of available granules': 191, 'Average size of granules (MB)': 1271.524732869333, 'Total size of all granules (MB)': 242861.2239780426}
+-- This project is done:  roc_hansennorth
+-- Processing  inpe_brazil31975
+-- Bounding box: [-59.951996227948705, 0.037910628444340226, -54.12598577075044, 1.8394856192865217]
+{'Number of available granules': 1498, 'Average size of granules (MB)': 1010.5250204045559, 'Total size of all granules (MB)': 1513766.4805660248}
+-- This project is done:  inpe_brazil31975
+-- Processing  csir_welverdient
+-- Bounding box: [31.157257890531547, -24.64745895303965, 31.389933879762864, -24.544117484499456]
+{'Number of available granules': 58, 'Average size of granules (MB)': 1550.721584681807, 'Total size of all granules (MB)': 89941.8519115448}
+-- This project is done:  csir_welverdient
+-- Processing  neon_stei2016
+-- Bounding box: [-89.6221200023814, 45.42406184976738, -89.3854383369472, 45.58048117470955]
+{'Number of available granules': 59, 'Average size of granules (MB)': 1128.463305247032, 'Total size of all granules (MB)': 66579.33500957489}
+-- This project is done:  neon_stei2016
+-- Processing  nsw_armidale
+-- Bounding box: [152.0220595775211, -30.802444180449818, 152.40946833203355, -30.475834759698504]
+{'Number of available granules': 78, 'Average size of granules (MB)': 844.2745687289116, 'Total size of all granules (MB)': 65853.4163608551}
+-- This project is done:  nsw_armidale
+-- Processing  tanzania_wwf_germany
+-- Bounding box: [37.612876394596555, -10.387336658141514, 38.64957599213426, -8.963982179425203]
+{'Number of available granules': 192, 'Average size of granules (MB)': 1505.8365564843018, 'Total size of all granules (MB)': 289120.61884498596}
+-- This project is done:  tanzania_wwf_germany
+-- Processing  embrapa_brazil_2020_tap_a06
+-- Bounding box: [-54.954041443594456, -3.0554722363333444, -54.940548164452736, -3.0451239909805414]
+{'Number of available granules': 20, 'Average size of granules (MB)': 1166.756700706482, 'Total size of all granules (MB)': 23335.13401412964}
+-- This project is done:  embrapa_brazil_2020_tap_a06
+-- Processing  jpl_borneo_139
+-- Bounding box: [116.6963585373053, 2.113308746939429, 116.76489130545018, 2.155343751808719]
+{'Number of available granules': 30, 'Average size of granules (MB)': 1517.2315021832785, 'Total size of all granules (MB)': 45516.94506549835}
+-- This project is done:  jpl_borneo_139
+-- Processing  hill_peru
+-- Bounding box: [-69.35441571765203, -12.9016792774063, -69.21048119193368, -12.738509191929031]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1908.3832425813416, 'Total size of all granules (MB)': 70610.17997550964}
+-- This project is done:  hill_peru
+-- Processing  neon_dsny2016
+-- Bounding box: [-81.49833946758199, 28.00871168180038, -81.36603492682798, 28.172598624508293]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1380.5992793842238, 'Total size of all granules (MB)': 67649.36468982697}
+-- This project is done:  neon_dsny2016
+-- Processing  neon_soap
+-- Bounding box: [-119.31082892469419, 37.00055321469857, -119.22196062539182, 37.06421017755753]
+{'Number of available granules': 36, 'Average size of granules (MB)': 2964.9241160286797, 'Total size of all granules (MB)': 106737.26817703247}
+-- This project is done:  neon_soap
+-- Processing  neon_teak
+-- Bounding box: [-119.09674993710931, 36.915089005661976, -118.89798213181943, 37.096758277730615]
+{'Number of available granules': 45, 'Average size of granules (MB)': 2771.692350684272, 'Total size of all granules (MB)': 124726.15578079224}
+-- This project is done:  neon_teak
+-- Processing  neon_cper2017
+-- Bounding box: [-104.80414834527359, 40.771666851622555, -104.6671077117384, 40.879532886685986]
+{'Number of available granules': 40, 'Average size of granules (MB)': 1875.0386793136597, 'Total size of all granules (MB)': 75001.54717254639}
+-- This project is done:  neon_cper2017
+-- Processing  nasa_laselva_2009
+-- Bounding box: [-84.06173556754096, 10.383601681988512, -83.96600729814631, 10.4749570751838]
+{'Number of available granules': 36, 'Average size of granules (MB)': 1068.9156628449757, 'Total size of all granules (MB)': 38480.96386241913}
+-- This project is done:  nasa_laselva_2009
+-- Processing  neon_ukfs2018
+-- Bounding box: [-95.21968802947531, 38.98883977362625, -95.13044596873195, 39.08641022615387]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1210.9627471356778, 'Total size of all granules (MB)': 44805.62164402008}
+-- This project is done:  neon_ukfs2018
+-- Processing  csir_venetia
+-- Bounding box: [29.304456300318517, -22.350354769054064, 29.356509065518683, -22.24837980042288]
+{'Number of available granules': 29, 'Average size of granules (MB)': 1613.7488012642696, 'Total size of all granules (MB)': 46798.71523666382}
+-- This project is done:  csir_venetia
+-- Processing  embrapa_brazil_keller_2012_tan
+-- Bounding box: [-52.443282929333066, -13.090432729098813, -52.37476784491945, -13.071685653201301]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1262.0603840869405, 'Total size of all granules (MB)': 29027.388833999634}
+-- This project is done:  embrapa_brazil_keller_2012_tan
+-- Processing  rushworth_forests
+-- Bounding box: [144.93771884502178, -36.77588299248518, 144.99488706227453, -36.730263254673744]
+{'Number of available granules': 30, 'Average size of granules (MB)': 586.380427201589, 'Total size of all granules (MB)': 17591.41281604767}
+-- This project is done:  rushworth_forests
+-- Processing  embrapa_brazil_keller_2008_duc
+-- Bounding box: [-59.967860547083696, -2.9670368029923626, -59.89261172562206, -2.9332192285002456]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1048.752077522278, 'Total size of all granules (MB)': 26218.801938056946}
+-- This project is done:  embrapa_brazil_keller_2008_duc
+-- Processing  tellus_sw_uk
+-- Bounding box: [-5.7474942466357595, 49.94068686616688, -3.4955389112102333, 51.26641922806061]
+{'Number of available granules': 383, 'Average size of granules (MB)': 1663.7422309830667, 'Total size of all granules (MB)': 637213.2744665146}
+-- This project is done:  tellus_sw_uk
+-- Processing  neon_osbs2016
+-- Bounding box: [-82.09745352486833, 29.586936403492942, -81.90783720297327, 29.781751424991704]
+{'Number of available granules': 54, 'Average size of granules (MB)': 1490.1694283838626, 'Total size of all granules (MB)': 80469.14913272858}
+-- This project is done:  neon_osbs2016
+-- Processing  fergusonfire_20180722
+-- Bounding box: [-119.97445365671064, 37.36364773740395, -119.53067498781625, 37.73560625276219]
+{'Number of available granules': 84, 'Average size of granules (MB)': 2773.785955894561, 'Total size of all granules (MB)': 232998.02029514313}
+-- This project is done:  fergusonfire_20180722
+-- Processing  umn_mn_falkowski
+-- Bounding box: [-88.55390407595733, 46.607214831017416, -88.46984815745321, 46.6779324740004]
+{'Number of available granules': 40, 'Average size of granules (MB)': 1331.9384659290313, 'Total size of all granules (MB)': 53277.538637161255}
+-- This project is done:  umn_mn_falkowski
+-- Processing  embrapa_brazil_keller_2012_sfx
+-- Bounding box: [-52.91601927736537, -6.619715446972901, -51.7732470733935, -6.38897365341058]
+{'Number of available granules': 186, 'Average size of granules (MB)': 1305.0413408433237, 'Total size of all granules (MB)': 242737.68939685822}
+-- This project is done:  embrapa_brazil_keller_2012_sfx
+-- Processing  jpl_mondah
+-- Bounding box: [9.298634238255378, 0.43681436233073717, 9.484232609469341, 0.6498724055981266]
+{'Number of available granules': 45, 'Average size of granules (MB)': 1398.2400941424899, 'Total size of all granules (MB)': 62920.80423641205}
+-- This project is done:  jpl_mondah
+-- Processing  embrapa_brazil_2020_bon_a01
+-- Bounding box: [-67.30217808840585, -9.89162046542685, -67.26884317727718, -9.858209903991696]
+{'Number of available granules': 20, 'Average size of granules (MB)': 1501.245350408554, 'Total size of all granules (MB)': 30024.90700817108}
+-- This project is done:  embrapa_brazil_2020_bon_a01
+-- Processing  canada_2010_32613
+-- Bounding box: [-114.14276912559055, 57.39930392916474, -105.07995017560809, 62.28975912378605]
+{'Number of available granules': 2843, 'Average size of granules (MB)': 2109.952494337489, 'Total size of all granules (MB)': 5998594.941401482}
+-- This project is done:  canada_2010_32613
+-- Processing  neon_sawb
+-- Bounding box: [-71.27122872943416, 42.46340707063547, -71.09300545964855, 42.58474613658274]
+{'Number of available granules': 53, 'Average size of granules (MB)': 1295.2849281598938, 'Total size of all granules (MB)': 68650.10119247437}
+-- This project is done:  neon_sawb
+-- Processing  umn_colvilleeast_2015
+-- Bounding box: [-117.83024623007036, 48.22234637464294, -117.35838852267949, 48.82938452486477]
+{'Number of available granules': 105, 'Average size of granules (MB)': 2885.748239589873, 'Total size of all granules (MB)': 303003.56515693665}
+-- This project is done:  umn_colvilleeast_2015
+-- Processing  neon_dela2017
+-- Bounding box: [-87.86747569340852, 32.5014887751548, -87.73972459393806, 32.60037085710771]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1211.9698131652106, 'Total size of all granules (MB)': 50902.73215293884}
+-- This project is done:  neon_dela2017
+-- Processing  neon_dsny2018
+-- Bounding box: [-81.44809252805538, 28.027172042295486, -81.36610698534992, 28.150462785256668]
+{'Number of available granules': 34, 'Average size of granules (MB)': 1392.4737199615029, 'Total size of all granules (MB)': 47344.1064786911}
+-- This project is done:  neon_dsny2018
+-- Processing  neon_grsm2021
+-- Bounding box: [-83.66438878872978, 35.549853219465376, -83.32391689964548, 35.751743599918875]
+{'Number of available granules': 70, 'Average size of granules (MB)': 1329.5606950487409, 'Total size of all granules (MB)': 93069.24865341187}
+-- This project is done:  neon_grsm2021
+-- Processing  neon_bart
+-- Bounding box: [-71.35620819768424, 43.97950260501636, -71.18877422939255, 44.091925945815234]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1422.8931358298478, 'Total size of all granules (MB)': 69721.76365566254}
+-- This project is done:  neon_bart
+-- Processing  neon_bldr_postflood
+-- Bounding box: [-105.33834024876604, 39.93887626345457, -105.14451754397501, 40.09900371794479]
+{'Number of available granules': 61, 'Average size of granules (MB)': 1979.0966066297938, 'Total size of all granules (MB)': 120724.89300441742}
+-- This project is done:  neon_bldr_postflood
+-- Processing  aso_sierra_nevada
+-- Bounding box: [-119.54215516208222, 36.574879521213894, -118.3074558086755, 37.757969082191856]
+{'Number of available granules': 217, 'Average size of granules (MB)': 2722.04239256371, 'Total size of all granules (MB)': 590683.1991863251}
+-- This project is done:  aso_sierra_nevada
+-- Processing  neon_yell2019
+-- Bounding box: [-110.66937636045581, 44.852493281373945, -110.36582812405632, 44.98887904388553]
+{'Number of available granules': 74, 'Average size of granules (MB)': 2355.661201193526, 'Total size of all granules (MB)': 174318.92888832092}
+-- This project is done:  neon_yell2019
+-- Processing  embrapa_brazil_keller_2012_duc
+-- Bounding box: [-59.95766641053131, -2.964713091671789, -59.92152309770663, -2.936230716429014]
+{'Number of available granules': 16, 'Average size of granules (MB)': 1062.7811490297318, 'Total size of all granules (MB)': 17004.498384475708}
+-- This project is done:  embrapa_brazil_keller_2012_duc
+-- Processing  neon_leno2018
+-- Bounding box: [-88.25611921819014, 31.78064906111484, -88.12910175839991, 31.886192449774935]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1150.9212632062959, 'Total size of all granules (MB)': 47187.77179145813}
+-- This project is done:  neon_leno2018
+-- Processing  chave_paracou
+-- Bounding box: [-52.943679588377385, 5.248720812588255, -52.916725850943024, 5.288384165840777]
+{'Number of available granules': 18, 'Average size of granules (MB)': 797.7611455917358, 'Total size of all granules (MB)': 14359.700620651245}
+-- This project is done:  chave_paracou
+-- Processing  embrapa_brazil_2020_tap_a05
+-- Bounding box: [-54.96909261763354, -3.0363898043646436, -54.94941733038791, -3.0324056625157483]
+{'Number of available granules': 20, 'Average size of granules (MB)': 1156.541848230362, 'Total size of all granules (MB)': 23130.83696460724}
+-- This project is done:  embrapa_brazil_2020_tap_a05
+-- Processing  cflra_crookedriver
+-- Bounding box: [-115.60387488075644, 45.645666270422, -115.52995517755572, 45.732550784976524]
+{'Number of available granules': 23, 'Average size of granules (MB)': 2964.1821495553722, 'Total size of all granules (MB)': 68176.18943977356}
+-- This project is done:  cflra_crookedriver
+-- Processing  jpl_borneo_144
+-- Bounding box: [113.17314897730641, -2.3467306978672124, 113.29175475926053, -2.319312013125363]
+{'Number of available granules': 33, 'Average size of granules (MB)': 957.9766170328313, 'Total size of all granules (MB)': 31613.228362083435}
+-- This project is done:  jpl_borneo_144
+-- Processing  gsfc_mozambique
+-- Bounding box: [36.149555993204366, -18.89877493880305, 36.2916837429985, -18.787435109631303]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1377.0765501813191, 'Total size of all granules (MB)': 56460.13855743408}
+-- This project is done:  gsfc_mozambique
+-- Processing  embrapa_brazil_keller_2011_jam
+-- Bounding box: [-63.01173536874145, -9.173693861398743, -62.781032435413124, -9.061216629446381]
+{'Number of available granules': 61, 'Average size of granules (MB)': 1154.0576498782048, 'Total size of all granules (MB)': 70397.5166425705}
+-- This project is done:  embrapa_brazil_keller_2011_jam
+-- Processing  neon_jerc
+-- Bounding box: [-84.55278560117142, 31.14314815447133, -84.40018109345164, 31.26502772162571]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1236.2965265196196, 'Total size of all granules (MB)': 60578.529799461365}
+-- This project is done:  neon_jerc
+-- Processing  embrapa_brazil_keller_2014_st3
+-- Bounding box: [-54.95041843328704, -3.493981155534934, -54.46385816181135, -2.2214464342945703]
+{'Number of available granules': 107, 'Average size of granules (MB)': 1223.6353421879705, 'Total size of all granules (MB)': 130928.98161411285}
+-- This project is done:  embrapa_brazil_keller_2014_st3
+-- Processing  inpe_brazil31973
+-- Bounding box: [-68.86339810699798, -0.03644875023314274, -66.347188784186, 1.6054863579586918]
+{'Number of available granules': 746, 'Average size of granules (MB)': 1444.7793837335091, 'Total size of all granules (MB)': 1077805.4202651978}
+-- This project is done:  inpe_brazil31973
+-- Processing  neon_serc
+-- Bounding box: [-76.62720560208642, 38.84464980258599, -76.49958035507906, 38.935846648720116]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1374.5541555404664, 'Total size of all granules (MB)': 68727.70777702332}
+-- This project is done:  neon_serc
+-- Processing  embrapa_brazil_keller_2013_tal
+-- Bounding box: [-67.99368903490955, -10.267839410566959, -67.9603346944408, -10.243340578770937]
+{'Number of available granules': 12, 'Average size of granules (MB)': 2816.564598004023, 'Total size of all granules (MB)': 33798.77517604828}
+-- This project is done:  embrapa_brazil_keller_2013_tal
+-- Processing  canada_2010_32619
+-- Bounding box: [-68.34006749631233, 47.873295205412255, -67.54730576275756, 49.30794743316767]
+{'Number of available granules': 164, 'Average size of granules (MB)': 1327.5880183592076, 'Total size of all granules (MB)': 217724.43501091003}
+-- This project is done:  canada_2010_32619
+-- Processing  neon_cper
+-- Bounding box: [-104.82387068714583, 40.777875066425835, -104.65178784358544, 40.881789414643634]
+{'Number of available granules': 44, 'Average size of granules (MB)': 1974.1917012821543, 'Total size of all granules (MB)': 86864.4348564148}
+-- This project is done:  neon_cper
+-- Processing  neon_rmnp2018
+-- Bounding box: [-105.57696122416716, 40.13723416752554, -105.44692667826936, 40.30289908139918]
+{'Number of available granules': 46, 'Average size of granules (MB)': 2370.450558890467, 'Total size of all granules (MB)': 109040.72570896149}
+-- This project is done:  neon_rmnp2018
+-- Processing  neon_osbs2017
+-- Bounding box: [-82.08959189761212, 29.612157473590045, -81.90798025979036, 29.75785254911349]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1582.0599495502229, 'Total size of all granules (MB)': 74356.81762886047}
+-- This project is done:  neon_osbs2017
+-- Processing  spain_leonposada
+-- Bounding box: [-5.018127150670286, 43.08341317138574, -4.821494522754675, 43.24551584765397]
+{'Number of available granules': 55, 'Average size of granules (MB)': 1506.7098003907638, 'Total size of all granules (MB)': 82869.039021492}
+-- This project is done:  spain_leonposada
+-- Processing  inpe_brazil31976
+-- Bounding box: [-53.97851619899409, -0.09191439606439726, -50.01405808737819, 3.001788778013138]
+{'Number of available granules': 1191, 'Average size of granules (MB)': 988.1894526533677, 'Total size of all granules (MB)': 1176933.6381101608}
+-- This project is done:  inpe_brazil31976
+-- Processing  drc_ghent_field_32735
+-- Bounding box: [25.06240161308125, -4.718806113435368, 29.22618410404618, -0.4912297997018801]
+{'Number of available granules': 683, 'Average size of granules (MB)': 1287.9928576063098, 'Total size of all granules (MB)': 879699.1217451096}
+-- This project is done:  drc_ghent_field_32735
+-- Processing  csir_dnyala
+-- Bounding box: [27.745025547983644, -23.760412331325213, 27.847200173960786, -23.71013980861904]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1292.380821579381, 'Total size of all granules (MB)': 49110.47122001648}
+-- This project is done:  csir_dnyala
+-- Processing  slatecreek_2008
+-- Bounding box: [-116.19387451674699, 45.492390934999065, -115.98974487036627, 45.71763984995078]
+{'Number of available granules': 44, 'Average size of granules (MB)': 3099.6863188960338, 'Total size of all granules (MB)': 136386.19803142548}
+-- This project is done:  slatecreek_2008
+-- Processing  moscowmtn_2007
+-- Bounding box: [-116.69544824298502, 46.839439626595606, -116.6706950628636, 46.85501538702124]
+{'Number of available granules': 31, 'Average size of granules (MB)': 2995.245684869828, 'Total size of all granules (MB)': 92852.61623096466}
+-- This project is done:  moscowmtn_2007
+-- Processing  demiguel_soriaii
+-- Bounding box: [-2.959303009721506, 41.86181708698417, -2.9562878906013474, 41.866319329678696]
+{'Number of available granules': 18, 'Average size of granules (MB)': 1945.2203367551167, 'Total size of all granules (MB)': 35013.9660615921}
+-- This project is done:  demiguel_soriaii
+-- Processing  embrapa_brazil_2020_st2_a01
+-- Bounding box: [-54.90140923058112, -3.703847537106778, -54.78192730979795, -3.2678215355824944]
+{'Number of available granules': 39, 'Average size of granules (MB)': 1212.991101827377, 'Total size of all granules (MB)': 47306.6529712677}
+-- This project is done:  embrapa_brazil_2020_st2_a01
+-- Processing  neon_dela2019
+-- Bounding box: [-87.86943886318164, 32.49938967217061, -87.73851400105016, 32.60206119403062]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1211.9698131652106, 'Total size of all granules (MB)': 50902.73215293884}
+-- This project is done:  neon_dela2019
+-- Processing  neon_wref2021
+-- Bounding box: [-122.1027607338953, 45.77235463805449, -121.77316871902059, 45.89370392353701]
+{'Number of available granules': 74, 'Average size of granules (MB)': 2942.263715628031, 'Total size of all granules (MB)': 217727.5149564743}
+-- This project is done:  neon_wref2021
+-- Processing  sweden_skog2020
+-- Bounding box: [10.918366146197775, 56.601193141543106, 21.47456162479705, 64.38289230622172]
+{'Number of available granules': 3384, 'Average size of granules (MB)': 1522.1496559265938, 'Total size of all granules (MB)': 5150954.435655594}
+-- This project is done:  sweden_skog2020
+-- Processing  neon_dela2015
+-- Bounding box: [-87.86905687992487, 32.49700648927765, -87.73732079846057, 32.60360056380017]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1220.3879162766214, 'Total size of all granules (MB)': 52476.680399894714}
+-- This project is done:  neon_dela2015
+-- Processing  drc_ghent_field_32635
+-- Bounding box: [24.46587845639367, 0.6633893087053724, 28.718577801796904, 1.6351084191840788]
+{'Number of available granules': 648, 'Average size of granules (MB)': 1185.0463632727847, 'Total size of all granules (MB)': 767910.0434007645}
+-- This project is done:  drc_ghent_field_32635
+-- Processing  neon_jerc2021
+-- Bounding box: [-84.57534212556615, 31.157732350542915, -84.35375317698917, 31.327598591576958]
+{'Number of available granules': 59, 'Average size of granules (MB)': 1206.413291640201, 'Total size of all granules (MB)': 71178.38420677185}
+-- This project is done:  neon_jerc2021
+-- Processing  embrapa_brazil_keller_2013_tap
+-- Bounding box: [-54.99161620083635, -3.158817765750604, -54.94381140447058, -3.1051562116995286]
+{'Number of available granules': 24, 'Average size of granules (MB)': 1133.9529690742493, 'Total size of all granules (MB)': 27214.871257781982}
+-- This project is done:  embrapa_brazil_keller_2013_tap
+-- Processing  spain_leon1
+-- Bounding box: [-6.287053053791146, 42.45930088991755, -6.114179808083758, 42.535990700662055]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1547.9844488334656, 'Total size of all granules (MB)': 77399.22244167328}
+-- This project is done:  spain_leon1
+-- Processing  nasa_laselva_2006
+-- Bounding box: [-84.07708884285533, 10.317194440822364, -83.98174644779783, 10.496601709905995]
+{'Number of available granules': 36, 'Average size of granules (MB)': 1063.2608814769321, 'Total size of all granules (MB)': 38277.391733169556}
+-- This project is done:  nasa_laselva_2006
+-- Processing  watts_creek
+-- Bounding box: [145.65595252055766, -37.712214391830265, 145.7134443643223, -37.6667800300354]
+{'Number of available granules': 32, 'Average size of granules (MB)': 838.6560744345188, 'Total size of all granules (MB)': 26836.994381904602}
+-- This project is done:  watts_creek
+-- Processing  spain_leon3
+-- Bounding box: [-5.524121032289585, 42.856827346707426, -5.374926299694988, 42.93194686387425]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1550.211664260702, 'Total size of all granules (MB)': 72859.94822025299}
+-- This project is done:  spain_leon3
+-- Processing  neon_moab2022
+-- Bounding box: [-109.456981370395, 38.19129556882365, -109.31539597731663, 38.3023655831442]
+{'Number of available granules': 39, 'Average size of granules (MB)': 2604.0327396881885, 'Total size of all granules (MB)': 101557.27684783936}
+-- This project is done:  neon_moab2022
+-- Processing  neon_unde2019
+-- Bounding box: [-89.59975315658504, 46.1414991581625, -89.41192177220421, 46.27444156385636]
+{'Number of available granules': 52, 'Average size of granules (MB)': 1338.7825740117294, 'Total size of all granules (MB)': 69616.69384860992}
+-- This project is done:  neon_unde2019
+-- Processing  inpe_brazil31982
+-- Bounding box: [-58.21863114247497, -14.80193530254688, -48.0362372318231, -0.05220234816088412]
+{'Number of available granules': 2075, 'Average size of granules (MB)': 1177.3050942354316, 'Total size of all granules (MB)': 2442908.070538521}
+-- This project is done:  inpe_brazil31982
+-- Processing  neon_steicheq2022
+-- Bounding box: [-90.13439641951105, 45.77133059777463, -90.02738742308932, 45.84979752379658]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1251.7897428821873, 'Total size of all granules (MB)': 46316.22048664093}
+-- This project is done:  neon_steicheq2022
+-- Processing  neon_soap2017
+-- Bounding box: [-119.32666702429799, 36.987232322278786, -119.19516032412291, 37.079725242012636]
+{'Number of available granules': 40, 'Average size of granules (MB)': 3049.6614995241166, 'Total size of all granules (MB)': 121986.45998096466}
+-- This project is done:  neon_soap2017
+-- Processing  nsw_portmacquarie3
+-- Bounding box: [152.46385792005168, -31.822894721621278, 152.82493521349815, -31.44942169518443]
+{'Number of available granules': 85, 'Average size of granules (MB)': 684.3456149269552, 'Total size of all granules (MB)': 58169.3772687912}
+-- This project is done:  nsw_portmacquarie3
+-- Processing  chowilla
+-- Bounding box: [140.56055461834043, -34.06903559232712, 140.77608126709328, -33.95245186283637]
+{'Number of available granules': 50, 'Average size of granules (MB)': 601.1508707046509, 'Total size of all granules (MB)': 30057.543535232544}
+-- This project is done:  chowilla
+-- Processing  nasa_laselva_1997
+-- Bounding box: [-84.02762986148343, 10.402740724131043, -83.99727558836709, 10.443447742215708]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1080.144083404541, 'Total size of all granules (MB)': 27003.602085113525}
+-- This project is done:  nasa_laselva_1997
+-- Processing  embrapa_brazil_2020_jar_a01d
+-- Bounding box: [-53.70168315427082, 0.4344609145667912, -53.60369838584454, 0.4957718258408043]
+{'Number of available granules': 29, 'Average size of granules (MB)': 791.9743424119621, 'Total size of all granules (MB)': 22967.2559299469}
+-- This project is done:  embrapa_brazil_2020_jar_a01d
+-- Processing  embrapa_brazil_keller_2014_jam
+-- Bounding box: [-63.01171792264441, -9.418774817350904, -62.94601052915026, -9.061457482129738]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1293.3356639044625, 'Total size of all granules (MB)': 45266.74823665619}
+-- This project is done:  embrapa_brazil_keller_2014_jam
+-- Processing  hill_newforest
+-- Bounding box: [-1.5667433806897348, 50.80023450390984, -1.4692267148853146, 50.86641203888603]
+{'Number of available granules': 40, 'Average size of granules (MB)': 1453.0084535360336, 'Total size of all granules (MB)': 58120.338141441345}
+-- This project is done:  hill_newforest
+-- Processing  embrapa_brazil_2020_tan_a01
+-- Bounding box: [-52.443788247248435, -13.090926900865107, -52.374301933263105, -13.071192941446661]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1262.0603840869405, 'Total size of all granules (MB)': 29027.388833999634}
+-- This project is done:  embrapa_brazil_2020_tan_a01
+-- Processing  aso_sierra_nevada_snowoff
+-- Bounding box: [-119.53456892985696, 36.57556268977127, -118.3074558086755, 37.75779645271209]
+{'Number of available granules': 217, 'Average size of granules (MB)': 2722.04239256371, 'Total size of all granules (MB)': 590683.1991863251}
+-- This project is done:  aso_sierra_nevada_snowoff
+-- Processing  cflra_waldepeteking
+-- Bounding box: [-115.70902518377228, 46.17266304682632, -115.6785059157098, 46.192931633205916]
+{'Number of available granules': 32, 'Average size of granules (MB)': 2384.0288538336754, 'Total size of all granules (MB)': 76288.92332267761}
+-- This project is done:  cflra_waldepeteking
+-- Processing  gliht_32605ak2018
+-- Bounding box: [-152.43028427487596, 60.54870165303312, -144.53557186767037, 63.15407616333198]
+{'Number of available granules': 1272, 'Average size of granules (MB)': 2241.9438013565614, 'Total size of all granules (MB)': 2851752.5153255463}
+-- This project is done:  gliht_32605ak2018
+-- Processing  fitsum_southforksalmon
+-- Bounding box: [-115.76294781567198, 44.99615874248191, -115.73361800191626, 45.04029492162474]
+{'Number of available granules': 32, 'Average size of granules (MB)': 3175.0629490315914, 'Total size of all granules (MB)': 101602.01436901093}
+-- This project is done:  fitsum_southforksalmon
+-- Processing  neon_osbs2021
+-- Bounding box: [-82.09342698174135, 29.611262204946094, -81.90457221461918, 29.759053345335328]
+{'Number of available granules': 49, 'Average size of granules (MB)': 1537.7190750277773, 'Total size of all granules (MB)': 75348.23467636108}
+-- This project is done:  neon_osbs2021
+-- Processing  neon_leno2021
+-- Bounding box: [-88.25706279309838, 31.77978410731063, -88.12598336646263, 31.887353407235505]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1153.4467953727358, 'Total size of all granules (MB)': 48444.76540565491}
+-- This project is done:  neon_leno2021
+-- Processing  embrapa_brazil_keller_2014_bar
+-- Bounding box: [-61.85180846571747, -1.6936785725699728, -61.820192821714386, -1.662054478409911]
+{'Number of available granules': 18, 'Average size of granules (MB)': 1112.2511675622727, 'Total size of all granules (MB)': 20020.52101612091}
+-- This project is done:  embrapa_brazil_keller_2014_bar
+-- Processing  nasa_howland_2009
+-- Bounding box: [-68.76720090877336, 45.19515902481332, -68.7001564327661, 45.236032840903746]
+{'Number of available granules': 30, 'Average size of granules (MB)': 1307.477541732788, 'Total size of all granules (MB)': 39224.32625198364}
+-- This project is done:  nasa_howland_2009
+-- Processing  zigzag_creek
+-- Bounding box: [148.3099993683009, -37.49666424097446, 148.36712178369868, -37.450967610634954]
+{'Number of available granules': 36, 'Average size of granules (MB)': 829.6635856098599, 'Total size of all granules (MB)': 29867.889081954956}
+-- This project is done:  zigzag_creek
+-- Processing  kljun_tharandt
+-- Bounding box: [13.461410750696055, 50.915156413650905, 13.642314537659317, 51.00596617074008]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1420.9397483062744, 'Total size of all granules (MB)': 71046.98741531372}
+-- This project is done:  kljun_tharandt
+-- Processing  tepeecreek_2014
+-- Bounding box: [-116.41426307490114, 47.74074186489845, -116.19498514868441, 47.84239505376536]
+{'Number of available granules': 60, 'Average size of granules (MB)': 2593.550630648931, 'Total size of all granules (MB)': 155613.03783893585}
+-- This project is done:  tepeecreek_2014
+-- Processing  sweden_skog2018
+-- Bounding box: [12.64081912137392, 55.47815701436274, 24.20340173015649, 66.42904380488007]
+{'Number of available granules': 3788, 'Average size of granules (MB)': 1502.3456587428905, 'Total size of all granules (MB)': 5690885.355318069}
+-- This project is done:  sweden_skog2018
+-- Processing  neon_guan2018
+-- Bounding box: [-66.91326932499595, 17.93416122107479, -66.79366713733579, 18.03847858770634]
+{'Number of available granules': 36, 'Average size of granules (MB)': 1075.6571599377526, 'Total size of all granules (MB)': 38723.657757759094}
+-- This project is done:  neon_guan2018
+-- Processing  whrc_mexico_walker
+-- Bounding box: [-101.69832886197221, 15.555459155550079, -95.02895275404916, 26.431064849234236]
+{'Number of available granules': 1136, 'Average size of granules (MB)': 1080.275283360985, 'Total size of all granules (MB)': 1227192.721898079}
+-- This project is done:  whrc_mexico_walker
+-- Processing  neon_konz2020
+-- Bounding box: [-96.6701068482685, 39.042244078200454, -96.47515026741927, 39.24802507762276]
+{'Number of available granules': 54, 'Average size of granules (MB)': 1206.2140413213658, 'Total size of all granules (MB)': 65135.55823135376}
+-- This project is done:  neon_konz2020
+-- Processing  neon_abby2018
+-- Bounding box: [-122.40580997714478, 45.700822256547376, -122.23620666260406, 45.81358944562276]
+{'Number of available granules': 51, 'Average size of granules (MB)': 2744.6797964432662, 'Total size of all granules (MB)': 139978.66961860657}
+-- This project is done:  neon_abby2018
+-- Processing  neon_scbi2016
+-- Bounding box: [-78.2140519433254, 38.80848214865808, -78.08558475097085, 38.94337416557205]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1419.7895750772386, 'Total size of all granules (MB)': 59631.16215324402}
+-- This project is done:  neon_scbi2016
+-- Processing  germany_coburn2
+-- Bounding box: [10.932158641570362, 50.50868306993752, 11.0186414497315, 50.55362320414781]
+{'Number of available granules': 39, 'Average size of granules (MB)': 1777.580094826527, 'Total size of all granules (MB)': 69325.62369823456}
+-- This project is done:  germany_coburn2
+-- Processing  boyd_danum
+-- Bounding box: [117.75499916130697, 4.917464425005396, 117.92094421003807, 4.977820586570639]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1184.2559386852176, 'Total size of all granules (MB)': 50923.005363464355}
+-- This project is done:  boyd_danum
+-- Processing  nsw_portmacquarie2
+-- Bounding box: [152.6150119206114, -31.40876905481013, 152.8422351672694, -31.28323113346426]
+{'Number of available granules': 60, 'Average size of granules (MB)': 590.6362826665243, 'Total size of all granules (MB)': 35438.176959991455}
+-- This project is done:  nsw_portmacquarie2
+-- Processing  jrsrp_ilcp2015_wholeq5
+-- Bounding box: [146.25289893788167, -26.41838541286952, 147.701621221757, -25.28082319011361]
+{'Number of available granules': 239, 'Average size of granules (MB)': 1164.3931461837003, 'Total size of all granules (MB)': 278289.96193790436}
+-- This project is done:  jrsrp_ilcp2015_wholeq5
+-- Processing  neon_tall2021
+-- Bounding box: [-87.48262335104084, 32.86484112053962, -87.3487687659304, 32.9923344259811]
+{'Number of available granules': 42, 'Average size of granules (MB)': 1123.3116831098284, 'Total size of all granules (MB)': 47179.09069061279}
+-- This project is done:  neon_tall2021
+-- Processing  neon_ukfs2017
+-- Bounding box: [-95.25769170968354, 38.95847477533663, -95.12801490356334, 39.08593799846721]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1135.536177413408, 'Total size of all granules (MB)': 48828.05562877655}
+-- This project is done:  neon_ukfs2017
+-- Processing  neon_serc2022
+-- Bounding box: [-76.62966472515207, 38.842814630578374, -76.49703829805274, 38.93728302307997]
+{'Number of available granules': 50, 'Average size of granules (MB)': 1374.5541555404664, 'Total size of all granules (MB)': 68727.70777702332}
+-- This project is done:  neon_serc2022
+-- Processing  neon_abby2021
+-- Bounding box: [-122.40169170849656, 45.708642625022556, -122.23354922193332, 45.80943343792041]
+{'Number of available granules': 51, 'Average size of granules (MB)': 2744.6797964432662, 'Total size of all granules (MB)': 139978.66961860657}
+-- This project is done:  neon_abby2021
+-- Processing  neon_scbi2017
+-- Bounding box: [-78.21454005834288, 38.82785505549487, -78.08354881977237, 38.9207196732413]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1441.8775914355022, 'Total size of all granules (MB)': 59116.98124885559}
+-- This project is done:  neon_scbi2017
+-- Processing  neon_stei2022
+-- Bounding box: [-89.62906121601722, 45.436696317937084, -89.37388970567362, 45.56117756845502]
+{'Number of available granules': 60, 'Average size of granules (MB)': 1151.5468026161193, 'Total size of all granules (MB)': 69092.80815696716}
+-- This project is done:  neon_stei2022
+-- Processing  inpe_brazil31978
+-- Bounding box: [-73.23272289610806, -8.948713593140173, -71.98557605685697, -5.716993994437047]
+{'Number of available granules': 246, 'Average size of granules (MB)': 1681.5987833922472, 'Total size of all granules (MB)': 413673.3007144928}
+-- This project is done:  inpe_brazil31978
+-- Processing  gliht_32606ak2018
+-- Bounding box: [-149.93523419020676, 60.578727956259456, -143.12791970009155, 63.28053937277639]
+{'Number of available granules': 1110, 'Average size of granules (MB)': 2279.2325595211337, 'Total size of all granules (MB)': 2529948.1410684586}
+-- This project is done:  gliht_32606ak2018
+-- Processing  neon_onaq2017
+-- Bounding box: [-112.58029721103972, 40.14002519464513, -112.40165351437172, 40.24184787724757]
+{'Number of available granules': 53, 'Average size of granules (MB)': 2142.5206430183266, 'Total size of all granules (MB)': 113553.59407997131}
+-- This project is done:  neon_onaq2017
+-- Processing  gliht_mexico_nfi_32614
+-- Bounding box: [-101.67940419343267, 16.39626243230755, -93.50492162576516, 21.604321300975148]
+{'Number of available granules': 1266, 'Average size of granules (MB)': 1037.3210337851285, 'Total size of all granules (MB)': 1313248.4287719727}
+-- This project is done:  gliht_mexico_nfi_32614
+-- Processing  neon_bart2017
+-- Bounding box: [-71.33220692263723, 43.99105925563042, -71.25678440765655, 44.083563080990174]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1420.07946837289, 'Total size of all granules (MB)': 49702.78139305115}
+-- This project is done:  neon_bart2017
+-- Processing  neon_moab2021
+-- Bounding box: [-109.441717352258, 38.20179595085902, -109.32532445488488, 38.2946309441148]
+{'Number of available granules': 35, 'Average size of granules (MB)': 2494.946052987235, 'Total size of all granules (MB)': 87323.11185455322}
+-- This project is done:  neon_moab2021
+-- Processing  neon_ukfs2020
+-- Bounding box: [-95.26003184019845, 38.95169618034127, -95.13680242776066, 39.09601127579575]
+{'Number of available granules': 43, 'Average size of granules (MB)': 1136.0571874795958, 'Total size of all granules (MB)': 48850.45906162262}
+-- This project is done:  neon_ukfs2020
+-- Processing  embrapa_brazil_keller_2014_can
+-- Bounding box: [-46.388690281491776, -23.147163642712155, -46.217363160199874, -23.12426507906191]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1391.6876385839362, 'Total size of all granules (MB)': 52884.130266189575}
+-- This project is done:  embrapa_brazil_keller_2014_can
+-- Processing  neon_ornl
+-- Bounding box: [-84.44508517150675, 35.85389087228843, -84.16890024583054, 36.01122055710349]
+{'Number of available granules': 60, 'Average size of granules (MB)': 1366.6005156675974, 'Total size of all granules (MB)': 81996.03094005585}
+-- This project is done:  neon_ornl
+-- Processing  neon_laja2018
+-- Bounding box: [-67.12725316956269, 17.985059129601826, -66.94112623951742, 18.128477872948636]
+{'Number of available granules': 41, 'Average size of granules (MB)': 1176.0579313650364, 'Total size of all granules (MB)': 48218.37518596649}
+-- This project is done:  neon_laja2018
+-- Processing  veg3D_laegeren
+-- Bounding box: [8.362093158205722, 47.47682702040624, 8.367329326064176, 47.480382955337355]
+{'Number of available granules': 34, 'Average size of granules (MB)': 2029.9102949254652, 'Total size of all granules (MB)': 69016.95002746582}
+-- This project is done:  veg3D_laegeren
+-- Processing  neon_jerc2019
+-- Bounding box: [-84.5723680836508, 31.150211705222706, -84.35513408321371, 31.333848928902576]
+{'Number of available granules': 59, 'Average size of granules (MB)': 1206.413291640201, 'Total size of all granules (MB)': 71178.38420677185}
+-- This project is done:  neon_jerc2019
+-- Processing  embrapa_brazil_2020_and_a01
+-- Bounding box: [-46.846514686090984, -2.5775899779172264, -46.82756809241599, -2.5314605790870965]
+{'Number of available granules': 22, 'Average size of granules (MB)': 1100.4743243997748, 'Total size of all granules (MB)': 24210.435136795044}
+-- This project is done:  embrapa_brazil_2020_and_a01
+-- Processing  gliht_32605ak2014
+-- Bounding box: [-152.8895424520917, 59.596854832975936, -145.25734405606394, 65.68603023097607]
+{'Number of available granules': 1355, 'Average size of granules (MB)': 2239.4775225678054, 'Total size of all granules (MB)': 3034492.043079376}
+-- This project is done:  gliht_32605ak2014
+-- Processing  boyd_selangor
+-- Bounding box: [101.05857996044618, 3.4061675878765523, 101.38782447163618, 3.7329473602197027]
+{'Number of available granules': 62, 'Average size of granules (MB)': 1947.3302320818748, 'Total size of all granules (MB)': 120734.47438907623}
+-- This project is done:  boyd_selangor
+-- Processing  neon_blan2019
+-- Bounding box: [-78.09899844726088, 39.02582982221544, -77.94430889001387, 39.14911355526694]
+{'Number of available granules': 47, 'Average size of granules (MB)': 1372.915768623352, 'Total size of all granules (MB)': 64527.04112529755}
+-- This project is done:  neon_blan2019
+-- Processing  neon_jorn2019
+-- Bounding box: [-106.97873487478437, 32.52603272828177, -106.72544395543893, 32.749742602202495]
+{'Number of available granules': 32, 'Average size of granules (MB)': 2415.0230591893196, 'Total size of all granules (MB)': 77280.73789405823}
+-- This project is done:  neon_jorn2019
+-- Processing  embrapa_brazil_keller_2013_par
+-- Bounding box: [-47.55806345118242, -3.3288555755641576, -47.51146665814739, -3.306267574366179]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1518.5759559714277, 'Total size of all granules (MB)': 34927.246987342834}
+-- This project is done:  embrapa_brazil_keller_2013_par
+-- Processing  pref_pref
+-- Bounding box: [-116.85066350839129, 48.33429487483168, -116.73241975332205, 48.37613523348698]
+{'Number of available granules': 42, 'Average size of granules (MB)': 3123.473667303721, 'Total size of all granules (MB)': 131185.8940267563}
+-- This project is done:  pref_pref
+-- Processing  neon_wref
+-- Bounding box: [-122.10202204716886, 45.78469999133684, -121.77619254091483, 45.892685439067186]
+{'Number of available granules': 74, 'Average size of granules (MB)': 2942.263715628031, 'Total size of all granules (MB)': 217727.5149564743}
+-- This project is done:  neon_wref
+-- Processing  neon_deju2021
+-- Bounding box: [-145.84169617128774, 63.752043241050615, -145.5694749511128, 63.9746679480507]
+{'Number of available granules': 88, 'Average size of granules (MB)': 2276.4325118281627, 'Total size of all granules (MB)': 200326.0610408783}
+-- This project is done:  neon_deju2021
+-- Processing  nasa_laselva
+-- Bounding box: [-84.07708884285533, 10.317194440822364, -83.96600729814631, 10.496601709905995]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1046.4049939858287, 'Total size of all granules (MB)': 39763.38977146149}
+-- This project is done:  nasa_laselva
+-- Processing  embrapa_brazil_2020_rib_a01
+-- Bounding box: [-67.59360613714655, -9.950315813784297, -67.55205927017218, -9.908069225640771]
+{'Number of available granules': 20, 'Average size of granules (MB)': 2215.9243535518644, 'Total size of all granules (MB)': 44318.48707103729}
+-- This project is done:  embrapa_brazil_2020_rib_a01
+-- Processing  neon_harv2017
+-- Bounding box: [-72.28905847172871, 42.38322742115958, -72.10125349989067, 42.57627842533638]
+{'Number of available granules': 54, 'Average size of granules (MB)': 1179.7741741604275, 'Total size of all granules (MB)': 63707.805404663086}
+-- This project is done:  neon_harv2017
+-- Processing  embrapa_brazil_keller_2012_cau
+-- Bounding box: [-48.49580346521597, -3.7671953287832745, -48.46843421206663, -3.73028258707713]
+{'Number of available granules': 27, 'Average size of granules (MB)': 1297.2970222897, 'Total size of all granules (MB)': 35027.0196018219}
+-- This project is done:  embrapa_brazil_keller_2012_cau
+-- Processing  jpl_borneo_008
+-- Bounding box: [115.01405765377577, 0.9393575934421338, 115.110457822521, 1.013371947226511]
+{'Number of available granules': 39, 'Average size of granules (MB)': 1360.8077875284048, 'Total size of all granules (MB)': 53071.50371360779}
+-- This project is done:  jpl_borneo_008
+-- Processing  karawatha
+-- Bounding box: [153.0588897863754, -27.651752707051557, 153.09936918812087, -27.611062255714486]
+{'Number of available granules': 30, 'Average size of granules (MB)': 592.4800453821819, 'Total size of all granules (MB)': 17774.401361465454}
+-- This project is done:  karawatha
+-- Processing  neon_harv
+-- Bounding box: [-72.31122629146532, 42.36442085059556, -72.12085573629197, 42.59057830786774]
+{'Number of available granules': 53, 'Average size of granules (MB)': 1162.7749783857814, 'Total size of all granules (MB)': 61627.07385444641}
+-- This project is done:  neon_harv
+-- Processing  boschetti_idaho_selway
+-- Bounding box: [-115.77756403924984, 45.79586580892937, -115.32400293058923, 46.197353440845895]
+{'Number of available granules': 114, 'Average size of granules (MB)': 2920.977570659236, 'Total size of all granules (MB)': 332991.4430551529}
+-- This project is done:  boschetti_idaho_selway
+-- Processing  neon_grsm2015
+-- Bounding box: [-83.67790128664416, 35.53500950695856, -83.31496204789076, 35.78267174226774]
+{'Number of available granules': 76, 'Average size of granules (MB)': 1358.6780817383215, 'Total size of all granules (MB)': 103259.53421211243}
+-- This project is done:  neon_grsm2015
+-- Processing  slatecreek_2010
+-- Bounding box: [-116.09211261008925, 45.566154047690006, -115.97285312025433, 45.634323224678184]
+{'Number of available granules': 33, 'Average size of granules (MB)': 2806.5933655536537, 'Total size of all granules (MB)': 92617.58106327057}
+-- This project is done:  slatecreek_2010
+-- Processing  neon_onaq2021
+-- Bounding box: [-112.58560726569017, 40.13072369722363, -112.40017668052299, 40.24964021129286]
+{'Number of available granules': 60, 'Average size of granules (MB)': 2274.5059095541637, 'Total size of all granules (MB)': 136470.35457324982}
+-- This project is done:  neon_onaq2021
+-- Processing  cflra_powell
+-- Bounding box: [-114.90890948499742, 46.49560575780483, -114.36942216378131, 46.65006028228149]
+{'Number of available granules': 105, 'Average size of granules (MB)': 2768.6189583823793, 'Total size of all granules (MB)': 290704.99063014984}
+-- This project is done:  cflra_powell
+-- Processing  drc_ghent_field_32733
+-- Bounding box: [16.419181190664805, -6.864094233216938, 17.894960304851494, -1.2083390291588556]
+{'Number of available granules': 316, 'Average size of granules (MB)': 1022.5289798265771, 'Total size of all granules (MB)': 323119.15762519836}
+-- This project is done:  drc_ghent_field_32733
+-- Processing  inpe_brazil_gorgens
+-- Bounding box: [-69.09629069182478, -8.568539279945753, -68.95990430085415, -8.521237717024732]
+{'Number of available granules': 38, 'Average size of granules (MB)': 1931.7033516984236, 'Total size of all granules (MB)': 73404.7273645401}
+-- This project is done:  inpe_brazil_gorgens
+-- Processing  khaoyai_thailand
+-- Bounding box: [101.3400823836152, 14.385786045890423, 101.40409555424378, 14.44891047305249]
+{'Number of available granules': 22, 'Average size of granules (MB)': 2201.2649277340283, 'Total size of all granules (MB)': 48427.82841014862}
+-- This project is done:  khaoyai_thailand
+-- Processing  zofin_180416
+-- Bounding box: [14.693874446710572, 48.65861551527692, 14.717306391312217, 48.67440105774]
+{'Number of available granules': 31, 'Average size of granules (MB)': 1448.3599582487536, 'Total size of all granules (MB)': 44899.158705711365}
+-- This project is done:  zofin_180416
+-- Processing  italy_sella
+-- Bounding box: [11.415851101229931, 45.992338360912754, 11.437047469544373, 46.00603587841893]
+{'Number of available granules': 34, 'Average size of granules (MB)': 1404.6338502098533, 'Total size of all granules (MB)': 47757.55090713501}
+-- This project is done:  italy_sella
+-- Processing  kljun_loobos
+-- Bounding box: [5.647383590062529, 52.121156955988525, 5.831015688018531, 52.21059391940469]
+{'Number of available granules': 60, 'Average size of granules (MB)': 1492.2731777509055, 'Total size of all granules (MB)': 89536.39066505432}
+-- This project is done:  kljun_loobos
+-- Processing  neon_konz2016
+-- Bounding box: [-96.66609757061158, 39.02651449835301, -96.4838745484672, 39.17183694925866]
+{'Number of available granules': 51, 'Average size of granules (MB)': 1197.5590594983569, 'Total size of all granules (MB)': 61075.5120344162}
+-- This project is done:  neon_konz2016
+-- Processing  embrapa_brazil_keller_2014_fst
+-- Bounding box: [-56.32891049162468, -1.6949333193925726, -56.170899357624705, -1.579473754597447]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1123.7419931308643, 'Total size of all granules (MB)': 41578.45374584198}
+-- This project is done:  embrapa_brazil_keller_2014_fst
+-- Processing  neon_abby
+-- Bounding box: [-122.40419393869365, 45.70708375551558, -122.23659833386408, 45.80902472976685]
+{'Number of available granules': 51, 'Average size of granules (MB)': 2744.6797964432662, 'Total size of all granules (MB)': 139978.66961860657}
+-- This project is done:  neon_abby
+-- Processing  neon_jorn2021
+-- Bounding box: [-106.9797725614968, 32.52263725301052, -106.72701525166536, 32.72845721755488]
+{'Number of available granules': 33, 'Average size of granules (MB)': 2384.399309245023, 'Total size of all granules (MB)': 78685.17720508575}
+-- This project is done:  neon_jorn2021
+-- Processing  neon_soap2018
+-- Bounding box: [-119.32638908495804, 36.98617961347469, -119.19713161471277, 37.07979953813117]
+{'Number of available granules': 39, 'Average size of granules (MB)': 3011.5709776267026, 'Total size of all granules (MB)': 117451.2681274414}
+-- This project is done:  neon_soap2018
+-- Processing  spain_exts1
+-- Bounding box: [-6.894376867062397, 38.36962227058419, -6.7324888607270355, 38.44677350166464]
+{'Number of available granules': 48, 'Average size of granules (MB)': 1312.932705660661, 'Total size of all granules (MB)': 63020.76987171173}
+-- This project is done:  spain_exts1
+-- Processing  neon_wref2019
+-- Bounding box: [-122.06411269091494, 45.776840132472984, -121.76858755990133, 45.8986560952541]
+{'Number of available granules': 73, 'Average size of granules (MB)': 2964.432933389324, 'Total size of all granules (MB)': 216403.60413742065}
+-- This project is done:  neon_wref2019
+-- Processing  neon_mlbs2018
+-- Bounding box: [-80.60248010749578, 37.319102294684015, -80.46564982305529, 37.44161937888918]
+{'Number of available granules': 45, 'Average size of granules (MB)': 1441.4541836632623, 'Total size of all granules (MB)': 64865.4382648468}
+-- This project is done:  neon_mlbs2018
+-- Processing  nsw_taree
+-- Bounding box: [152.1673872944856, -32.47847776235303, 152.32432869758512, -32.17684916416658]
+{'Number of available granules': 45, 'Average size of granules (MB)': 866.5898003896077, 'Total size of all granules (MB)': 38996.54101753235}
+-- This project is done:  nsw_taree
+-- Processing  david_test
+-- Bounding box: [-79.87137826803259, 9.132181691782076, -79.81877490865183, 9.183251353286826]
+{'Number of available granules': 24, 'Average size of granules (MB)': 831.6840955018997, 'Total size of all granules (MB)': 19960.418292045593}
+-- This project is done:  david_test
+-- Processing  gliht_32607ak2014
+-- Bounding box: [-143.66834541597498, 61.633694855676964, -140.93032039484262, 64.08187473113634]
+{'Number of available granules': 521, 'Average size of granules (MB)': 2236.4289852405923, 'Total size of all granules (MB)': 1165179.5013103485}
+-- This project is done:  gliht_32607ak2014
+-- Processing  ara_smapex
+-- Bounding box: [145.9678359721696, -35.014943096477325, 146.53389855373698, -34.687173651397806]
+{'Number of available granules': 113, 'Average size of granules (MB)': 833.7256187506482, 'Total size of all granules (MB)': 94210.99491882324}
+-- This project is done:  ara_smapex
+-- Processing  jpl_borneo_219
+-- Bounding box: [115.6167276896263, -1.2089460848655924, 115.77131264593373, -1.1249866249428664]
+{'Number of available granules': 39, 'Average size of granules (MB)': 1031.0157832121238, 'Total size of all granules (MB)': 40209.61554527283}
+-- This project is done:  jpl_borneo_219
+-- Processing  jpl_rabi
+-- Bounding box: [9.85912447233234, -1.9460068855695174, 9.906108013319134, -1.9004367196807879]
+{'Number of available granules': 25, 'Average size of granules (MB)': 593.9927140426636, 'Total size of all granules (MB)': 14849.81785106659}
+-- This project is done:  jpl_rabi
+-- Processing  neon_steicheq2020
+-- Bounding box: [-90.14874879149077, 45.77234939501285, -90.02985826378934, 45.84681245599967]
+{'Number of available granules': 37, 'Average size of granules (MB)': 1245.7407501839302, 'Total size of all granules (MB)': 46092.40775680542}
+-- This project is done:  neon_steicheq2020
+-- Processing  tern_alice_mulga
+-- Bounding box: [133.22111699429132, -22.307470961827292, 133.44851748424867, -22.111170637759376]
+{'Number of available granules': 55, 'Average size of granules (MB)': 965.6864540446888, 'Total size of all granules (MB)': 53112.754972457886}
+-- This project is done:  tern_alice_mulga
+-- Processing  neon_niwo2019
+-- Bounding box: [-105.66404393072054, 39.97300168956336, -105.46701257025792, 40.08282741652976]
+{'Number of available granules': 44, 'Average size of granules (MB)': 2456.582945845344, 'Total size of all granules (MB)': 108089.64961719513}
+-- This project is done:  neon_niwo2019

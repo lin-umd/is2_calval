@@ -1,1 +1,0 @@
-/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/las/africa/csir_welverdient/tile_28920_-2720680_utm_0000001.las

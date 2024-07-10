@@ -1,0 +1,41 @@
+41745
+-- Processing polyon index 0
+-- Bounding box: [-70.48178383  45.36199058 -70.48119008  45.36390123]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1429.2458864974976, 'Total size of all granules (MB)': 35731.14716243744}
+-- This project is done:  usda_me
+-- Processing polyon index 1
+-- Bounding box: [-70.6173432   45.36513505 -70.59692696  45.63699513]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1338.2229659489224, 'Total size of all granules (MB)': 46837.80380821228}
+-- This project is done:  usda_me
+-- Processing polyon index 2
+-- Bounding box: [-70.5528788   45.37306637 -70.54275257  45.66929896]
+{'Number of available granules': 34, 'Average size of granules (MB)': 1439.138417187859, 'Total size of all granules (MB)': 48930.70618438721}
+-- This project is done:  usda_me
+-- Processing polyon index 3
+-- Bounding box: [-70.55074211  45.37326379 -70.53523876  45.66933506]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1406.7335191999164, 'Total size of all granules (MB)': 49235.67317199707}
+-- This project is done:  usda_me
+-- Processing polyon index 4
+-- Bounding box: [-70.53553099  45.37384418 -70.53273229  45.39079698]
+{'Number of available granules': 26, 'Average size of granules (MB)': 1543.442927470574, 'Total size of all granules (MB)': 40129.516114234924}
+-- This project is done:  usda_me
+-- Processing polyon index 5
+-- Bounding box: [-70.61232702  45.3757999  -70.61183466  45.3776335 ]
+{'Number of available granules': 24, 'Average size of granules (MB)': 1211.933745821317, 'Total size of all granules (MB)': 29086.40989971161}
+-- This project is done:  usda_me
+-- Processing polyon index 6
+-- Bounding box: [-70.61219818  45.38735731 -70.61212183  45.38773159]
+{'Number of available granules': 23, 'Average size of granules (MB)': 1235.0627467113993, 'Total size of all granules (MB)': 28406.443174362183}
+-- This project is done:  usda_me
+-- Processing polyon index 7
+-- Bounding box: [-70.4894957   45.36200932 -70.47353132  45.70877775]
+{'Number of available granules': 35, 'Average size of granules (MB)': 1325.0302532468522, 'Total size of all granules (MB)': 46376.05886363983}
+-- This project is done:  usda_me
+-- Processing polyon index 8
+-- Bounding box: [-70.48253931  45.40257849 -70.48223529  45.4035102 ]
+{'Number of available granules': 22, 'Average size of granules (MB)': 1560.1126945669, 'Total size of all granules (MB)': 34322.4792804718}
+-- This project is done:  usda_me
+-- Processing polyon index 9
+-- Bounding box: [-70.53634707  45.41990277 -70.53552815  45.42149595]
+{'Number of available granules': 25, 'Average size of granules (MB)': 1553.5463975906373, 'Total size of all granules (MB)': 38838.65993976593}
+-- This project is done:  usda_me

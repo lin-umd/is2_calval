@@ -1,6 +1,8 @@
-# read is2_calval
-from dask.distributed import Client
-
+#!/usr/bin/env python
+# coding: utf-8
+from dask.distributed import Client, progress
+import dask.dataframe as dd
+import dask
 import geopandas as gpd 
 import numpy as np
 import os
@@ -9,52 +11,48 @@ import time
 import subprocess
 import multiprocessing
 from tqdm import tqdm
-# read H5 file 
 import h5py
-########
 import utm
 import pandas as pd
 import math
 import matplotlib.pyplot as plt
 from scipy.stats import poisson
 from shapely.geometry import Point
+from shapely.geometry import Polygon
+
+TMP_FILE = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/is2_in_als_utm.parquet'
+# processing file track 
+LOG = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/is2_calval/processing_test.txt'
+SIM_LOG = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/is2_calval/running.log'
 # variables 
 LAS_PATH = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/las'
 RES_PATH = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result'
 Pulse_PATH = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/20190821.gt1l.pulse' # from Amy
-# CPU
-N = 20
+# data files 
+IS2_20M_FILE = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/is2_20m_calval_09252023.parquet'
+ALS_SITES = "/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/sites_20221006.gpkg"
 
-# check if the file is processed before???
 
-
-##########################################################################################################
-# 
-print('# read is2 in cal/val sites ...')
-gdf_is2 = gpd.read_parquet('../result/is2_20m_calval_09252023.parquet') # 18550387 IS2 20 m segment points
-# Specify the path to your GeoPackage file
-als_sites = "../data/sites_20221006.gpkg"
-# Read the GeoPackage file
-gdf_als = gpd.read_file(als_sites)
-
-# return all is2 points in laz boundary 
-def sim_is2_laz(is2_in_als_utm , laz_path):
-#laz_path = '/gpfs/data1/vclgp/data/gedi/imported/usa/usda_or/LAZ_ground/or_10_101.laz'
+@dask.delayed
+def sim_is2_laz(laz_path):
+                    #laz_path = '/gpfs/data1/vclgp/data/gedi/imported/usa/usda_or/LAZ_ground/or_10_101.laz'
+                    is2_in_als_utm = gpd.read_parquet(TMP_FILE)
                     als_name = laz_path.split('/')[-3]
                     region = laz_path.split('/')[-4]
                     bounds_file = '/gpfs/data1/vclgp/data/gedi/imported/lists/ground_bounds/boundGround.' + als_name+ '.txt'
-                    df = pd.read_csv(bounds_file, header = None, sep = " ")
+                    column_names = ['file', 'xmin', 'ymin', 'zmin', 'xmax', 'ymax', 'zmax']
+                    df = pd.read_csv(bounds_file, header = None, sep = " ",  names=column_names , encoding='latin1')
                     #print('# las file : \n', laz_path)
-                    df.columns = ['file', 'xmin', 'ymin', 'zmin', 'xmax', 'ymax', 'zmax']
+                    #df.columns = ['file', 'xmin', 'ymin', 'zmin', 'xmax', 'ymax', 'zmax']
                     basename = os.path.basename(laz_path)
-                    d_file = df[df['file'].str.contains(basename[:-4])]
+                    d_file = df[df['file'].str.contains(basename[:-1])] ### or_10_101.laz    
                     #print( '# laz file bounds: ',d_file.iloc[:, 1:6])
                     xmin = d_file['xmin'] 
                     xmax = d_file['xmax'] 
                     ymin = d_file['ymin'] 
                     ymax = d_file['ymax'] 
                     # get laz and nearby laz 
-                    from shapely.geometry import Polygon
+                    
                     # Create a Polygon geometry from the coordinates
                     polygon = Polygon([(xmin, ymin), (xmax, ymin), (xmax, ymax), (xmin, ymax)])
                     # return is2_in_als -----
@@ -64,30 +62,15 @@ def sim_is2_laz(is2_in_als_utm , laz_path):
                         #print('# no is2 20m segment is in this las file!')
                         return None
                     # get footprints 
-                    ###########################################################
-                    # should i get 1 las file  ---> 1 wave.h5?
-                    # start from one segment -- one row 
-                    
-                    
                     segment_footprints_utm = get_footprint(is2_laz) # get all 
                         # create result folder /region/name/
                     res_out = RES_PATH + '/' + region + '/' + als_name 
                     os.makedirs( res_out , exist_ok = True)
-                    # if (len(is2_laz) > 300):
-                    #     print('# number of is2 20m segments in las file: ', len(is2_laz))
-                    #     is2_laz.to_csv(res_out+'/'+ basename[:-4] + '.csv' ) 
-                    #     print('# las file: ', laz_path)
                     out_coor = res_out+ '/coordinates_'+ basename[:-4] + '.txt'####
-                    #out_las_txt = res_out+ '/lasfiles_'+ basename[:-4] + '.txt'
                     out_wave = res_out+ '/wave_'+ basename[:-4] + '.h5'
-                                       
-                                        ### if wave file exist, 
-                    if os.path.isfile(out_coor):
-                            print(f"The file {out_coor} exists.") 
-                            return None
-
-
-
+                    # if os.path.isfile(out_coor):
+                    #         print(f"The file {out_coor} exists.") 
+                    #         return None
                     segment_footprints_utm[['e', 'n']].to_csv(out_coor, sep=' ', header = False,  index = False)
                     
                     # /gpfs/data1/vclgp/data/gedi/imported/usa/usda_or/ALS_ground/or_10_101.las
@@ -101,10 +84,10 @@ def sim_is2_laz(is2_in_als_utm , laz_path):
                     bs_las_path = las_out+'/'+bs_las
                     if not os.path.isfile(bs_las_path):
                             #print('not exist')
-                            print('# converting laz file: ', laz_path )
+                            #print('# converting laz file: ', laz_path )
                             os.system(f'las2las -i {laz_path} -odir {las_out} -olas')
                     #print('bs_las_path', bs_las_path)
-                    os.system(f'gediRat -fSigma 2.75 -readPulse {Pulse_PATH} -input {bs_las_path} -listCoord {out_coor}  -output {out_wave} -hdf  -ground > running.log')
+                    os.system(f'gediRat -fSigma 2.75 -readPulse {Pulse_PATH} -input {bs_las_path} -listCoord {out_coor}  -output {out_wave} -hdf  -ground > {SIM_LOG}')
 
                     # if out_wave is done. 
                     # remove this las file 
@@ -125,8 +108,6 @@ def sim_is2_laz(is2_in_als_utm , laz_path):
                         df1.columns = ['id']
                         df1['wave_index'] = df1.index
                         #print("Keys in HDF5 file:", list(f_wave.keys()))
-
-
                         ########## loop every segment 
                         res_las = []
                         for index_20m, row_20m in is2_laz.iterrows():
@@ -159,14 +140,18 @@ def sim_is2_laz(is2_in_als_utm , laz_path):
                                     end = res['wave_index'].iloc[-1]
                                     #print('start, end: ', start, end)
                                     rh = get_sim_rh(out_wave, start, end)
-                                    rh['fid'] = index_20m
-                                    #print('# rh: ', rh)
-                                    res_las.append(rh)
-                        #print('rh list in each las file: ',res_las)          
+                                    if rh is not None:
+                                        rh['fid'] = index_20m
+                                        #print('# rh: ', rh)
+                                        res_las.append(rh)
+                        #print('rh list in each las file: ',res_las)  
+                        if (len(res_las) ==0):
+                            return None
                         res_las = pd.concat(res_las, ignore_index=True)
                         out_rh = res_out+ '/rh_'+ basename[:-4] + '.parquet' # each las file, give me rh.
                         #print('# write to parquet file ...')
                         res_las.to_parquet(out_rh)
+                        
 
 # get rh from one waveform .
 
@@ -180,7 +165,7 @@ def get_sim_rh(filename, start, end):
                         #print("Keys: %s" % f.keys())
                         N_foorprints = f['RXWAVECOUNT'].shape[0]
                         pho_w_ground = pd.DataFrame()
-                        pho_no_ground = pd.DataFrame()
+
                         for i in range(start, end+1): # inclusive
                                     
                                     RXWAVECOUNT = f['RXWAVECOUNT'][i]
@@ -208,33 +193,22 @@ def get_sim_rh(filename, start, end):
                                     photon_rows = np.random.choice(rows, size=n, p=p_data)
                                     df1 = zStretch[photon_rows] - zG
                                     df1 = pd.DataFrame(df1)
+                                    # add a ground flag to df1 
+                                    df1['ground_flag'] = GRWAVECOUNT[photon_rows] > 0 
                                     if (len(pho_w_ground) == 0):
                                         pho_w_ground = df1
                                     else:
                                         #print(df1)
                                         pho_w_ground = pd.concat([pho_w_ground, df1], ignore_index=True)
-                                    # # canopy photons only
-                                    canopy_wave = RXWAVECOUNT - GRWAVECOUNT
-                                    
-                                        
-                                    total = sum(canopy_wave)
-                                    if (total == 0 ): continue
-                                    # fill NAs.
-                                    #canopy_wave = np.nan_to_num(canopy_wave, nan=0.0)
-                                    # Normalize the data by dividing each value by the total
-                                    p_data = [value / total for value in canopy_wave]
-                                    photon_rows = np.random.choice(rows, size=n, p=p_data)
-                                    df1 = zStretch[photon_rows] - zG
-                                    df1 = pd.DataFrame(df1)
-                                    if (len(pho_no_ground) == 0):
-                                        pho_no_ground = df1
-                                    else:
-                                        pho_no_ground = pd.concat([pho_no_ground, df1], ignore_index=True)
+
                     f.close()
                     percentiles = np.arange(1, 101, 1)
-                    height_percentiles = np.percentile(pho_no_ground, percentiles)
-                    ch_98 = height_percentiles[97] ### h_98
-                    
+                    pho_no_ground = pho_w_ground[pho_w_ground['ground_flag'] == False]
+                    if (len(pho_no_ground) == 0):
+                        return None
+                    else:
+                        height_percentiles = np.percentile(pho_no_ground, percentiles)
+                        ch_98 = height_percentiles[97] ### h_98
                     # rh 
                     percentiles = np.arange(0, 101, 1)
                     #0 --> min height
@@ -247,7 +221,6 @@ def get_sim_rh(filename, start, end):
                     sim.loc[0] = height_percentiles
                     sim['h_canopy_98'] = ch_98
                     return sim
-
 
 def get_footprint(is2_laz):
     res_footprints = []
@@ -266,73 +239,57 @@ def get_footprint(is2_laz):
                     res_footprints.append(coordinates_utm)
     res_footprints = pd.concat(res_footprints, ignore_index=True)
     return res_footprints
-     #coordinates_utm_sites_df #.to_csv('../wave/coordinates_utm_sites.txt', sep=' ', header = False,  index = False) # coordinates should be differnt. 
-
-flag = 1000
 
 
-print('## start client')
-client = Client()
-print(client)
-for index, row in gdf_als.iloc[150:160].iterrows(): 
-        # Open a text file named "output.txt" in write mode
-        with open('processing_test.txt', 'w') as file:
-            # Write text to the file
-            file.write('# index: {}\n'.format(index))
-            file.write('# now processing als project: {}\n'.format(row['region'] + '_' + row['name']))
-        
-        # usa_neon_sawb
-        # start from this project. 
-        
-        if (row['region'] == 'southamerica' and row['name'] == 'embrapa_brazil_keller_2014_tan'):
-            flag = index
-        if (index < flag): continue # start only from this project. 
+if __name__ == '__main__':
 
-        # The file will be automatically closed when you exit the 'with' block
-        # the bounding box of each input geometry intersects the bounding box
-        als_index = gdf_is2.sindex.query(row['geometry']) # super fast!!!!! # but only boundary box. 
-        is2_in_als = gdf_is2.loc[als_index] 
-        #print(len(is2_in_als))
-        is2_in_als = is2_in_als.clip(row['geometry'])  # get points inside polygon.
-        #out_name = '../result/is2_calval_region/is2_' + row['region'] + '_' + row['name'] + '.parquet'
-        print('# now processing als project: ', row['region'] + '_' + row['name'])
-        #is2_in_als.to_parquet(out_name)   # save is2 footprints in this als site
-        print("# is2 points in this als project: ", len(is2_in_als))
-        if (len(is2_in_als) <= 1): continue
-        print('# convert segments in utm...')
-        ##############################################################
-        for is2_index, is2_row in is2_in_als.iterrows():   
-                lat_c = is2_row['land_segments/latitude_20m'] 
-                lon_c = is2_row['land_segments/longitude_20m']
-                e, n , zone, letter = utm.from_latlon(lat_c, lon_c)
-                is2_in_als.loc[is2_index, 'e'] = e
-                is2_in_als.loc[is2_index, 'n'] = n
-                is2_in_als.loc[is2_index, 'zone'] = zone
-        # Create a GeoDataFrame with a Point geometry
-        geometry = [Point(x, y) for x, y in zip(is2_in_als['e'], is2_in_als['n'])]
-        is2_in_als_utm = gpd.GeoDataFrame(data = is2_in_als, geometry=geometry)
-        ########################################################### 
-        data_path = '/gpfs/data1/vclgp/data/gedi/imported/' + row['region'] + '/' + row['name'] + '/LAZ_ground'
-        # convert all laz file to las files
-        files_path = data_path + '/*.laz' 
-        laz_files = glob.glob(files_path)
-        print('# number of laz files: ', len(laz_files))
-        futures = []
-        for laz_f in laz_files:
-            future = client.submit(sim_is2_laz, is2_in_als_utm, laz_f)
-            futures.append(future)  
-        # nCPU = len(laz_files)
-        # if nCPU > 10 : 
-        #    nCPU = N  # number of cores to use  
-        # print('# parallel processing...')
-        # pool = multiprocessing.Pool(nCPU) # Set up multi-processing
-        # progress_bar = tqdm(total=len(laz_files))
-        # def update_progress_bar(_):
-        #       progress_bar.update()  
-        # for laz_f in laz_files:
-        #     pool.apply_async(sim_is2_laz, (is2_in_als_utm, laz_f), callback=update_progress_bar)
-        # pool.close()
-        # pool.join()
-        # # Close the progress bar
-        # progress_bar.close()
-        print('# als project:', row['region'] + '_' + row['name'], ' is done!')    
+            print('## read is2 in cal/val sites ...')
+            gdf_is2 = gpd.read_parquet(IS2_20M_FILE) # 18550387 IS2 20 m segment points
+            # Specify the path to your GeoPackage file
+            # Read the GeoPackage file
+            gdf_als = gpd.read_file(ALS_SITES)
+            print('## start client')
+            client = Client()
+            print(f'## -- dask client opened at: {client.dashboard_link}')
+            for index, row in gdf_als.iterrows(): 
+                    # Open a text file named "output.txt" in write mode
+                    with open(LOG, 'w') as file:
+                        # Write text to the file
+                        file.write('# index: {}\n'.format(index))
+                        file.write('# now processing als project: {}\n'.format(row['region'] + '_' + row['name']))
+            
+                    als_index = gdf_is2.sindex.query(row['geometry']) # super fast!!!!! # but only boundary box. 
+                    is2_in_als = gdf_is2.loc[als_index] 
+            
+                    is2_in_als = is2_in_als.clip(row['geometry'])  # get points inside polygon.
+            
+                    print('# now processing als project: ', row['region'] + '_' + row['name'])
+            
+                    print("# is2 points in this als project: ", len(is2_in_als))
+                    if (len(is2_in_als) <= 1): continue
+                    print('# convert segments in utm...')
+                    ##############################################################
+                    for is2_index, is2_row in is2_in_als.iterrows():   
+                            lat_c = is2_row['land_segments/latitude_20m'] 
+                            lon_c = is2_row['land_segments/longitude_20m']
+                            e, n , zone, letter = utm.from_latlon(lat_c, lon_c)
+                            is2_in_als.loc[is2_index, 'e'] = e
+                            is2_in_als.loc[is2_index, 'n'] = n
+                            is2_in_als.loc[is2_index, 'zone'] = zone
+            
+                    geometry = [Point(x, y) for x, y in zip(is2_in_als['e'], is2_in_als['n'])]
+                    is2_in_als_utm = gpd.GeoDataFrame(data = is2_in_als, geometry=geometry)
+                    is2_in_als_utm.to_parquet(TMP_FILE)
+                    ########################################################### 
+                    data_path = '/gpfs/data1/vclgp/data/gedi/imported/' + row['region'] + '/' + row['name'] + '/LAZ_ground'
+                    # convert all laz file to las files
+                    files_path = data_path + '/*.laz' 
+                    laz_files = glob.glob(files_path)
+                    print('# number of laz files: ', len(laz_files))
+                    cmds = [sim_is2_laz(laz_f) for laz_f in laz_files]  ## if update merge to new shots 
+                    _ = dask.persist(*cmds)
+                    progress(_)
+                    del _
+                    print('') 
+                    print('# als project:', row['region'] + '_' + row['name'], ' is done!')    
+            client.close()
