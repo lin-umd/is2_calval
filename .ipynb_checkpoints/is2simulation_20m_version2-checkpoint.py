@@ -5,16 +5,12 @@ this script is for is2 simulation of 20m segment data over cal/val sites.
 lin xiong
 lxiong@umd.edu
 07/03/2024
-
-currently every laz file. 
-to revise:
-simulation by is2 track is a good idea.
-site -- is2 segment -- simulate footprints -- how many? --
+to do
+* optimze pipeline from waveform to photons and rh metrics.
 '''
 
 # example use:
-# python is2simulation_20m.py --lamda 1 --output ../result/lamda1 --test --ratiopvpg 0.75
-
+# python is2simulation_20m_version2.py --test --sim --metric --prepare
 
 import os
 os.environ['USE_PYGEOS'] = '0'
@@ -68,7 +64,8 @@ redo_sites =  ['csir_agincourt', 'csir_dnyala', 'csir_ireagh', 'csir_justicia', 
 # global env.
 FOLDER_PROJ = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/is2_projected_als'
 LAS_PATH = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/las'
-RES_PATH = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result' # default output.
+LAZ_PATH = '/gpfs/data1/vclgp/data/gedi/imported'
+RES_PATH = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result_simV2' # default output.
 Pulse_PATH = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/20190821.gt1l.pulse' # from Amy
 IS2_20M_FILE = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/is2_20m_cal_val_12262023.parquet'
 ALS_SITES = "/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/all_sites_20231218.parquet"
@@ -77,10 +74,13 @@ def getCmdArgs():
     p = argparse.ArgumentParser(description = "IS2 simulation over cal/val database")
     p.add_argument("-n", "--name", dest="name", required=False, type=str, help="ALS project name") # nargs='+', if I want multiple names.
     p.add_argument("-p", "--projection", dest="projection", required=False, action='store_true', help="projecting is2 data to sites.") # nargs='+', if I want multiple names.
-    p.add_argument("-l", "--lamda", dest="lamda", required=False, type=float, default=3, help="number of average photons in poisson distribution")
-    p.add_argument("-o", "--output", dest="output", required=False, help="Output folder path")
+    p.add_argument("-l", "--lamda", dest="lamda", required=False, type=float, default=0.5, help="number of average photons in poisson distribution")
+    #p.add_argument("-o", "--output", dest="output", required=False, default=RES_PATH,  help="Output folder path")
     p.add_argument("-t", "--test", dest="test", required=False, action='store_true', help="Simulate 10 files")
-    p.add_argument("-r", "--ratiopvpg", dest="ratiopvpg", required=False, type=float, default=1.5, help="Reflactance ratio")
+    p.add_argument("-e", "--prepare", dest="prepare", required=False, action='store_true', help="pepare coordinates, las lists for simulation")
+    p.add_argument("-s", "--sim", dest="sim", required=False, action='store_true', help="run simulation to waves")
+    p.add_argument("-m", "--metric", dest="metric", required=False, action='store_true', help="run waves to rh metrics")
+    p.add_argument("-r", "--ratiopvpg", dest="ratiopvpg", required=False, type=float, default=1.5, help="Reflectance ratio")
     cmdargs = p.parse_args()        
     return cmdargs
 
@@ -98,86 +98,124 @@ def remove_las_files(LAS_PATH, region, name):
     except OSError as e:
         print(f"Error deleting files in {las_folder}: {e}")     
 
-@dask.delayed
-def sim_is2_laz(laz_path, output=RES_PATH, lamda=3, ratiopvpg=1.5, overwrite_wave=False, overwrite_photon=False): 
-    als_name = laz_path.split('/')[-3]
-    region = laz_path.split('/')[-4]
-    out_projected = FOLDER_PROJ + '/' + region  + '_' + als_name  + '.parquet'
-    is2_in_als_projected = gpd.read_parquet(out_projected)
-    basename = os.path.basename(laz_path)  
-    bounds_file = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/laz_bounds/' + region+ '_' + als_name+ '_' + basename[:-4] + '.parquet'
-    if not os.path.isfile(bounds_file):
-        print('/n this laz file may corrupted:',laz_path)
-        return
-    else:
-        laz_gdf = gpd.read_parquet(bounds_file)
-        polygon = laz_gdf.to_crs(laz_gdf.iloc[0]['epsg']).iloc[0]['geometry']
-    is2_laz = is2_in_als_projected.clip(polygon) 
-    if (len(is2_laz) == 0): return # no is2 points in laz
-    # /gpfs/data1/vclgp/data/gedi/imported/centralamerica/gliht_mexico_nfi_32613/LAZ_ground/AMIGACarb_PM1_Herm_Guan_GLAS_Apr2013_s719.laz
-    las_out = LAS_PATH + '/' + region + '/' + als_name
-    os.makedirs( las_out , exist_ok = True)
-    bs = os.path.basename(laz_path)
-    bs_las = bs[:-1] + 's'
-    bs_las_path = las_out+'/'+bs_las
-    if not os.path.isfile(bs_las_path):
-        os.system(f'las2las -i {laz_path} -odir {las_out} -olas')
-    segment_footprints_list = []
-    for index_20m, row_20m in is2_laz.iterrows():
-        segment_footprints_list.append(get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']))
-    segment_footprints = pd.concat(segment_footprints_list, ignore_index=True)
-    res_out = output + '/' + region + '/' + als_name 
-    os.makedirs( res_out , exist_ok = True)
-    out_coor = res_out+ '/coordinates_'+ basename[:-4] + '.txt'####
-    out_wave = res_out+ '/wave_'+ basename[:-4] + '.h5'
-    out_sim_log = res_out+ '/sim_log_'+ basename[:-4] + '.txt'
-    if not os.path.exists(out_wave) or overwrite_wave: # waveform not exist, run simulation; ovewrite= true, run simulation.
-        segment_footprints[['e', 'n']].to_csv(out_coor, sep=' ', header = False,  index = False)
-        os.system(f'gediRat -fSigma 2.75 -readPulse {Pulse_PATH} -input {bs_las_path} -listCoord {out_coor}  -output {out_wave} -hdf  -ground > {out_sim_log}')
-    if os.path.exists(out_wave):  # no matter exist previously or just after simulation now.
-        out_pho = res_out+ '/photon_'+ basename[:-4] + '.parquet' # each las file, output photons
-        if os.path.exists(out_pho) and not overwrite_photon: return # file exist, and no need to overwrite, return. 
-        f_wave = h5py.File(out_wave, 'r')
-        byte_strings = f_wave['WAVEID'][()]
-        f_wave.close() 
-        wave_ids = []
-        for item in byte_strings:
-            result_string = ''.join([byte.decode('utf-8') for byte in item])
-            wave_ids.append(result_string)
-        # Find common strings
-        df1 = pd.DataFrame(wave_ids)
-        df1.columns = ['id']
-        df1['wave_index'] = df1.index
-        res_las = []
-        res_pho = []
-        for index_20m, row_20m in is2_laz.iterrows():
-            footprint = get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']) # string already.
-            footprint['id'] = footprint['e'].astype(str) + '.' + footprint['n'].astype(str) 
-            res = pd.merge(df1, footprint, on='id', how='inner')
-            if (len(res) == 0): continue   ##### why is there empty waveform for this is2 20m segment?
-            start = res['wave_index'].iloc[0] # must have
-            end = res['wave_index'].iloc[-1] # must end>= start.
-            pho_w_ground = get_sim_photon(out_wave, start, end, lamda, ratiopvpg) # average ~30*3 = 90 photons/rows
-            if pho_w_ground is None: continue # this segment no photons. 
-            pho_w_ground['land_segments/longitude_20m'] = row_20m['land_segments/longitude_20m']  # lon, lat, time ---> unique ID. 
-            pho_w_ground['land_segments/latitude_20m'] = row_20m['land_segments/latitude_20m']
-            pho_w_ground['land_segments/delta_time'] = row_20m['land_segments/delta_time']
-            res_pho.append(pho_w_ground)        
-            rh = get_sim_rh(pho_w_ground)
-            rh['land_segments/longitude_20m'] = row_20m['land_segments/longitude_20m'] 
-            rh['land_segments/latitude_20m'] = row_20m['land_segments/latitude_20m']
-            rh['land_segments/delta_time'] = row_20m['land_segments/delta_time']
-            res_las.append(rh) 
-        if len(res_pho) ==0: return # not likely to happen
-        res_pho = pd.concat(res_pho, ignore_index=True)
-        
-        res_pho.to_parquet(out_pho) # output photons.                        
-        if (len(res_las) ==0): return # not likely to happen
-        res_las = pd.concat(res_las, ignore_index=True)
-        out_rh = res_out+ '/rh_'+ basename[:-4] + '.parquet' # each las file, give me rh.
-        res_las.to_parquet(out_rh) # Pandas will silently overwrite the file, if the file is already there
+
+def project2track2beam(region, name, output=RES_PATH): 
+    is2file='/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/is2_projected_als/'+region + '_' + name + '.parquet' 
+    gdf_als = gpd.read_parquet(is2file)
+    laz_project = gpd.read_parquet('/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/bounds_project/' + region + '_' + name + '.parquet' )# wgs84
+    epsg = int(laz_project.iloc[0]['epsg'])
+    laz_project = laz_project.to_crs(epsg)# projected
+    res_out = output + '/' + region + '/' + name
+    os.makedirs( res_out, exist_ok = True)
+    cmds = []
+    for t in gdf_als['root_file'].unique(): 
+        t_df = gdf_als[gdf_als['root_file'] == t]
+        for b in  t_df['root_beam'].unique():
+            b_t_df = t_df[t_df['root_beam'] == b]
+            out_b_t = res_out+ '/df_'+ t[:-3] + '_' + b + '.parquet'####o
+            if os.path.exists(out_b_t): continue # skip this file.
+            b_t_df.to_parquet(out_b_t) # output photons. 
+            print(name, t, b, len(b_t_df))
+            segment_footprints_list = []
+            for index_20m, row_20m in b_t_df.iterrows():
+                segment_footprints_list.append(get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']))
+            segment_footprints = pd.concat(segment_footprints_list, ignore_index=True)
+            foots = gpd.GeoSeries(gpd.points_from_xy(segment_footprints.e, segment_footprints.n))
+            idx= laz_project.sindex.query(foots)
+            out_coor = res_out+ '/coordinates_'+ t[:-3] + '_' + b + '.txt'####o
+            segment_footprints[['e', 'n']].to_csv(out_coor, sep=' ', header = False,  index = False)
+            # get laz, las file list
+            files_list = laz_project.iloc[idx[1]]['file'].unique()
+            las_list = []
+            for f in files_list:
+                bs = f.replace(region+'_'+name + '_', '').replace('.parquet' , '.las')
+                bs_las_path = LAS_PATH + '/' + region + '/' + name + '/' + bs
+                las_list.append(bs_las_path)
+                if not os.path.isfile(bs_las_path):
+                    bs_laz_path = LAZ_PATH + '/' + region + '/' + name + '/LAZ_ground/' + bs[:-1]+ 'z'
+                    if os.path.isfile(bs_laz_path):
+                        print('laz to las...', bs_laz_path)
+                        os.system(f'las2las -i {bs_laz_path} -o {bs_las_path}')
+                    else:
+                        las_list.remove(bs_las_path)
+                        print('no such laz file: ', bs_laz_path)
+                        continue
+            out_als_list = res_out+ '/alslist_'+ t[:-3] + '_' + b + '.txt'####o
+            with open(out_als_list, 'w') as file:
+                for item in las_list:
+                    file.write(f"{item}\n")
+
+
+#@dask.delayed
+# coordinates_ATL08_20181201082105_09730106_006_02_gt1l.txt
+# alslist_ATL08_20181201082105_09730106_006_02_gt1l.txt
+def get_sim_cmds(regions, names, overwrite_wave=False): 
+    all_als_lists = []
+    cmds = []
+    for region, name in zip(regions, names):
+        als_list = glob.glob(RES_PATH+'/'+region+'/'+name+'/alslist*.txt')
+        all_als_lists.extend(als_list)
+    for alsfile in all_als_lists:
+        out_coord = alsfile.replace('alslist' , 'coordinates')
+        out_wave =  alsfile.replace('alslist', 'wave')[:-4] + '.h5'
+        out_sim_log = alsfile.replace('alslist','sim_log') 
+        #if not os.path.exists(out_wave) or overwrite_wave: # waveform not exist, run simulation; ovewrite= true, run simulation.
+        if not os.path.exists(out_sim_log) or overwrite_wave: # some files, no is2 points.
+            cmd = f'gediRat -fSigma 2.75 -readPulse {Pulse_PATH} -inList {alsfile} -listCoord {out_coord}  -output {out_wave} -hdf  -ground > {out_sim_log}'
+            cmds.append(cmd)
+    return cmds
+
+def run_cmd(cmd):
+    print(cmd)
+    os.system(cmd)
+
+#@dask.delayed
+def read_waves(out_wave='../result_simV2/usa/neon_niwo2020/wave_ATL08_20230524021757_09731906_006_01_gt3l.h5', lamda=0.5, ratiopvpg=0.86, overwrite_photon=False):
+    out_pho = out_wave.replace('wave_', 'photon_')[:-3] + '.parquet'
+    if os.path.exists(out_pho) and not overwrite_photon: return # file exist, and no need to overwrite, return
+    print('reading wave file', out_wave)
+    f_wave = h5py.File(out_wave, 'r')
+    byte_strings = f_wave['WAVEID'][()]
+    f_wave.close() 
+    wave_ids = []
+    for item in byte_strings:
+        result_string = ''.join([byte.decode('utf-8') for byte in item])
+        wave_ids.append(result_string)
+    # Find common strings
+    df1 = pd.DataFrame(wave_ids)
+    df1.columns = ['id']
+    df1['wave_index'] = df1.index
+    res_las = []
+    res_pho = []
+    b_t_df = gpd.read_parquet(out_wave.replace('wave_', 'df_')[:-3] + '.parquet') # read saved data file.
+    for index_20m, row_20m in b_t_df.iterrows(): # every 20m segment
+        footprint = get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']) # string already.
+        footprint['id'] = footprint['e'].astype(str) + '.' + footprint['n'].astype(str) 
+        res = pd.merge(df1, footprint, on='id', how='inner')
+        if (len(res) == 0): continue   ##### why is there empty waveform for this is2 20m segment?
+        start = res['wave_index'].iloc[0] # must have
+        end = res['wave_index'].iloc[-1] # must end>= start.
+        pho_w_ground = get_sim_photon(out_wave, start, end, lamda, ratiopvpg) # average ~30*3 = 90 photons/rows
+        if pho_w_ground is None: continue # this segment no photons. 
+        pho_w_ground['land_segments/longitude_20m'] = row_20m['land_segments/longitude_20m']  # lon, lat, time ---> unique ID. 
+        pho_w_ground['land_segments/latitude_20m'] = row_20m['land_segments/latitude_20m']
+        pho_w_ground['land_segments/delta_time'] = row_20m['land_segments/delta_time']
+        res_pho.append(pho_w_ground)        
+        rh = get_sim_rh(pho_w_ground)
+        rh['land_segments/longitude_20m'] = row_20m['land_segments/longitude_20m'] 
+        rh['land_segments/latitude_20m'] = row_20m['land_segments/latitude_20m']
+        rh['land_segments/delta_time'] = row_20m['land_segments/delta_time']
+        res_las.append(rh) 
+    if len(res_pho) ==0: return # not likely to happen
+    res_pho = pd.concat(res_pho, ignore_index=True)
+    res_pho.to_parquet(out_pho) # output photons.                        
+    if (len(res_las) ==0): return # not likely to happen
+    res_las = pd.concat(res_las, ignore_index=True)
+    out_rh = out_wave.replace('wave_', 'rh_')[:-3] + '.parquet'
+    res_las.to_parquet(out_rh) # Pandas will silently overwrite the file, if the file is already there
+
                         
-def get_sim_photon(filename, start, end, lamda=3, ratiopvpg=1.5): # for each 20m segment, get the ~30 waveforms.
+def get_sim_photon(filename, start, end, lamda=0.5, ratiopvpg=0.86): # for each 20m segment, get the ~30 waveforms.
     pho_w_ground = pd.DataFrame()
     with h5py.File(filename, "r") as f:
         N_foorprints = f['RXWAVECOUNT'].shape[0]        
@@ -287,31 +325,39 @@ def is2ProjectToSite(gdf_als): # save is2 in each site
         
 if __name__ == '__main__':
     args = getCmdArgs()
-    output_folder = args.output
-    if not os.path.exists(output_folder):
-        os.makedirs(output_folder)
     gdf_als = gpd.read_parquet(ALS_SITES)
     if args.projection:
         is2ProjectToSite(gdf_als)
-    all_lazs = [] # get all laz files
+    regions = []
+    names = []
     for index, row in gdf_als.iterrows(): 
         if args.name and row['name'] != args.name: continue
-        if row['name'] not in redo_sites: continue # redo simulation .....
-        out_projected = FOLDER_PROJ + '/' + row['region'] + '_' + row['name'] + '.parquet'
-        data_path = '/gpfs/data1/vclgp/data/gedi/imported/' + row['region'] + '/' + row['name'] + '/LAZ_ground'
-        files_path = data_path + '/*.laz' 
-        laz_files = glob.glob(files_path)
-        all_lazs.extend(laz_files)      
+        if row['name'] not in VALID_SITES: continue 
+        regions.append( row['region'] )
+        names.append(row['name'])    
     if args.test:
         print('# test simulation')
-        all_lazs = all_lazs[:10]
-    print('# number of laz files: ', len(all_lazs))
+        regions = ['usa']
+        names = ['neon_niwo2020']
+    print('# number of projecs: ', len(names))
     print('# start client')
-    client = Client(n_workers=15, threads_per_worker=1) # 
-    print(f'# dask client opened at: {client.dashboard_link}')
-    cmds = [sim_is2_laz(laz_f,output=output_folder, lamda = args.lamda, ratiopvpg=args.ratiopvpg, overwrite_wave=False, overwrite_photon=False) for laz_f in all_lazs]  
-    progress(dask.persist(*cmds))
+    client = Client(n_workers=30, threads_per_worker=1) # 
+    print(f'# dask client opened at: {client.dashboard_link}') 
+    if args.prepare:
+        futures = client.map(project2track2beam, regions, names)
+        progress(futures)
+    if args.sim:
+        all_cmds = get_sim_cmds(regions, names)
+        print(' number of simulation commands: ', len(all_cmds))
+        futures = client.map(run_cmd, all_cmds)
+        progress(futures)
+    if args.metric:
+        allwaves = []
+        for region, name in zip(regions, names):
+            waves = glob.glob(RES_PATH+'/'+region+'/'+name+'/wave*.h5')
+            allwaves.extend(waves)
+        futures = client.map(read_waves, allwaves)
+        progress(futures)
     print('') 
-    client.close()
+    client.shutdown()
     sys.exit("# DONE")
-

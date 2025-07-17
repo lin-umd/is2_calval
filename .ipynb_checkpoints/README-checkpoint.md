@@ -1,3 +1,7 @@
+# What is this repository for?
+This calval repository is used for simulating on-orbit ICESat-2 segments against ALS datasets. 
+
+
 # Steps for getting cal/val database. 
 # Activate environment
 conda activate /gpfs/data1/vclgp/xiongl/env/linpy

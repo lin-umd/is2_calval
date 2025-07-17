@@ -200,7 +200,7 @@ def get_sim_photon(filename, start, end, lamda=3, ratiopvpg=1.5): # for each 20m
             if n == 0: continue # no sample photons. continue to next waveform
             # canopy + ground photons
             rows = np.arange(RXWAVECOUNT.shape[0])
-            scaled_RXWAVECOUNT = ((RXWAVECOUNT - RXWAVECOUNT)*ratiopvpg + RXWAVECOUNT*1)/ (ratiopvpg + 1) # scale the wavefrom by ratiopvpg
+            scaled_RXWAVECOUNT = ((RXWAVECOUNT - GRWAVECOUNT)*ratiopvpg + GRWAVECOUNT*1)/ (ratiopvpg + 1) # scale the wavefrom by ratiopvpg
             total = sum(scaled_RXWAVECOUNT)
             # Normalize the data by dividing each value by the total
             p_data = [value / total for value in scaled_RXWAVECOUNT]

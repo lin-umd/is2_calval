@@ -29,7 +29,6 @@ import matplotlib.pyplot as plt
 from scipy.stats import poisson
 from shapely.geometry import Point
 from shapely.geometry import Polygon
-import utm
 import subprocess
 import glob
 import pandas as pd

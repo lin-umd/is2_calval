@@ -2,6 +2,7 @@
 # coding: utf-8
 # project to rerun 12.23.2023
 # laz_path = 'europe/ucl_wytham'
+# slope calculation is not right...
 
 import os
 os.environ['USE_PYGEOS'] = '0'

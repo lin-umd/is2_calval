@@ -24,4 +24,4 @@ echo "Hello, World!"
 
 
 echo "tile data test"
-wine $LASTOOLS/lastile.exe -i /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/ease1km_tile/X21074Y07968.laz -olaz  -refine_tiling 10000000 
+wine $LASTOOLS/lastile.exe -i /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/ease1km_tile/X21074Y07968.laz -o /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/ease1km_tile/X21074Y07968tile.laz  -tile_size 500
