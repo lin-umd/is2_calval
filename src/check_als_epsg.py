@@ -15,7 +15,7 @@ python check_als_epsg.py
 #parameters
 base_dir = '/gpfs/data1/vclgp/data/gedi/imported'
 info_dir = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/lasinfo_txt' # 358817 las files information.
-
+output_txt = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/als_epsg.txt'
 
 import argparse, os, sys, re
 os.environ['USE_PYGEOS'] = '0'
@@ -48,7 +48,7 @@ def get_laz_epsg(f):
     name = f.split('/')[8]
     out_txt = f'{info_dir}/{region}_{name}_{os.path.basename(f)[:-4]}.txt'  # Replace with the path to your text file
     if not os.path.exists(out_txt):     
-        command = f"lasinfo -i {f}  -o  {out_txt}"  # Replace this with your Bash command
+        command = f"wine /gpfs/data1/vclgp/software/lastools/bin/lasinfo.exe -i {f}  -o  {out_txt}"  # Replace this with your Bash command
         result = subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
     epsg_number = None
     with open(out_txt, 'r') as file:
@@ -66,12 +66,20 @@ def get_laz_epsg(f):
     file.close()  
     if epsg_number is None:
         print('site can not determine epsg: ', f) 
-    print(f, epsg_number)
+    return region, name, epsg_number
 
 laz_files = []
 for folder_path in glob.glob(os.path.join(base_dir, '*', '*', 'LAZ_ground')):
     laz_files_in_folder = glob.glob(os.path.join(folder_path, '*.laz'))
     if laz_files_in_folder:
         laz_files.append(laz_files_in_folder[-1]) # each site first or last laz file.
-for laz_file in laz_files:
-    get_laz_epsg(laz_file)
+
+with open(output_txt, 'w') as f:        
+    for laz_file in laz_files:
+        if '/jpl_wwf_germany_drc/' in laz_file:
+            print('jpl_wwf_germany_drc has been splitted into a few folders by epsg.')
+            continue
+        region, name, epsg = get_laz_epsg(laz_file)
+        f.write(f"{region},{name},{epsg}\n")
+print(f"Wrote summary to: {output_txt}")
+    
