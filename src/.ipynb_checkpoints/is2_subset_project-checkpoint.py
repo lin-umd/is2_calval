@@ -2,7 +2,7 @@
 # coding: utf-8
 '''
 This script is to download subset of ATL03 data within a ALS project boundary. 
-
+Big ALS boundary will not work.
 '''
 
 

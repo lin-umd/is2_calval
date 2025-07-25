@@ -1,0 +1,4 @@
+/gpfs/data1/vclgp/data/gedi/imported/australia/tern_robson_whole/LAZ_ground/13_55_classed.laz
+/gpfs/data1/vclgp/data/gedi/imported/australia/tern_robson_whole/LAZ_ground/14_08_classed.laz
+/gpfs/data1/vclgp/data/gedi/imported/australia/tern_robson_whole/LAZ_ground/14_37_classed.laz
+/gpfs/data1/vclgp/data/gedi/imported/australia/tern_robson_whole/LAZ_ground/13_59_classed.laz

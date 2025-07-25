@@ -3,8 +3,8 @@
 '''
 this script is used to download subset of IS2 data across ALS sites boundaries. 
 # example use
-# python 3is2subset.py  --check --test --product ATL08
-# python 3is2subset.py  --download --test --product ATL03
+# python is2_subset_tile.py  --check --test --product ATL08
+# python is2_subset_tile.py  --download --test --product ATL03
 '''
 import os
 os.environ['USE_PYGEOS'] = '0'

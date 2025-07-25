@@ -17,8 +17,17 @@ bash extract.sh
 # step 4: is2 data projected to each als site by epsg
 python src/is2_rojection.py
 
-# step 5: run simulation
-python src/is2_simulation_20m.py --output ../result/lamda1 --test --ratiopvpg 0.85
+# step 5: run simulation. Version3 fixed the issue: 200 x 20-m segments one file.
+python src/is2_simulation_20m.py --output ../result/lamda1 --test 
+
+## step 5.1
+in some file, the number of footprints are >5k. we need to split.
+
+pyhton src/is2_sim_split.py
+## step 5.2 run gediRat cmds.
+python src/run_sim_split_by_name --name_file als_site.txt
+## step 5.3 merge h5 files into folder
+python src/merge_h5.py
 
 # step 6: get ALS rh metrics and slope.
 python src/get_segment_als_statistics.py --out /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/result_als_stat
@@ -29,12 +38,18 @@ python src/export_metrics.py
 # step 8: make reports.
 
 
+# subsetting atl03 over calval sites
+
+python src/is2_subset_tile.py
+
+[Note] subsetting one project
+
+python src/is2_subset_tile.py  --download  --project neon_wref2021
 
 # get canopy/ground ratio.
 code from John.
 
 cp /gpfs/data1/vclgp/armstonj/git/gedipy/notebooks/icesat2_atl03_atl08_canopy_cover.ipynb ./icesat2_atl03_atl08_canopy_cover.ipynb
-
 
 
 # Troubleshooting

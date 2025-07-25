@@ -5,12 +5,28 @@ this script is for is2 simulation of 20m segment data over cal/val sites. The si
 lin xiong
 lxiong@umd.edu
 07/03/2024
-to do
-* optimze pipeline from waveform to photons and rh metrics.
-'''
+# plz test lastool and gediRat before use.
 
 # example use:
-# python src/is2_simulation_20m.py --test --sim --metric --prepare
+python /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/is2_calval/src/is2_simulation_20m.py --file file_path --sim --metric --prepare
+
+# lastool windows version -- old system:
+module load wine
+wine /gpfs/data1/vclgp/software/lastools/bin/las2las.exe
+# lastool linux version -- new system
+export LD_LIBRARY_PATH=/gpfs/data1/vclgp/decontot/environments/lastools/lib:$LD_LIBRARY_PATH
+/gpfs/data1/vclgp/xiongl/tools/lastool/bin/las2las64 -h
+# or try to install free las tool commands.
+https://anaconda.org/conda-forge/lastools .
+# The native lastools for Linux are now available as a module. Type: module load rh9/lastools
+# gediRat issue
+conda install conda-forge::gsl
+cd /gpfs/data1/vclgp/xiongl/env/linpy/lib
+ln -s libgsl.so.28 libgsl.so.0
+ln -s libgdal.so.34 libgdal.so.27
+export LD_LIBRARY_PATH=/gpfs/data1/vclgp/xiongl/env/linpy/lib:$LD_LIBRARY_PATH
+'''
+
 
 import os
 os.environ['USE_PYGEOS'] = '0'
@@ -71,11 +87,12 @@ CALVAL_SITES = "/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/calval_sites_2025
 
 def getCmdArgs():
     p = argparse.ArgumentParser(description = "IS2 simulation over cal/val database")
-    p.add_argument("-n", "--name", dest="name", required=False, type=str, help="ALS project name") # nargs='+', if I want multiple names.
+    p.add_argument("-f", "--file", dest="file", required=True, type=str, help="Text file containing ALS project names (one per line)")
+    #p.add_argument("-n", "--name", dest="name", required=False, type=str, help="ALS project name") # nargs='+', if I want multiple names.
     p.add_argument("-w", "--workers", dest="workers", required=False, type=int, default=10, help="number of cores to be used")
     p.add_argument("-l", "--lamda", dest="lamda", required=False, type=float, default=1, help="number of average photons in poisson distribution")
     #p.add_argument("-o", "--output", dest="output", required=False, default=RES_PATH,  help="Output folder path")
-    p.add_argument("-t", "--test", dest="test", required=False, action='store_true', help="Simulate 10 files")
+    #p.add_argument("-t", "--test", dest="test", required=False, action='store_true', help="Simulate 10 files")
     p.add_argument("-e", "--prepare", dest="prepare", required=False, action='store_true', help="pepare coordinates, las lists for simulation")
     p.add_argument("-s", "--sim", dest="sim", required=False, action='store_true', help="run simulation to waves")
     p.add_argument("-m", "--metric", dest="metric", required=False, action='store_true', help="run waves to rh metrics")
@@ -112,20 +129,15 @@ def project2track2beam(region, name, output=RES_PATH):
         t_df = gdf_als[gdf_als['root_file'] == t]
         for b in  t_df['root_beam'].unique():
             b_t_df = t_df[t_df['root_beam'] == b]
-            out_b_t = res_out+ '/df_'+ t[:-3] + '_' + b + '.parquet'####o
-            if os.path.exists(out_b_t): continue # skip this file.
-            b_t_df.to_parquet(out_b_t) # output photons. 
             print(name, t, b, len(b_t_df))
             segment_footprints_list = []
             for index_20m, row_20m in b_t_df.iterrows():
                 segment_footprints_list.append(get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']))
             segment_footprints = pd.concat(segment_footprints_list, ignore_index=True)
             foots = gpd.GeoSeries(gpd.points_from_xy(segment_footprints.e, segment_footprints.n))
-            idx= laz_project.sindex.query(foots)
-            out_coor = res_out+ '/coordinates_'+ t[:-3] + '_' + b + '.txt'####o
-            segment_footprints[['e', 'n']].to_csv(out_coor, sep=' ', header = False,  index = False)
-            # get laz, las file list
-            files_list = laz_project.iloc[idx[1]]['file'].unique()
+            idx = laz_project.sindex.query(foots.union_all())
+            files_list = laz_project.iloc[idx]['file'].unique()
+        
             las_list = []
             for f in files_list:
                 bs = f.replace(region+'_'+name + '_', '').replace('.parquet' , '.las')
@@ -136,12 +148,17 @@ def project2track2beam(region, name, output=RES_PATH):
                     if os.path.isfile(bs_laz_path):
                         os.makedirs(os.path.dirname(bs_las_path), exist_ok=True)#make sure folder exists.
                         print('laz to las...', bs_laz_path)
-                        os.system(f'wine /gpfs/data1/vclgp/software/lastools/bin/las2las.exe -i {bs_laz_path} -o {bs_las_path}')
+                        os.system(f'las2las -i {bs_laz_path} -o {bs_las_path}')
                     else:
                         las_list.remove(bs_las_path)
                         print('no such laz file: ', bs_laz_path)
                         continue
-            out_als_list = res_out+ '/alslist_'+ t[:-3] + '_' + b + '.txt'####o
+            out_b_t = res_out+ '/df_'+ t[:-3] + '_' + b + '.parquet'
+            if os.path.exists(out_b_t): continue # skip writing this file.
+            b_t_df.to_parquet(out_b_t) # output is2 segments
+            out_coor = res_out+ '/coordinates_'+ t[:-3] + '_' + b + '.txt'
+            segment_footprints[['e', 'n']].to_csv(out_coor, sep=' ', header = False,  index = False)
+            out_als_list = res_out+ '/alslist_'+ t[:-3] + '_' + b + '.txt'
             with open(out_als_list, 'w') as file:
                 for item in las_list:
                     file.write(f"{item}\n")
@@ -160,8 +177,7 @@ def get_sim_cmds(regions, names, overwrite_wave=False):
         out_coord = alsfile.replace('alslist' , 'coordinates')
         out_wave =  alsfile.replace('alslist', 'wave')[:-4] + '.h5'
         out_sim_log = alsfile.replace('alslist','sim_log') 
-        #if not os.path.exists(out_wave) or overwrite_wave: # waveform not exist, run simulation; ovewrite= true, run simulation.
-        if not os.path.exists(out_sim_log) or overwrite_wave: # some files, no is2 points.
+        if not os.path.exists(out_wave) or overwrite_wave: # waveform not exist, run simulation; ovewrite= true, run simulation.
             cmd = f'gediRat -fSigma 2.75 -readPulse {Pulse_PATH} -inList {alsfile} -listCoord {out_coord}  -output {out_wave} -hdf  -ground > {out_sim_log}'
             cmds.append(cmd)
     return cmds
@@ -209,7 +225,7 @@ def read_waves(out_wave='../result_simV2/usa/neon_niwo2020/wave_ATL08_2023052402
         res_las.append(rh) 
     if len(res_pho) ==0: return # not likely to happen
     res_pho = pd.concat(res_pho, ignore_index=True)
-    res_pho.to_parquet(out_pho) # output photons.                        
+    res_pho.to_parquet(out_pho) # output simulated photons.                        
     if (len(res_las) ==0): return # not likely to happen
     res_las = pd.concat(res_las, ignore_index=True)
     out_rh = out_wave.replace('wave_', 'rh_')[:-3] + '.parquet'
@@ -304,18 +320,16 @@ def transform_coordinates(row, transformer):
         
 if __name__ == '__main__':
     args = getCmdArgs()
+    with open(args.file, 'r') as f:
+        process_names = [line.strip() for line in f if line.strip()]
+    print(process_names)
     gdf_als = gpd.read_parquet(CALVAL_SITES)
     regions = []
     names = []
     for index, row in gdf_als.iterrows(): 
-        if args.name and row['name'] != args.name: continue
-        if row['name'] not in VALID_SITES: continue 
+        if row['name'] not in process_names: continue
         regions.append( row['region'] )
         names.append(row['name'])    
-    if args.test:
-        print('# test simulation')
-        regions = ['usa']
-        names = ['neon_niwo2020']
     print('# number of projecs: ', len(names))
     print('# start client')
     client = Client(n_workers=args.workers, threads_per_worker=1) # 
@@ -325,8 +339,6 @@ if __name__ == '__main__':
         progress(futures)
     if args.sim:
         all_cmds = get_sim_cmds(regions, names)
-        if args.test:
-            all_cmds = all_cmds[:10]
         print('# number of simulation commands: ', len(all_cmds))
         futures = client.map(run_cmd, all_cmds)
         progress(futures)
@@ -335,8 +347,6 @@ if __name__ == '__main__':
         for region, name in zip(regions, names):
             waves = glob.glob(RES_PATH+'/'+region+'/'+name+'/wave*.h5')
             allwaves.extend(waves)
-        if args.test:
-            allwaves = allwaves[:10]
         futures = client.map(read_waves, allwaves)
         progress(futures)
     print('') 
