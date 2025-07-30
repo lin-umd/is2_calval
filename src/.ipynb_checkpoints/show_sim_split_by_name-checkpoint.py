@@ -35,18 +35,16 @@ def split_commands_by_name(cmds, names):
             # check if wave file already exists?
             match = re.search(r"-output\s+(\S+)", c)
             output_file = match.group(1)
+            
             output_file = output_file.replace('splitV3', 'simV3')  # Replace 'splitV3' with 'simV3'
             output_file = re.sub(r'_[^_]+(?=\.h5$)', '', output_file)
             if os.path.exists(output_file):
                 pass
-                #print(f"Skipping {output_file}, already exists.")
+                #print(f"Skipping {output_file}, already exists in simulation folder.")
             else:
                 cmds_name.append(c)
     return cmds_name
 
-def run_cmd(cmd):
-    """Run a single command."""
-    os.system(cmd)
 
 def main():
 
@@ -70,7 +68,8 @@ def main():
     cmds_name = [item for item in cmds_name if item is not None]
 
     print('number of split running commands: ', len(cmds_name))
-    print(cmds_name)
+    for c in cmds_name:
+        print(c)
 
 if __name__ == "__main__":
     main()

@@ -8,7 +8,7 @@ lxiong@umd.edu
 # plz test lastool and gediRat before use.
 
 # example use:
-python /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/is2_calval/src/is2_simulation_20m.py --file file_path --sim --metric --prepare
+python /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/is2_calval/src/is2_simulation_20m.py --file file_path --prepare --sim --metric 
 
 # lastool windows version -- old system:
 module load wine
@@ -25,6 +25,10 @@ cd /gpfs/data1/vclgp/xiongl/env/linpy/lib
 ln -s libgsl.so.28 libgsl.so.0
 ln -s libgdal.so.34 libgdal.so.27
 export LD_LIBRARY_PATH=/gpfs/data1/vclgp/xiongl/env/linpy/lib:$LD_LIBRARY_PATH
+
+# version2:
+when >200 IS2 segments, we need to split, savd in chunks. very 200m segemnts.
+per track, per beam, per 200 x 20m-segments, we save a file.
 '''
 
 
@@ -129,7 +133,7 @@ def project2track2beam(region, name, output=RES_PATH):
         t_df = gdf_als[gdf_als['root_file'] == t]
         for b in  t_df['root_beam'].unique():
             b_t_df = t_df[t_df['root_beam'] == b]
-            print(name, t, b, len(b_t_df))
+            print(name, t, b, len(b_t_df)) # when >200 segments, we need to split.
             segment_footprints_list = []
             for index_20m, row_20m in b_t_df.iterrows():
                 segment_footprints_list.append(get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']))
@@ -205,7 +209,7 @@ def read_waves(out_wave='../result_simV2/usa/neon_niwo2020/wave_ATL08_2023052402
     res_las = []
     res_pho = []
     b_t_df = gpd.read_parquet(out_wave.replace('wave_', 'df_')[:-3] + '.parquet') # read saved data file.
-    for index_20m, row_20m in b_t_df.iterrows(): # every 20m segment
+    for _, row_20m in b_t_df.iterrows(): # every 20m segment
         footprint = get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']) 
         footprint['id'] = footprint['e'].astype(str) + '.' + footprint['n'].astype(str) 
         res = pd.merge(df1, footprint, on='id', how='inner')

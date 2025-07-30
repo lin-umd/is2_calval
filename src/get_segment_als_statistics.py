@@ -4,7 +4,7 @@
 # project to rerun 12.23.2023
 # laz_path = 'europe/ucl_wytham'
 # example use 
-python src/get_segment_als_statistics.py --out /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/result_als_stat --region_name  usa/neon_puum2020
+python src/get_segment_als_statistics.py --out /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/result_als_stat --region_name  usa/neon_blan2022
 python src/get_segment_als_statistics.py --out /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/result_als_stat --workers 40
 
 clip by is2 footprints. not by laz file. 
@@ -160,7 +160,7 @@ def merge_clipped_las(laz_files, rectangle):
 
 
 @dask.delayed
-def process_beam_group(region, name, f, res_out):
+def process_beam_group(region, name, f):
     out_b_t = f.replace('/is2_', '/df_')
     if os.path.exists(out_b_t): return
     b_t_df=gpd.read_parquet(f)
@@ -249,7 +249,7 @@ if __name__ == '__main__':
         res_out = os.path.join(args.out, region, name)
         df_files = glob.glob(res_out+ '/is2_*.parquet')
         for f in df_files:
-            cmds.append(process_beam_group(region, name, f, res_out))  
+            cmds.append(process_beam_group(region, name, f))  
     print('## -- clip als per 20m segment and get metrics')
     futures2 = dask.persist(*cmds)
     progress(futures2)

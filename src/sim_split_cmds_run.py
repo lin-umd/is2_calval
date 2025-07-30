@@ -1,3 +1,7 @@
+'''
+this script is used to run the splitted simulation commands from gediRat_commands.txt
+'''
+
 import os
 import dask
 from dask.diagnostics import ProgressBar
@@ -33,10 +37,12 @@ def split_commands_by_name(cmds, names):
     for c in cmds:
         if any(name in c for name in set(names)): # check if command contains the project name
             # check if wave file already exists?
+            
             match = re.search(r"-output\s+(\S+)", c)
             output_file = match.group(1)
+            # check if output file is in simV3 directory
             output_file = output_file.replace('splitV3', 'simV3')  # Replace 'splitV3' with 'simV3'
-            output_file = re.sub(r'_[^_]+(?=\.h5$)', '', output_file)
+            output_file = re.sub(r'_[^_]+(?=\.h5$)', '', output_file) # remove the last part before .h5
             if os.path.exists(output_file):
                 pass
                 #print(f"Skipping {output_file}, already exists.")
@@ -46,7 +52,12 @@ def split_commands_by_name(cmds, names):
 
 def run_cmd(cmd):
     """Run a single command."""
-    os.system(cmd)
+    match = re.search(r"-output\s+(\S+)", cmd)
+    output_file = match.group(1)
+    if os.path.exists(output_file):
+        print(f"Skipping {output_file}, already exists in split simulation folder.")
+    else:
+        os.system(cmd)
 
 def main():
 
@@ -62,7 +73,7 @@ def main():
     parser.add_argument(
     "--num_workers",
     type=int,
-    default=4,  # Default number of workers
+    default=35,  # Default number of workers
     help="Number of workers to use for parallel processing."
     )
     args = parser.parse_args()

@@ -5,11 +5,8 @@ this script is for is2 simulation of 20m segment data over cal/val sites. The si
 lin xiong
 lxiong@umd.edu
 07/03/2024
+
 # plz test lastool and gediRat before use.
-
-# example use:
-python /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/is2_calval/src/is2_simulation_20m.py --file file_path --sim --metric --prepare
-
 # lastool windows version -- old system:
 module load wine
 wine /gpfs/data1/vclgp/software/lastools/bin/las2las.exe
@@ -25,9 +22,16 @@ cd /gpfs/data1/vclgp/xiongl/env/linpy/lib
 ln -s libgsl.so.28 libgsl.so.0
 ln -s libgdal.so.34 libgdal.so.27
 export LD_LIBRARY_PATH=/gpfs/data1/vclgp/xiongl/env/linpy/lib:$LD_LIBRARY_PATH
+
+
+# example use:
+python /gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/is2_calval/src/is2_simulation_20m.py --file file_path --sim --metric --prepare
+
+
 # version2:
-when >200 IS2 segments, we need to split, savd in chunks. very 200m segemnts.
+1. when >200 IS2 segments, we need to split, savd in chunks. very 200m segemnts.
 per track, per beam, per 200 x 20m-segments, we save a file.
+2. optimize the reading of waveforms.
 '''
 
 
@@ -78,6 +82,8 @@ VALID_SITES = ['amani','csir_agincourt', 'csir_dnyala', 'csir_ireagh', 'csir_jus
                'neon_stei2022', 'neon_steicheq2022', 'neon_ster2022', 'neon_unde2022', 'inpe_brazil31983', 'inpe_brazil31981', 
                'inpe_brazil31979', 'inpe_brazil31976', 'inpe_brazil31975', 'inpe_brazil31973', 'inpe_brazil31974', 'inpe_brazil31978', 
                'csir_limpopo','jrsrp_ilcp2015_wholeq6']
+
+BAD_SITES = ['neon_blan2022','neon_clbj2022']
 # global env.
 FOLDER_PROJ = '/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/result/is2_projected_als'# in als local coordinates.
 ALS_BOUND_PATH='/gpfs/data1/vclgp/xiongl/ProjectIS2CalVal/data/bounds_project'
@@ -127,44 +133,55 @@ def project2track2beam(region, name, output=RES_PATH):
     laz_project = laz_project.to_crs(epsg)# projected
     res_out = output + '/' + region + '/' + name
     os.makedirs( res_out, exist_ok = True)
-    cmds = []
+    
     for t in gdf_als['root_file'].unique(): 
         t_df = gdf_als[gdf_als['root_file'] == t]
         for b in  t_df['root_beam'].unique():
             b_t_df = t_df[t_df['root_beam'] == b]
             print(name, t, b, len(b_t_df)) # when >200 segments, we need to split.
-            segment_footprints_list = []
-            for index_20m, row_20m in b_t_df.iterrows():
-                segment_footprints_list.append(get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']))
-            segment_footprints = pd.concat(segment_footprints_list, ignore_index=True)
-            foots = gpd.GeoSeries(gpd.points_from_xy(segment_footprints.e, segment_footprints.n))
-            idx = laz_project.sindex.query(foots.union_all())
-            files_list = laz_project.iloc[idx]['file'].unique()
-        
-            las_list = []
-            for f in files_list:
-                bs = f.replace(region+'_'+name + '_', '').replace('.parquet' , '.las')
-                bs_las_path = LAS_PATH + '/' + region + '/' + name + '/' + bs
-                las_list.append(bs_las_path)
-                if not os.path.isfile(bs_las_path):
-                    bs_laz_path = LAZ_PATH + '/' + region + '/' + name + '/LAZ_ground/' + bs[:-1]+ 'z'
-                    if os.path.isfile(bs_laz_path):
-                        os.makedirs(os.path.dirname(bs_las_path), exist_ok=True)#make sure folder exists.
-                        print('laz to las...', bs_laz_path)
-                        os.system(f'las2las -i {bs_laz_path} -o {bs_las_path}')
-                    else:
-                        las_list.remove(bs_las_path)
-                        print('no such laz file: ', bs_laz_path)
-                        continue
-            out_b_t = res_out+ '/df_'+ t[:-3] + '_' + b + '.parquet'
-            if os.path.exists(out_b_t): continue # skip writing this file.
-            b_t_df.to_parquet(out_b_t) # output is2 segments
-            out_coor = res_out+ '/coordinates_'+ t[:-3] + '_' + b + '.txt'
-            segment_footprints[['e', 'n']].to_csv(out_coor, sep=' ', header = False,  index = False)
-            out_als_list = res_out+ '/alslist_'+ t[:-3] + '_' + b + '.txt'
-            with open(out_als_list, 'w') as file:
-                for item in las_list:
-                    file.write(f"{item}\n")
+            # sor from old to new by time.
+            b_t_df = b_t_df.sort_values(by='land_segments/delta_time', ascending=True)
+
+            num_chunks = (len(b_t_df) + 199) // 200  # Calculate number of chunks
+            for i in range(num_chunks):
+                start = i * 200
+                end = min((i + 1) * 200, len(b_t_df))
+                chunk_df = b_t_df.iloc[start:end]
+                # get coordinates
+                segment_footprints_list = []
+                for row_20m in chunk_df.itertuples(index=True):
+                    segment_footprints_list.append(get_footprint(row_20m.e, row_20m.n, row_20m.orientation))
+                segment_footprints = pd.concat(segment_footprints_list, ignore_index=True)
+                foots = gpd.GeoSeries(gpd.points_from_xy(segment_footprints.e, segment_footprints.n))
+                idx = laz_project.sindex.query(foots.union_all()) 
+                files_list = laz_project.iloc[idx]['file'].unique() # get als list
+                # check las files.
+                las_list = []
+                for f in files_list:
+                    bs = f.replace(region+'_'+name + '_', '').replace('.parquet' , '.las')
+                    bs_las_path = LAS_PATH + '/' + region + '/' + name + '/' + bs
+                    las_list.append(bs_las_path)
+                    if not os.path.isfile(bs_las_path):
+                        bs_laz_path = LAZ_PATH + '/' + region + '/' + name + '/LAZ_ground/' + bs[:-1]+ 'z'
+                        if os.path.isfile(bs_laz_path):
+                            os.makedirs(os.path.dirname(bs_las_path), exist_ok=True)#make sure folder exists.
+                            print('laz to las...', bs_laz_path)
+                            if name not in BAD_SITES: # this site has wrong laz files.
+                                os.system(f'las2las -i {bs_laz_path} -o {bs_las_path}')
+                        else:
+                            las_list.remove(bs_las_path)
+                            print('no such laz file: ', bs_laz_path)
+                            continue
+                # writing files.
+                out_b_t = res_out + '/df_' + t[:-3] + '_' + b + f'_{i+1}.parquet'
+                if os.path.exists(out_b_t): continue
+                chunk_df.to_parquet(out_b_t)
+                out_coor = res_out+ '/coordinates_'+ t[:-3] + '_' + b + f'_{i+1}.txt'
+                segment_footprints[['e', 'n']].to_csv(out_coor, sep=' ', header = False,  index = False)
+                out_als_list = res_out+ '/alslist_'+ t[:-3] + '_' + b + f'_{i+1}.txt'
+                with open(out_als_list, 'w') as file:
+                    for item in las_list:
+                        file.write(f"{item}\n")
 
 
 #@dask.delayed
@@ -174,7 +191,8 @@ def get_sim_cmds(regions, names, overwrite_wave=False):
     all_als_lists = []
     cmds = []
     for region, name in zip(regions, names):
-        als_list = glob.glob(RES_PATH+'/'+region+'/'+name+'/alslist*.txt')
+        print('## get als txt files list in this project: ', region, name)
+        als_list = glob.glob(RES_PATH+'/'+region+'/'+name+'/alslist*.txt') # run chunk2.
         all_als_lists.extend(als_list)
     for alsfile in all_als_lists:
         out_coord = alsfile.replace('alslist' , 'coordinates')
@@ -196,7 +214,7 @@ def read_waves(out_wave='../result_simV2/usa/neon_niwo2020/wave_ATL08_2023052402
     print('reading wave file', out_wave)
     f_wave = h5py.File(out_wave, 'r')
     byte_strings = f_wave['WAVEID'][()]
-    f_wave.close() 
+    
     wave_ids = []
     for item in byte_strings:
         result_string = ''.join([byte.decode('utf-8') for byte in item])
@@ -208,14 +226,16 @@ def read_waves(out_wave='../result_simV2/usa/neon_niwo2020/wave_ATL08_2023052402
     res_las = []
     res_pho = []
     b_t_df = gpd.read_parquet(out_wave.replace('wave_', 'df_')[:-3] + '.parquet') # read saved data file.
-    for index_20m, row_20m in b_t_df.iterrows(): # every 20m segment
+    for _, row_20m in b_t_df.iterrows(): # every 20m segment
         footprint = get_footprint(row_20m['e'], row_20m['n'], row_20m['orientation']) 
-        footprint['id'] = footprint['e'].astype(str) + '.' + footprint['n'].astype(str) 
+        #footprint['id'] = footprint['e'].astype(str) + '.' + footprint['n'].astype(str) 
+        footprint['id'] = footprint['e'].map('{:.6f}'.format) + '.' + footprint['n'].map('{:.6f}'.format)
         res = pd.merge(df1, footprint, on='id', how='inner')
         if (len(res) == 0): continue   ##### why is there empty waveform for this is2 20m segment?
         start = res['wave_index'].iloc[0] # must have
         end = res['wave_index'].iloc[-1] # must end>= start.
-        pho_w_ground = get_sim_photon(out_wave, start, end, lamda, ratiopvpg) # average ~30*3 = 90 photons/rows
+        print('waveform index start and end: ', start, end)
+        pho_w_ground = get_sim_photon(f_wave, start, end, lamda, ratiopvpg) # average ~30*3 = 90 photons/rows
         if pho_w_ground is None: continue # this segment no photons. 
         pho_w_ground['land_segments/longitude_20m'] = row_20m['land_segments/longitude_20m']  # lon, lat, time ---> unique ID. 
         pho_w_ground['land_segments/latitude_20m'] = row_20m['land_segments/latitude_20m']
@@ -225,7 +245,8 @@ def read_waves(out_wave='../result_simV2/usa/neon_niwo2020/wave_ATL08_2023052402
         rh['land_segments/longitude_20m'] = row_20m['land_segments/longitude_20m'] 
         rh['land_segments/latitude_20m'] = row_20m['land_segments/latitude_20m']
         rh['land_segments/delta_time'] = row_20m['land_segments/delta_time']
-        res_las.append(rh) 
+        res_las.append(rh)
+    f_wave.close()  
     if len(res_pho) ==0: return # not likely to happen
     res_pho = pd.concat(res_pho, ignore_index=True)
     res_pho.to_parquet(out_pho) # output simulated photons.                        
@@ -235,43 +256,49 @@ def read_waves(out_wave='../result_simV2/usa/neon_niwo2020/wave_ATL08_2023052402
     res_las.to_parquet(out_rh) # Pandas will silently overwrite the file, if the file is already there
 
                         
-def get_sim_photon(filename, start, end, lamda=1, ratiopvpg=0.86): # for each 20m segment, get the ~30 waveforms.
-    pho_w_ground = pd.DataFrame()
-    with h5py.File(filename, "r") as f:
-        N_foorprints = f['RXWAVECOUNT'].shape[0]        
-        for i in range(start, end+1): # inclusive for i th waveform
-            RXWAVECOUNT = f['RXWAVECOUNT'][i]
-            GRWAVECOUNT = f['GRWAVECOUNT'][i]
-            zStart = f["Z0"][i]
-            zEnd = f["ZN"][i]
-            zG = f["ZG"][i] # can be NaN
-            wfCount = f["NBINS"][0]
-            if (wfCount < 1): continue
-            wfStart = 1
-            zStretch = zEnd + (np.arange(wfCount, 0, -1) * ((zStart - zEnd) / wfCount))
-            n = np.random.poisson(lamda) # posson sample, how many photons? n=0, 1,2,...
-            if n == 0: continue # no sample photons. continue to next waveform
-            # canopy + ground photons
-            rows = np.arange(RXWAVECOUNT.shape[0])
-            scaled_RXWAVECOUNT = (RXWAVECOUNT - GRWAVECOUNT)*ratiopvpg + GRWAVECOUNT*1 # scale the wavefrom by ratiopvpg
-            total = sum(scaled_RXWAVECOUNT)
-            p_data = [value / total for value in scaled_RXWAVECOUNT]
-            photon_rows = np.random.choice(rows, size=n, p=p_data)
-            df1 = zStretch[photon_rows] - zG
-            df1 = pd.DataFrame(df1,  columns= ["Z"])
-            df1['LON0'] = f["LON0"][i]
-            df1['LAT0'] = f["LAT0"][i]
-            df1.dropna(inplace=True) # drop nan rows, NaN caused by zG.
-            if len(df1) == 0: continue # continue to next waveform
-            # add a ground flag to df1 
-            df1['ground_flag'] = GRWAVECOUNT[photon_rows] > 0 
-            if (len(pho_w_ground) == 0):
-                pho_w_ground = df1
-            else:
-                pho_w_ground = pd.concat([pho_w_ground, df1], ignore_index=True)
-    f.close()
-    if (len(pho_w_ground) == 0): return  # no photons in this laz file
-    return pho_w_ground
+def get_sim_photon(f, start, end, lamda=1, ratiopvpg=0.86):
+    wfCount = f['NBINS'][0]
+    if wfCount < 1:
+        return None
+
+    z_bins = np.arange(wfCount, 0, -1)
+    data = []
+
+    RX = f['RXWAVECOUNT'][start:end+1]
+    GR = f['GRWAVECOUNT'][start:end+1]
+    Z0 = f['Z0'][start:end+1]
+    ZN = f['ZN'][start:end+1]
+    ZG = f['ZG'][start:end+1]
+    LON0 = f['LON0'][start:end+1]
+    LAT0 = f['LAT0'][start:end+1]
+
+    for i in range(end - start + 1):
+        if np.isnan(ZG[i]):
+            continue
+
+        zStretch = ZN[i] + z_bins * ((Z0[i] - ZN[i]) / wfCount)
+        n = np.random.poisson(lamda)
+        if n == 0:
+            continue
+
+        scaled = (RX[i] - GR[i]) * ratiopvpg + GR[i]
+        total = scaled.sum()
+        if total <= 0:
+            continue
+
+        probs = scaled / total
+        photon_rows = np.random.choice(len(probs), size=n, p=probs)
+
+        z = zStretch[photon_rows] - ZG[i]
+        gflag = GR[i][photon_rows] > 0
+
+        for z_, gf in zip(z, gflag):
+            data.append((z_, LON0[i], LAT0[i], gf))
+
+    if not data:
+        return None
+
+    return pd.DataFrame(data, columns=["Z", "LON0", "LAT0", "ground_flag"])
     
 def get_sim_rh(pho_w_ground): # for each segment.
     percentiles = np.arange(0, 101, 1) #0 --> min height # 100 --> max height
